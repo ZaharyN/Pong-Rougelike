@@ -399,3 +399,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Ignore the entire CMake output folder
+out/
+
+# Ignore some specific binary files
+*.exe
+*.dll
+*.pdb
