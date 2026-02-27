@@ -109,8 +109,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-wjqnx3"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-wjqnx3"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4hblzj"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4hblzj"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -119,11 +119,11 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-wjqnx3'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4hblzj'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6e6d9
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6e6d9.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_6e6d9.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6e6d9.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6e6d9.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_6e6d9.exe /implib:cmTC_6e6d9.lib /pdb:cmTC_6e6d9.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_ea800
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_ea800.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_ea800.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_ea800.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ea800.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_ea800.exe /implib:cmTC_ea800.lib /pdb:cmTC_ea800.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -163,8 +163,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7lnvbt"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7lnvbt"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5ncjqq"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5ncjqq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -174,11 +174,11 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7lnvbt'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5ncjqq'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_278bc
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_278bc.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_278bc.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_278bc.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_278bc.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_278bc.exe /implib:cmTC_278bc.lib /pdb:cmTC_278bc.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7e4b3
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_7e4b3.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_7e4b3.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_7e4b3.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7e4b3.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_7e4b3.exe /implib:cmTC_7e4b3.lib /pdb:cmTC_7e4b3.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -220,8 +220,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7s2r19"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7s2r19"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0qmdlp"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0qmdlp"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -232,13 +232,13 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7s2r19'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0qmdlp'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6c7ae
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6c7ae.dir\\src.c.obj /FdCMakeFiles\\cmTC_6c7ae.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-7s2r19\\src.c
-        FAILED: CMakeFiles/cmTC_6c7ae.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6c7ae.dir\\src.c.obj /FdCMakeFiles\\cmTC_6c7ae.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-7s2r19\\src.c
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-7s2r19\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f022b
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f022b.dir\\src.c.obj /FdCMakeFiles\\cmTC_f022b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-0qmdlp\\src.c
+        FAILED: CMakeFiles/cmTC_f022b.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f022b.dir\\src.c.obj /FdCMakeFiles\\cmTC_f022b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-0qmdlp\\src.c
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-0qmdlp\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -252,8 +252,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-00y7x4"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-00y7x4"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-uzyxjf"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-uzyxjf"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -264,14 +264,14 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-00y7x4'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-uzyxjf'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_06ebf
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_06ebf.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_06ebf.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-00y7x4\\CheckFunctionExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_06ebf.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_06ebf.dir\\CheckFunctionExists.c.obj  /out:cmTC_06ebf.exe /implib:cmTC_06ebf.lib /pdb:cmTC_06ebf.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_06ebf.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_06ebf.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_06ebf.dir\\CheckFunctionExists.c.obj  /out:cmTC_06ebf.exe /implib:cmTC_06ebf.lib /pdb:cmTC_06ebf.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_06ebf.dir\\CheckFunctionExists.c.obj /out:cmTC_06ebf.exe /implib:cmTC_06ebf.lib /pdb:cmTC_06ebf.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_06ebf.dir/intermediate.manifest CMakeFiles\\cmTC_06ebf.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_00651
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_00651.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_00651.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-uzyxjf\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_00651.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_00651.dir\\CheckFunctionExists.c.obj  /out:cmTC_00651.exe /implib:cmTC_00651.lib /pdb:cmTC_00651.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_00651.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_00651.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_00651.dir\\CheckFunctionExists.c.obj  /out:cmTC_00651.exe /implib:cmTC_00651.lib /pdb:cmTC_00651.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_00651.dir\\CheckFunctionExists.c.obj /out:cmTC_00651.exe /implib:cmTC_00651.lib /pdb:cmTC_00651.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_00651.dir/intermediate.manifest CMakeFiles\\cmTC_00651.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthreads.lib'\x0d
         ninja: build stopped: subcommand failed.
         
@@ -286,8 +286,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-y6ot62"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-y6ot62"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-toh2zy"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-toh2zy"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -298,14 +298,14 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-y6ot62'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-toh2zy'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1b7b1
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_1b7b1.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_1b7b1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-y6ot62\\CheckFunctionExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_1b7b1.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1b7b1.dir\\CheckFunctionExists.c.obj  /out:cmTC_1b7b1.exe /implib:cmTC_1b7b1.lib /pdb:cmTC_1b7b1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_1b7b1.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_1b7b1.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1b7b1.dir\\CheckFunctionExists.c.obj  /out:cmTC_1b7b1.exe /implib:cmTC_1b7b1.lib /pdb:cmTC_1b7b1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1b7b1.dir\\CheckFunctionExists.c.obj /out:cmTC_1b7b1.exe /implib:cmTC_1b7b1.lib /pdb:cmTC_1b7b1.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_1b7b1.dir/intermediate.manifest CMakeFiles\\cmTC_1b7b1.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1e59f
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_1e59f.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_1e59f.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-toh2zy\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_1e59f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1e59f.dir\\CheckFunctionExists.c.obj  /out:cmTC_1e59f.exe /implib:cmTC_1e59f.lib /pdb:cmTC_1e59f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_1e59f.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_1e59f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1e59f.dir\\CheckFunctionExists.c.obj  /out:cmTC_1e59f.exe /implib:cmTC_1e59f.lib /pdb:cmTC_1e59f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1e59f.dir\\CheckFunctionExists.c.obj /out:cmTC_1e59f.exe /implib:cmTC_1e59f.lib /pdb:cmTC_1e59f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_1e59f.dir/intermediate.manifest CMakeFiles\\cmTC_1e59f.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthread.lib'\x0d
         ninja: build stopped: subcommand failed.
         
@@ -318,8 +318,8 @@ events:
     checks:
       - "Looking for include file inttypes.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4wl1ks"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4wl1ks"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4b0on1"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4b0on1"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/"
@@ -328,11 +328,11 @@ events:
       variable: "INCLUDE_INTTYPES_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4wl1ks'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4b0on1'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_faa94
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_faa94.dir\\INCLUDE_INTTYPES_H.c.obj /FdCMakeFiles\\cmTC_faa94.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-4wl1ks\\INCLUDE_INTTYPES_H.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_faa94.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_faa94.dir\\INCLUDE_INTTYPES_H.c.obj  /out:cmTC_faa94.exe /implib:cmTC_faa94.lib /pdb:cmTC_faa94.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_3280a
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_3280a.dir\\INCLUDE_INTTYPES_H.c.obj /FdCMakeFiles\\cmTC_3280a.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-4b0on1\\INCLUDE_INTTYPES_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_3280a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_3280a.dir\\INCLUDE_INTTYPES_H.c.obj  /out:cmTC_3280a.exe /implib:cmTC_3280a.lib /pdb:cmTC_3280a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -343,8 +343,8 @@ events:
     checks:
       - "Looking for include file stdint.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dmmyl5"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dmmyl5"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1fpitj"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1fpitj"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/"
@@ -353,11 +353,11 @@ events:
       variable: "INCLUDE_STDINT_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dmmyl5'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1fpitj'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f4027
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f4027.dir\\INCLUDE_STDINT_H.c.obj /FdCMakeFiles\\cmTC_f4027.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dmmyl5\\INCLUDE_STDINT_H.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_f4027.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f4027.dir\\INCLUDE_STDINT_H.c.obj  /out:cmTC_f4027.exe /implib:cmTC_f4027.lib /pdb:cmTC_f4027.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_c9957
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_c9957.dir\\INCLUDE_STDINT_H.c.obj /FdCMakeFiles\\cmTC_c9957.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1fpitj\\INCLUDE_STDINT_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_c9957.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c9957.dir\\INCLUDE_STDINT_H.c.obj  /out:cmTC_c9957.exe /implib:cmTC_c9957.lib /pdb:cmTC_c9957.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -368,8 +368,8 @@ events:
     checks:
       - "Looking for include file sys/types.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bzttqs"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bzttqs"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7ys07i"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7ys07i"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/"
@@ -378,11 +378,11 @@ events:
       variable: "INCLUDE_SYS_TYPES_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bzttqs'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7ys07i'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_20618
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_20618.dir\\INCLUDE_SYS_TYPES_H.c.obj /FdCMakeFiles\\cmTC_20618.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-bzttqs\\INCLUDE_SYS_TYPES_H.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_20618.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_20618.dir\\INCLUDE_SYS_TYPES_H.c.obj  /out:cmTC_20618.exe /implib:cmTC_20618.lib /pdb:cmTC_20618.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_68d56
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_68d56.dir\\INCLUDE_SYS_TYPES_H.c.obj /FdCMakeFiles\\cmTC_68d56.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-7ys07i\\INCLUDE_SYS_TYPES_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_68d56.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_68d56.dir\\INCLUDE_SYS_TYPES_H.c.obj  /out:cmTC_68d56.exe /implib:cmTC_68d56.lib /pdb:cmTC_68d56.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -395,8 +395,8 @@ events:
     checks:
       - "Looking for sys/types.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pkqjt6"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pkqjt6"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-yx2suv"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-yx2suv"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -407,11 +407,11 @@ events:
       variable: "HAVE_SYS_TYPES_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pkqjt6'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-yx2suv'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_765f6
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_765f6.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_765f6.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-pkqjt6\\CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_765f6.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_765f6.dir\\CheckIncludeFile.c.obj  /out:cmTC_765f6.exe /implib:cmTC_765f6.lib /pdb:cmTC_765f6.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_14959
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_14959.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_14959.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yx2suv\\CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_14959.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_14959.dir\\CheckIncludeFile.c.obj  /out:cmTC_14959.exe /implib:cmTC_14959.lib /pdb:cmTC_14959.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -424,8 +424,8 @@ events:
     checks:
       - "Looking for stdint.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3l0cpp"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3l0cpp"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hd8mx4"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hd8mx4"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -436,11 +436,11 @@ events:
       variable: "HAVE_STDINT_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3l0cpp'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hd8mx4'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_64364
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_64364.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_64364.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3l0cpp\\CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_64364.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_64364.dir\\CheckIncludeFile.c.obj  /out:cmTC_64364.exe /implib:cmTC_64364.lib /pdb:cmTC_64364.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4bc4e
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_4bc4e.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_4bc4e.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-hd8mx4\\CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4bc4e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4bc4e.dir\\CheckIncludeFile.c.obj  /out:cmTC_4bc4e.exe /implib:cmTC_4bc4e.lib /pdb:cmTC_4bc4e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -453,8 +453,8 @@ events:
     checks:
       - "Looking for stddef.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-b1i2hm"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-b1i2hm"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-muv8td"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-muv8td"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -465,11 +465,11 @@ events:
       variable: "HAVE_STDDEF_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-b1i2hm'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-muv8td'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f794e
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f794e.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_f794e.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-b1i2hm\\CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_f794e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f794e.dir\\CheckIncludeFile.c.obj  /out:cmTC_f794e.exe /implib:cmTC_f794e.lib /pdb:cmTC_f794e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_dcd96
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_dcd96.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_dcd96.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-muv8td\\CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_dcd96.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_dcd96.dir\\CheckIncludeFile.c.obj  /out:cmTC_dcd96.exe /implib:cmTC_dcd96.lib /pdb:cmTC_dcd96.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -482,8 +482,8 @@ events:
     checks:
       - "Check size of int16_t"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-jytbe6"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-jytbe6"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gii9pb"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gii9pb"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -492,11 +492,11 @@ events:
       variable: "HAVE_INT16_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-jytbe6'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gii9pb'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_32102
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_32102.dir\\INT16_SIZE.c.obj /FdCMakeFiles\\cmTC_32102.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-jytbe6\\INT16_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_32102.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_32102.dir\\INT16_SIZE.c.obj  /out:cmTC_32102.exe /implib:cmTC_32102.lib /pdb:cmTC_32102.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_c2270
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_c2270.dir\\INT16_SIZE.c.obj /FdCMakeFiles\\cmTC_c2270.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gii9pb\\INT16_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_c2270.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c2270.dir\\INT16_SIZE.c.obj  /out:cmTC_c2270.exe /implib:cmTC_c2270.lib /pdb:cmTC_c2270.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -509,8 +509,8 @@ events:
     checks:
       - "Check size of uint16_t"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-cmpxt0"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-cmpxt0"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1wcv52"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1wcv52"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -519,11 +519,11 @@ events:
       variable: "HAVE_UINT16_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-cmpxt0'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1wcv52'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_41423
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_41423.dir\\UINT16_SIZE.c.obj /FdCMakeFiles\\cmTC_41423.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-cmpxt0\\UINT16_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_41423.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_41423.dir\\UINT16_SIZE.c.obj  /out:cmTC_41423.exe /implib:cmTC_41423.lib /pdb:cmTC_41423.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_3d2d2
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_3d2d2.dir\\UINT16_SIZE.c.obj /FdCMakeFiles\\cmTC_3d2d2.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1wcv52\\UINT16_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_3d2d2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_3d2d2.dir\\UINT16_SIZE.c.obj  /out:cmTC_3d2d2.exe /implib:cmTC_3d2d2.lib /pdb:cmTC_3d2d2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -536,8 +536,8 @@ events:
     checks:
       - "Check size of u_int16_t"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1jhnl0"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1jhnl0"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j5umrw"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j5umrw"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -546,17 +546,17 @@ events:
       variable: "HAVE_U_INT16_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1jhnl0'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j5umrw'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_136fe
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_136fe.dir\\U_INT16_SIZE.c.obj /FdCMakeFiles\\cmTC_136fe.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1jhnl0\\U_INT16_SIZE.c
-        FAILED: CMakeFiles/cmTC_136fe.dir/U_INT16_SIZE.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_136fe.dir\\U_INT16_SIZE.c.obj /FdCMakeFiles\\cmTC_136fe.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1jhnl0\\U_INT16_SIZE.c
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1jhnl0\\U_INT16_SIZE.c(29): error C2065: 'u_int16_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1jhnl0\\U_INT16_SIZE.c(30): error C2065: 'u_int16_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1jhnl0\\U_INT16_SIZE.c(31): error C2065: 'u_int16_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1jhnl0\\U_INT16_SIZE.c(32): error C2065: 'u_int16_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1jhnl0\\U_INT16_SIZE.c(33): error C2065: 'u_int16_t': undeclared identifier
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_5d4a4
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_5d4a4.dir\\U_INT16_SIZE.c.obj /FdCMakeFiles\\cmTC_5d4a4.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j5umrw\\U_INT16_SIZE.c
+        FAILED: CMakeFiles/cmTC_5d4a4.dir/U_INT16_SIZE.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_5d4a4.dir\\U_INT16_SIZE.c.obj /FdCMakeFiles\\cmTC_5d4a4.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j5umrw\\U_INT16_SIZE.c
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j5umrw\\U_INT16_SIZE.c(29): error C2065: 'u_int16_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j5umrw\\U_INT16_SIZE.c(30): error C2065: 'u_int16_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j5umrw\\U_INT16_SIZE.c(31): error C2065: 'u_int16_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j5umrw\\U_INT16_SIZE.c(32): error C2065: 'u_int16_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j5umrw\\U_INT16_SIZE.c(33): error C2065: 'u_int16_t': undeclared identifier
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -570,8 +570,8 @@ events:
     checks:
       - "Check size of int32_t"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hvx6ue"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hvx6ue"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4huihw"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4huihw"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -580,11 +580,11 @@ events:
       variable: "HAVE_INT32_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hvx6ue'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4huihw'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7e3b1
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_7e3b1.dir\\INT32_SIZE.c.obj /FdCMakeFiles\\cmTC_7e3b1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-hvx6ue\\INT32_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_7e3b1.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7e3b1.dir\\INT32_SIZE.c.obj  /out:cmTC_7e3b1.exe /implib:cmTC_7e3b1.lib /pdb:cmTC_7e3b1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_3ef77
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_3ef77.dir\\INT32_SIZE.c.obj /FdCMakeFiles\\cmTC_3ef77.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-4huihw\\INT32_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_3ef77.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_3ef77.dir\\INT32_SIZE.c.obj  /out:cmTC_3ef77.exe /implib:cmTC_3ef77.lib /pdb:cmTC_3ef77.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -597,8 +597,8 @@ events:
     checks:
       - "Check size of uint32_t"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bwb9j9"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bwb9j9"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-izmqz5"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-izmqz5"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -607,11 +607,11 @@ events:
       variable: "HAVE_UINT32_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bwb9j9'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-izmqz5'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_74a47
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_74a47.dir\\UINT32_SIZE.c.obj /FdCMakeFiles\\cmTC_74a47.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-bwb9j9\\UINT32_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_74a47.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_74a47.dir\\UINT32_SIZE.c.obj  /out:cmTC_74a47.exe /implib:cmTC_74a47.lib /pdb:cmTC_74a47.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_87b1b
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_87b1b.dir\\UINT32_SIZE.c.obj /FdCMakeFiles\\cmTC_87b1b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-izmqz5\\UINT32_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_87b1b.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_87b1b.dir\\UINT32_SIZE.c.obj  /out:cmTC_87b1b.exe /implib:cmTC_87b1b.lib /pdb:cmTC_87b1b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -624,8 +624,8 @@ events:
     checks:
       - "Check size of u_int32_t"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-2ozxtk"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-2ozxtk"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-v12x0w"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-v12x0w"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -634,17 +634,17 @@ events:
       variable: "HAVE_U_INT32_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-2ozxtk'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-v12x0w'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_c3273
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_c3273.dir\\U_INT32_SIZE.c.obj /FdCMakeFiles\\cmTC_c3273.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2ozxtk\\U_INT32_SIZE.c
-        FAILED: CMakeFiles/cmTC_c3273.dir/U_INT32_SIZE.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_c3273.dir\\U_INT32_SIZE.c.obj /FdCMakeFiles\\cmTC_c3273.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2ozxtk\\U_INT32_SIZE.c
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2ozxtk\\U_INT32_SIZE.c(29): error C2065: 'u_int32_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2ozxtk\\U_INT32_SIZE.c(30): error C2065: 'u_int32_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2ozxtk\\U_INT32_SIZE.c(31): error C2065: 'u_int32_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2ozxtk\\U_INT32_SIZE.c(32): error C2065: 'u_int32_t': undeclared identifier
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2ozxtk\\U_INT32_SIZE.c(33): error C2065: 'u_int32_t': undeclared identifier
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_65bac
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_65bac.dir\\U_INT32_SIZE.c.obj /FdCMakeFiles\\cmTC_65bac.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-v12x0w\\U_INT32_SIZE.c
+        FAILED: CMakeFiles/cmTC_65bac.dir/U_INT32_SIZE.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_65bac.dir\\U_INT32_SIZE.c.obj /FdCMakeFiles\\cmTC_65bac.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-v12x0w\\U_INT32_SIZE.c
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-v12x0w\\U_INT32_SIZE.c(29): error C2065: 'u_int32_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-v12x0w\\U_INT32_SIZE.c(30): error C2065: 'u_int32_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-v12x0w\\U_INT32_SIZE.c(31): error C2065: 'u_int32_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-v12x0w\\U_INT32_SIZE.c(32): error C2065: 'u_int32_t': undeclared identifier
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-v12x0w\\U_INT32_SIZE.c(33): error C2065: 'u_int32_t': undeclared identifier
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -658,8 +658,8 @@ events:
     checks:
       - "Check size of int64_t"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7g0gpn"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7g0gpn"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dcooft"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dcooft"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -668,11 +668,11 @@ events:
       variable: "HAVE_INT64_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7g0gpn'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dcooft'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a8d53
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_a8d53.dir\\INT64_SIZE.c.obj /FdCMakeFiles\\cmTC_a8d53.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-7g0gpn\\INT64_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_a8d53.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a8d53.dir\\INT64_SIZE.c.obj  /out:cmTC_a8d53.exe /implib:cmTC_a8d53.lib /pdb:cmTC_a8d53.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_454c6
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_454c6.dir\\INT64_SIZE.c.obj /FdCMakeFiles\\cmTC_454c6.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dcooft\\INT64_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_454c6.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_454c6.dir\\INT64_SIZE.c.obj  /out:cmTC_454c6.exe /implib:cmTC_454c6.lib /pdb:cmTC_454c6.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -685,8 +685,8 @@ events:
     checks:
       - "Check size of short"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dp6nty"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dp6nty"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gwkup0"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gwkup0"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -695,11 +695,11 @@ events:
       variable: "HAVE_SHORT_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dp6nty'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gwkup0'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b9277
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_b9277.dir\\SHORT_SIZE.c.obj /FdCMakeFiles\\cmTC_b9277.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dp6nty\\SHORT_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_b9277.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b9277.dir\\SHORT_SIZE.c.obj  /out:cmTC_b9277.exe /implib:cmTC_b9277.lib /pdb:cmTC_b9277.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_d31b7
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_d31b7.dir\\SHORT_SIZE.c.obj /FdCMakeFiles\\cmTC_d31b7.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gwkup0\\SHORT_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_d31b7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_d31b7.dir\\SHORT_SIZE.c.obj  /out:cmTC_d31b7.exe /implib:cmTC_d31b7.lib /pdb:cmTC_d31b7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -712,8 +712,8 @@ events:
     checks:
       - "Check size of int"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-z0zvlx"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-z0zvlx"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1ssao3"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1ssao3"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -722,11 +722,11 @@ events:
       variable: "HAVE_INT_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-z0zvlx'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-1ssao3'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4bea7
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_4bea7.dir\\INT_SIZE.c.obj /FdCMakeFiles\\cmTC_4bea7.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-z0zvlx\\INT_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4bea7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4bea7.dir\\INT_SIZE.c.obj  /out:cmTC_4bea7.exe /implib:cmTC_4bea7.lib /pdb:cmTC_4bea7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2bc5b
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_2bc5b.dir\\INT_SIZE.c.obj /FdCMakeFiles\\cmTC_2bc5b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-1ssao3\\INT_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_2bc5b.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_2bc5b.dir\\INT_SIZE.c.obj  /out:cmTC_2bc5b.exe /implib:cmTC_2bc5b.lib /pdb:cmTC_2bc5b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -739,8 +739,8 @@ events:
     checks:
       - "Check size of long"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3m5egr"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3m5egr"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u43jxe"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u43jxe"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -749,11 +749,11 @@ events:
       variable: "HAVE_LONG_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3m5egr'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u43jxe'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6157f
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6157f.dir\\LONG_SIZE.c.obj /FdCMakeFiles\\cmTC_6157f.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3m5egr\\LONG_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6157f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6157f.dir\\LONG_SIZE.c.obj  /out:cmTC_6157f.exe /implib:cmTC_6157f.lib /pdb:cmTC_6157f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6f4bf
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6f4bf.dir\\LONG_SIZE.c.obj /FdCMakeFiles\\cmTC_6f4bf.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-u43jxe\\LONG_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6f4bf.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6f4bf.dir\\LONG_SIZE.c.obj  /out:cmTC_6f4bf.exe /implib:cmTC_6f4bf.lib /pdb:cmTC_6f4bf.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -766,8 +766,8 @@ events:
     checks:
       - "Check size of long long"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3ycu6h"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3ycu6h"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bl2gtw"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bl2gtw"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_MODULE_PATH: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/sfml-src/cmake/Modules/;C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/ogg-src/cmake"
@@ -776,11 +776,11 @@ events:
       variable: "HAVE_LONG_LONG_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-3ycu6h'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bl2gtw'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_8b945
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_8b945.dir\\LONG_LONG_SIZE.c.obj /FdCMakeFiles\\cmTC_8b945.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3ycu6h\\LONG_LONG_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_8b945.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8b945.dir\\LONG_LONG_SIZE.c.obj  /out:cmTC_8b945.exe /implib:cmTC_8b945.lib /pdb:cmTC_8b945.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_ac4e1
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_ac4e1.dir\\LONG_LONG_SIZE.c.obj /FdCMakeFiles\\cmTC_ac4e1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-bl2gtw\\LONG_LONG_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_ac4e1.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ac4e1.dir\\LONG_LONG_SIZE.c.obj  /out:cmTC_ac4e1.exe /implib:cmTC_ac4e1.lib /pdb:cmTC_ac4e1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -793,8 +793,8 @@ events:
     checks:
       - "Performing Test HAVE_MBSTATE"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-97nyui"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-97nyui"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pzhm7j"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pzhm7j"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -805,11 +805,11 @@ events:
       variable: "HAVE_MBSTATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-97nyui'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pzhm7j'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_63db9
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_MBSTATE  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_63db9.dir\\src.c.obj /FdCMakeFiles\\cmTC_63db9.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-97nyui\\src.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_63db9.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_63db9.dir\\src.c.obj  /out:cmTC_63db9.exe /implib:cmTC_63db9.lib /pdb:cmTC_63db9.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_9e2a1
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_MBSTATE  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_9e2a1.dir\\src.c.obj /FdCMakeFiles\\cmTC_9e2a1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-pzhm7j\\src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_9e2a1.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_9e2a1.dir\\src.c.obj  /out:cmTC_9e2a1.exe /implib:cmTC_9e2a1.lib /pdb:cmTC_9e2a1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -822,8 +822,8 @@ events:
     checks:
       - "Performing Test DODEFINE_EXTENSIONS"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-nllcpg"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-nllcpg"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-l4q19x"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-l4q19x"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -834,11 +834,11 @@ events:
       variable: "DODEFINE_EXTENSIONS"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-nllcpg'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-l4q19x'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a0893
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DDODEFINE_EXTENSIONS  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_a0893.dir\\src.c.obj /FdCMakeFiles\\cmTC_a0893.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-nllcpg\\src.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_a0893.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a0893.dir\\src.c.obj  /out:cmTC_a0893.exe /implib:cmTC_a0893.lib /pdb:cmTC_a0893.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6917a
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DDODEFINE_EXTENSIONS  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6917a.dir\\src.c.obj /FdCMakeFiles\\cmTC_6917a.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-l4q19x\\src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6917a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6917a.dir\\src.c.obj  /out:cmTC_6917a.exe /implib:cmTC_6917a.lib /pdb:cmTC_6917a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -849,8 +849,8 @@ events:
     checks:
       - "Looking for byteswap.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ljrctl"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ljrctl"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-vi3cpb"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-vi3cpb"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -861,13 +861,13 @@ events:
       variable: "HAVE_BYTESWAP_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ljrctl'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-vi3cpb'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0253b
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_0253b.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_0253b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ljrctl\\CheckIncludeFile.c
-        FAILED: CMakeFiles/cmTC_0253b.dir/CheckIncludeFile.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_0253b.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_0253b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ljrctl\\CheckIncludeFile.c
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ljrctl\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'byteswap.h': No such file or directory
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f1195
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f1195.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_f1195.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-vi3cpb\\CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_f1195.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f1195.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_f1195.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-vi3cpb\\CheckIncludeFile.c
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-vi3cpb\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'byteswap.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -879,8 +879,8 @@ events:
     checks:
       - "Looking for inttypes.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-qxbbq0"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-qxbbq0"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-uyx0nj"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-uyx0nj"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -891,11 +891,11 @@ events:
       variable: "HAVE_INTTYPES_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-qxbbq0'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-uyx0nj'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_81855
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_81855.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_81855.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-qxbbq0\\CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_81855.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_81855.dir\\CheckIncludeFile.c.obj  /out:cmTC_81855.exe /implib:cmTC_81855.lib /pdb:cmTC_81855.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_85528
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_85528.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_85528.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-uyx0nj\\CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_85528.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_85528.dir\\CheckIncludeFile.c.obj  /out:cmTC_85528.exe /implib:cmTC_85528.lib /pdb:cmTC_85528.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -906,8 +906,8 @@ events:
     checks:
       - "Looking for stdbool.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ogp079"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ogp079"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5jminr"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5jminr"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -918,11 +918,11 @@ events:
       variable: "HAVE_STDBOOL_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ogp079'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5jminr'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4da56
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_4da56.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_4da56.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ogp079\\CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4da56.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4da56.dir\\CheckIncludeFile.c.obj  /out:cmTC_4da56.exe /implib:cmTC_4da56.lib /pdb:cmTC_4da56.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_e8b92
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_e8b92.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_e8b92.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-5jminr\\CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_e8b92.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e8b92.dir\\CheckIncludeFile.c.obj  /out:cmTC_e8b92.exe /implib:cmTC_e8b92.lib /pdb:cmTC_e8b92.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -933,8 +933,8 @@ events:
     checks:
       - "Looking for arm_neon.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-i7phqw"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-i7phqw"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-b24x4s"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-b24x4s"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -945,12 +945,12 @@ events:
       variable: "FLAC__HAS_NEONINTRIN"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-i7phqw'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-b24x4s'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2e49d
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_2e49d.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_2e49d.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-i7phqw\\CheckIncludeFile.c
-        FAILED: CMakeFiles/cmTC_2e49d.dir/CheckIncludeFile.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_2e49d.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_2e49d.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-i7phqw\\CheckIncludeFile.c
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_41541
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_41541.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_41541.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-b24x4s\\CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_41541.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_41541.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_41541.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-b24x4s\\CheckIncludeFile.c
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\arm_neon.h(21): fatal error C1189: #error:  This header is specific to ARM targets
         ninja: build stopped: subcommand failed.
         
@@ -963,8 +963,8 @@ events:
     checks:
       - "Looking for intrin.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-whra8v"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-whra8v"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-mygps2"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-mygps2"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -975,11 +975,11 @@ events:
       variable: "FLAC__HAS_X86INTRIN"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-whra8v'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-mygps2'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_970c1
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_970c1.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_970c1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-whra8v\\CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_970c1.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_970c1.dir\\CheckIncludeFile.c.obj  /out:cmTC_970c1.exe /implib:cmTC_970c1.lib /pdb:cmTC_970c1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_14e00
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_14e00.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_14e00.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-mygps2\\CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_14e00.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_14e00.dir\\CheckIncludeFile.c.obj  /out:cmTC_14e00.exe /implib:cmTC_14e00.lib /pdb:cmTC_14e00.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -990,8 +990,8 @@ events:
     checks:
       - "Looking for fseeko"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-6mnlj9"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-6mnlj9"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pbzm61"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pbzm61"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -1001,16 +1001,16 @@ events:
       variable: "HAVE_FSEEKO"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-6mnlj9'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-pbzm61'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_48694
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=fseeko /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_48694.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_48694.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-6mnlj9\\CheckFunctionExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_48694.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_48694.dir\\CheckFunctionExists.c.obj  /out:cmTC_48694.exe /implib:cmTC_48694.lib /pdb:cmTC_48694.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_48694.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_48694.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_48694.dir\\CheckFunctionExists.c.obj  /out:cmTC_48694.exe /implib:cmTC_48694.lib /pdb:cmTC_48694.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_48694.dir\\CheckFunctionExists.c.obj /out:cmTC_48694.exe /implib:cmTC_48694.lib /pdb:cmTC_48694.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_48694.dir/intermediate.manifest CMakeFiles\\cmTC_48694.dir/manifest.res" failed (exit code 1120) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_067c7
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=fseeko /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_067c7.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_067c7.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-pbzm61\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_067c7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_067c7.dir\\CheckFunctionExists.c.obj  /out:cmTC_067c7.exe /implib:cmTC_067c7.lib /pdb:cmTC_067c7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_067c7.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_067c7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_067c7.dir\\CheckFunctionExists.c.obj  /out:cmTC_067c7.exe /implib:cmTC_067c7.lib /pdb:cmTC_067c7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_067c7.dir\\CheckFunctionExists.c.obj /out:cmTC_067c7.exe /implib:cmTC_067c7.lib /pdb:cmTC_067c7.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_067c7.dir/intermediate.manifest CMakeFiles\\cmTC_067c7.dir/manifest.res" failed (exit code 1120) with the following output:
         CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol fseeko referenced in function main\x0d
-        cmTC_48694.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        cmTC_067c7.exe : fatal error LNK1120: 1 unresolved externals\x0d
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -1023,8 +1023,8 @@ events:
     checks:
       - "Performing Test HAVE_BSWAP16"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-c47xl5"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-c47xl5"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-cqkzu5"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-cqkzu5"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1035,16 +1035,16 @@ events:
       variable: "HAVE_BSWAP16"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-c47xl5'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-cqkzu5'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1e2eb
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_BSWAP16  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_1e2eb.dir\\src.c.obj /FdCMakeFiles\\cmTC_1e2eb.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-c47xl5\\src.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_1e2eb.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1e2eb.dir\\src.c.obj  /out:cmTC_1e2eb.exe /implib:cmTC_1e2eb.lib /pdb:cmTC_1e2eb.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_1e2eb.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_1e2eb.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1e2eb.dir\\src.c.obj  /out:cmTC_1e2eb.exe /implib:cmTC_1e2eb.lib /pdb:cmTC_1e2eb.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1e2eb.dir\\src.c.obj /out:cmTC_1e2eb.exe /implib:cmTC_1e2eb.lib /pdb:cmTC_1e2eb.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_1e2eb.dir/intermediate.manifest CMakeFiles\\cmTC_1e2eb.dir/manifest.res" failed (exit code 1120) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f21fe
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_BSWAP16  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f21fe.dir\\src.c.obj /FdCMakeFiles\\cmTC_f21fe.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-cqkzu5\\src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_f21fe.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f21fe.dir\\src.c.obj  /out:cmTC_f21fe.exe /implib:cmTC_f21fe.lib /pdb:cmTC_f21fe.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_f21fe.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_f21fe.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f21fe.dir\\src.c.obj  /out:cmTC_f21fe.exe /implib:cmTC_f21fe.lib /pdb:cmTC_f21fe.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f21fe.dir\\src.c.obj /out:cmTC_f21fe.exe /implib:cmTC_f21fe.lib /pdb:cmTC_f21fe.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_f21fe.dir/intermediate.manifest CMakeFiles\\cmTC_f21fe.dir/manifest.res" failed (exit code 1120) with the following output:
         src.c.obj : error LNK2019: unresolved external symbol __builtin_bswap16 referenced in function main\x0d
-        cmTC_1e2eb.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        cmTC_f21fe.exe : fatal error LNK1120: 1 unresolved externals\x0d
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -1057,8 +1057,8 @@ events:
     checks:
       - "Performing Test HAVE_BSWAP32"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-lmi7u7"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-lmi7u7"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ztnklt"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ztnklt"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1069,16 +1069,16 @@ events:
       variable: "HAVE_BSWAP32"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-lmi7u7'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ztnklt'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7d945
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_BSWAP32  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_7d945.dir\\src.c.obj /FdCMakeFiles\\cmTC_7d945.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-lmi7u7\\src.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_7d945.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7d945.dir\\src.c.obj  /out:cmTC_7d945.exe /implib:cmTC_7d945.lib /pdb:cmTC_7d945.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_7d945.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_7d945.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7d945.dir\\src.c.obj  /out:cmTC_7d945.exe /implib:cmTC_7d945.lib /pdb:cmTC_7d945.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7d945.dir\\src.c.obj /out:cmTC_7d945.exe /implib:cmTC_7d945.lib /pdb:cmTC_7d945.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_7d945.dir/intermediate.manifest CMakeFiles\\cmTC_7d945.dir/manifest.res" failed (exit code 1120) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_fc63f
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_BSWAP32  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_fc63f.dir\\src.c.obj /FdCMakeFiles\\cmTC_fc63f.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ztnklt\\src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_fc63f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fc63f.dir\\src.c.obj  /out:cmTC_fc63f.exe /implib:cmTC_fc63f.lib /pdb:cmTC_fc63f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_fc63f.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_fc63f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fc63f.dir\\src.c.obj  /out:cmTC_fc63f.exe /implib:cmTC_fc63f.lib /pdb:cmTC_fc63f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fc63f.dir\\src.c.obj /out:cmTC_fc63f.exe /implib:cmTC_fc63f.lib /pdb:cmTC_fc63f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_fc63f.dir/intermediate.manifest CMakeFiles\\cmTC_fc63f.dir/manifest.res" failed (exit code 1120) with the following output:
         src.c.obj : error LNK2019: unresolved external symbol __builtin_bswap32 referenced in function main\x0d
-        cmTC_7d945.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        cmTC_fc63f.exe : fatal error LNK1120: 1 unresolved externals\x0d
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -1091,8 +1091,8 @@ events:
     checks:
       - "Performing Test HAVE_LANGINFO_CODESET"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ynyykj"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ynyykj"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-p5ot2b"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-p5ot2b"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1103,13 +1103,13 @@ events:
       variable: "HAVE_LANGINFO_CODESET"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ynyykj'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-p5ot2b'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1458f
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LANGINFO_CODESET  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_1458f.dir\\src.c.obj /FdCMakeFiles\\cmTC_1458f.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ynyykj\\src.c
-        FAILED: CMakeFiles/cmTC_1458f.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LANGINFO_CODESET  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_1458f.dir\\src.c.obj /FdCMakeFiles\\cmTC_1458f.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ynyykj\\src.c
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ynyykj\\src.c(2): fatal error C1083: Cannot open include file: 'langinfo.h': No such file or directory
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_32cdb
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LANGINFO_CODESET  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_32cdb.dir\\src.c.obj /FdCMakeFiles\\cmTC_32cdb.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-p5ot2b\\src.c
+        FAILED: CMakeFiles/cmTC_32cdb.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LANGINFO_CODESET  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_32cdb.dir\\src.c.obj /FdCMakeFiles\\cmTC_32cdb.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-p5ot2b\\src.c
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-p5ot2b\\src.c(2): fatal error C1083: Cannot open include file: 'langinfo.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -1123,8 +1123,8 @@ events:
     checks:
       - "Performing Test HAVE_WERROR_FLAG"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dq18xf"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dq18xf"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-65pqkr"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-65pqkr"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1135,12 +1135,12 @@ events:
       variable: "HAVE_WERROR_FLAG"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-dq18xf'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-65pqkr'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2b1e2
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_WERROR_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Werror /showIncludes /FoCMakeFiles\\cmTC_2b1e2.dir\\src.c.obj /FdCMakeFiles\\cmTC_2b1e2.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dq18xf\\src.c
-        FAILED: CMakeFiles/cmTC_2b1e2.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_WERROR_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Werror /showIncludes /FoCMakeFiles\\cmTC_2b1e2.dir\\src.c.obj /FdCMakeFiles\\cmTC_2b1e2.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dq18xf\\src.c
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_3bf8a
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_WERROR_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Werror /showIncludes /FoCMakeFiles\\cmTC_3bf8a.dir\\src.c.obj /FdCMakeFiles\\cmTC_3bf8a.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-65pqkr\\src.c
+        FAILED: CMakeFiles/cmTC_3bf8a.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_WERROR_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Werror /showIncludes /FoCMakeFiles\\cmTC_3bf8a.dir\\src.c.obj /FdCMakeFiles\\cmTC_3bf8a.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-65pqkr\\src.c
         cl : Command line error D8021 : invalid numeric argument '/Werror'
         ninja: build stopped: subcommand failed.
         
@@ -1155,8 +1155,8 @@ events:
     checks:
       - "Performing Test HAVE_DECL_AFTER_STMT_FLAG"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-kxn6vu"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-kxn6vu"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u6u0w0"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u6u0w0"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1167,12 +1167,12 @@ events:
       variable: "HAVE_DECL_AFTER_STMT_FLAG"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-kxn6vu'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u6u0w0'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_91c51
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_DECL_AFTER_STMT_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Wdeclaration-after-statement /showIncludes /FoCMakeFiles\\cmTC_91c51.dir\\src.c.obj /FdCMakeFiles\\cmTC_91c51.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-kxn6vu\\src.c
-        FAILED: CMakeFiles/cmTC_91c51.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_DECL_AFTER_STMT_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Wdeclaration-after-statement /showIncludes /FoCMakeFiles\\cmTC_91c51.dir\\src.c.obj /FdCMakeFiles\\cmTC_91c51.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-kxn6vu\\src.c
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_96ac1
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_DECL_AFTER_STMT_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Wdeclaration-after-statement /showIncludes /FoCMakeFiles\\cmTC_96ac1.dir\\src.c.obj /FdCMakeFiles\\cmTC_96ac1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-u6u0w0\\src.c
+        FAILED: CMakeFiles/cmTC_96ac1.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_DECL_AFTER_STMT_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -Wdeclaration-after-statement /showIncludes /FoCMakeFiles\\cmTC_96ac1.dir\\src.c.obj /FdCMakeFiles\\cmTC_96ac1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-u6u0w0\\src.c
         cl : Command line error D8021 : invalid numeric argument '/Wdeclaration-after-statement'
         ninja: build stopped: subcommand failed.
         
@@ -1187,8 +1187,8 @@ events:
     checks:
       - "Performing Test HAVE_STACKREALIGN_FLAG"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gz9tfn"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gz9tfn"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bwc1u7"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bwc1u7"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1199,12 +1199,12 @@ events:
       variable: "HAVE_STACKREALIGN_FLAG"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gz9tfn'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bwc1u7'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_74ea1
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_STACKREALIGN_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -mstackrealign /showIncludes /FoCMakeFiles\\cmTC_74ea1.dir\\src.c.obj /FdCMakeFiles\\cmTC_74ea1.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gz9tfn\\src.c
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b4d0f
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_STACKREALIGN_FLAG  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -mstackrealign /showIncludes /FoCMakeFiles\\cmTC_b4d0f.dir\\src.c.obj /FdCMakeFiles\\cmTC_b4d0f.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-bwc1u7\\src.c
         cl : Command line warning D9002 : ignoring unknown option '-mstackrealign'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_74ea1.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_74ea1.dir\\src.c.obj  /out:cmTC_74ea1.exe /implib:cmTC_74ea1.lib /pdb:cmTC_74ea1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_b4d0f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b4d0f.dir\\src.c.obj  /out:cmTC_b4d0f.exe /implib:cmTC_b4d0f.lib /pdb:cmTC_b4d0f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -1217,8 +1217,8 @@ events:
     checks:
       - "Performing Test HAVE_WEFFCXX_FLAG"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-8ti79q"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-8ti79q"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0c104g"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0c104g"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1229,12 +1229,12 @@ events:
       variable: "HAVE_WEFFCXX_FLAG"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-8ti79q'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0c104g'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_fd97d
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DHAVE_WEFFCXX_FLAG  /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd   -Weffc++ /showIncludes /FoCMakeFiles\\cmTC_fd97d.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_fd97d.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-8ti79q\\src.cxx
-        FAILED: CMakeFiles/cmTC_fd97d.dir/src.cxx.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DHAVE_WEFFCXX_FLAG  /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd   -Weffc++ /showIncludes /FoCMakeFiles\\cmTC_fd97d.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_fd97d.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-8ti79q\\src.cxx
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_eb1ba
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DHAVE_WEFFCXX_FLAG  /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd   -Weffc++ /showIncludes /FoCMakeFiles\\cmTC_eb1ba.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_eb1ba.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-0c104g\\src.cxx
+        FAILED: CMakeFiles/cmTC_eb1ba.dir/src.cxx.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DHAVE_WEFFCXX_FLAG  /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd   -Weffc++ /showIncludes /FoCMakeFiles\\cmTC_eb1ba.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_eb1ba.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-0c104g\\src.cxx
         cl : Command line error D8021 : invalid numeric argument '/Weffc++'
         ninja: build stopped: subcommand failed.
         
@@ -1247,8 +1247,8 @@ events:
     checks:
       - "Looking for cpuid.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-zu4rcj"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-zu4rcj"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-9ov928"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-9ov928"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1259,13 +1259,13 @@ events:
       variable: "HAVE_CPUID_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-zu4rcj'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-9ov928'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_fa46a
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_fa46a.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_fa46a.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-zu4rcj\\CheckIncludeFile.c
-        FAILED: CMakeFiles/cmTC_fa46a.dir/CheckIncludeFile.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_fa46a.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_fa46a.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-zu4rcj\\CheckIncludeFile.c
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-zu4rcj\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'cpuid.h': No such file or directory
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_03014
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_03014.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_03014.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-9ov928\\CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_03014.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_03014.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_03014.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-9ov928\\CheckIncludeFile.c
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-9ov928\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'cpuid.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -1277,8 +1277,8 @@ events:
     checks:
       - "Looking for sys/param.h"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5atpxv"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5atpxv"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-k5ih38"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-k5ih38"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1289,13 +1289,13 @@ events:
       variable: "HAVE_SYS_PARAM_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-5atpxv'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-k5ih38'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2a808
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_2a808.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_2a808.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-5atpxv\\CheckIncludeFile.c
-        FAILED: CMakeFiles/cmTC_2a808.dir/CheckIncludeFile.c.obj 
-        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_2a808.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_2a808.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-5atpxv\\CheckIncludeFile.c
-        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-5atpxv\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'sys/param.h': No such file or directory
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_e3441
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_e3441.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_e3441.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-k5ih38\\CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_e3441.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_e3441.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_e3441.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-k5ih38\\CheckIncludeFile.c
+        C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-k5ih38\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'sys/param.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -1307,8 +1307,8 @@ events:
     checks:
       - "Looking for lround"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-xvrbdk"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-xvrbdk"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j7woc0"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j7woc0"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -1318,14 +1318,14 @@ events:
       variable: "HAVE_LROUND"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-xvrbdk'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j7woc0'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7c06d
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=lround /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_7c06d.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_7c06d.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-xvrbdk\\CheckFunctionExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_7c06d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7c06d.dir\\CheckFunctionExists.c.obj  /out:cmTC_7c06d.exe /implib:cmTC_7c06d.lib /pdb:cmTC_7c06d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_7c06d.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_7c06d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7c06d.dir\\CheckFunctionExists.c.obj  /out:cmTC_7c06d.exe /implib:cmTC_7c06d.lib /pdb:cmTC_7c06d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7c06d.dir\\CheckFunctionExists.c.obj /out:cmTC_7c06d.exe /implib:cmTC_7c06d.lib /pdb:cmTC_7c06d.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console m.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_7c06d.dir/intermediate.manifest CMakeFiles\\cmTC_7c06d.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_832b7
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=lround /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_832b7.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_832b7.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j7woc0\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_832b7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_832b7.dir\\CheckFunctionExists.c.obj  /out:cmTC_832b7.exe /implib:cmTC_832b7.lib /pdb:cmTC_832b7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_832b7.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_832b7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_832b7.dir\\CheckFunctionExists.c.obj  /out:cmTC_832b7.exe /implib:cmTC_832b7.lib /pdb:cmTC_832b7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_832b7.dir\\CheckFunctionExists.c.obj /out:cmTC_832b7.exe /implib:cmTC_832b7.lib /pdb:cmTC_832b7.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console m.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_832b7.dir/intermediate.manifest CMakeFiles\\cmTC_832b7.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'm.lib'\x0d
         ninja: build stopped: subcommand failed.
         
@@ -1351,9 +1351,9 @@ events:
       stdout: |
         Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/_deps/flac-build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6b38b
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6b38b.dir\\CheckCPUArch.c.obj /FdCMakeFiles\\cmTC_6b38b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\_deps\\flac-build\\CMakeFiles\\CMakeTmp\\CheckCPUArch.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6b38b.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6b38b.dir\\CheckCPUArch.c.obj  /out:cmTC_6b38b.exe /implib:cmTC_6b38b.lib /pdb:cmTC_6b38b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4fc8c
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_4fc8c.dir\\CheckCPUArch.c.obj /FdCMakeFiles\\cmTC_4fc8c.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\_deps\\flac-build\\CMakeFiles\\CMakeTmp\\CheckCPUArch.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4fc8c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4fc8c.dir\\CheckCPUArch.c.obj  /out:cmTC_4fc8c.exe /implib:cmTC_4fc8c.lib /pdb:cmTC_4fc8c.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -1366,8 +1366,8 @@ events:
     checks:
       - "Performing Test HAVE_ASSOC_MATH"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ml8nvl"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ml8nvl"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gmj1x0"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gmj1x0"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1378,18 +1378,18 @@ events:
       variable: "HAVE_ASSOC_MATH"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ml8nvl'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gmj1x0'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0d8dd
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_ASSOC_MATH  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math /showIncludes /FoCMakeFiles\\cmTC_0d8dd.dir\\src.c.obj /FdCMakeFiles\\cmTC_0d8dd.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ml8nvl\\src.c
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6e51b
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_ASSOC_MATH  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd   -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math /showIncludes /FoCMakeFiles\\cmTC_6e51b.dir\\src.c.obj /FdCMakeFiles\\cmTC_6e51b.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gmj1x0\\src.c
         cl : Command line warning D9002 : ignoring unknown option '-fassociative-math'
         cl : Command line warning D9002 : ignoring unknown option '-fno-signed-zeros'
         cl : Command line warning D9002 : ignoring unknown option '-fno-trapping-math'
         cl : Command line warning D9002 : ignoring unknown option '-freciprocal-math'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_0d8dd.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0d8dd.dir\\src.c.obj  /out:cmTC_0d8dd.exe /implib:cmTC_0d8dd.lib /pdb:cmTC_0d8dd.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_0d8dd.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_0d8dd.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0d8dd.dir\\src.c.obj  /out:cmTC_0d8dd.exe /implib:cmTC_0d8dd.lib /pdb:cmTC_0d8dd.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0d8dd.dir\\src.c.obj /out:cmTC_0d8dd.exe /implib:cmTC_0d8dd.lib /pdb:cmTC_0d8dd.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console m.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_0d8dd.dir/intermediate.manifest CMakeFiles\\cmTC_0d8dd.dir/manifest.res" failed (exit code 1104) with the following output:
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6e51b.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6e51b.dir\\src.c.obj  /out:cmTC_6e51b.exe /implib:cmTC_6e51b.lib /pdb:cmTC_6e51b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_6e51b.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6e51b.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6e51b.dir\\src.c.obj  /out:cmTC_6e51b.exe /implib:cmTC_6e51b.lib /pdb:cmTC_6e51b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6e51b.dir\\src.c.obj /out:cmTC_6e51b.exe /implib:cmTC_6e51b.lib /pdb:cmTC_6e51b.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console m.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_6e51b.dir/intermediate.manifest CMakeFiles\\cmTC_6e51b.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'm.lib'\x0d
         ninja: build stopped: subcommand failed.
         
@@ -1402,8 +1402,8 @@ events:
     checks:
       - "Looking for floor in m"
     directories:
-      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j1gs31"
-      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j1gs31"
+      source: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n03vkz"
+      binary: "C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n03vkz"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1414,14 +1414,14 @@ events:
       variable: "HAVE_LIBM"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-j1gs31'
+        Change Dir: 'C:/Users/elfsh/Documents/Pong-Game/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n03vkz'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6e261
-        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=floor /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6e261.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_6e261.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-j1gs31\\CheckFunctionExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6e261.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6e261.dir\\CheckFunctionExists.c.obj  /out:cmTC_6e261.exe /implib:cmTC_6e261.lib /pdb:cmTC_6e261.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_6e261.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6e261.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6e261.dir\\CheckFunctionExists.c.obj  /out:cmTC_6e261.exe /implib:cmTC_6e261.lib /pdb:cmTC_6e261.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6e261.dir\\CheckFunctionExists.c.obj /out:cmTC_6e261.exe /implib:cmTC_6e261.lib /pdb:cmTC_6e261.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console m.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_6e261.dir/intermediate.manifest CMakeFiles\\cmTC_6e261.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_dad26
+        [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=floor /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_dad26.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_dad26.dir\\ /FS -c C:\\Users\\elfsh\\Documents\\Pong-Game\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-n03vkz\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_dad26.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_dad26.dir\\CheckFunctionExists.c.obj  /out:cmTC_dad26.exe /implib:cmTC_dad26.lib /pdb:cmTC_dad26.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_dad26.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_dad26.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_dad26.dir\\CheckFunctionExists.c.obj  /out:cmTC_dad26.exe /implib:cmTC_dad26.lib /pdb:cmTC_dad26.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  m.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_dad26.dir\\CheckFunctionExists.c.obj /out:cmTC_dad26.exe /implib:cmTC_dad26.lib /pdb:cmTC_dad26.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console m.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_dad26.dir/intermediate.manifest CMakeFiles\\cmTC_dad26.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'm.lib'\x0d
         ninja: build stopped: subcommand failed.
         
