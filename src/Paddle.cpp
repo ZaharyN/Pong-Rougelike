@@ -1,7 +1,8 @@
 #include "Paddle.h"
 
-Paddle::Paddle(const sf::Vector2f& size, const sf::Vector2f& startPosition, const sf::Color& initialColor, const float& speed)
-	: initialSpeed(speed), currentSpeed(speed), horizontalDirection(0)
+Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
+	const sf::Color& initialColor, const float& speed)
+	: initialSpeed(speed), currentSpeed(speed), horizontalDirection(0), screenPosition(screenPos)
 {
 	body = sf::RectangleShape(size);
 	body.setOrigin(body.getGeometricCenter());
@@ -9,17 +10,33 @@ Paddle::Paddle(const sf::Vector2f& size, const sf::Vector2f& startPosition, cons
 	body.setFillColor(initialColor);
 }
 
-void Paddle::Update(float deltaT)
+void Paddle::Draw(sf::RenderTarget& target)
 {
-	
+	target.draw(body);
 }
 
-void Paddle::Draw(const sf::RenderWindow& window)
+void Paddle::Reset()
 {
-
+	currentSpeed = initialSpeed;
+	horizontalDirection = 0;
 }
 
-Paddle::~Paddle()
+void Paddle::SetPosition(const sf::Vector2f& newPosition)
 {
+	body.setPosition(newPosition);
+}
 
+const float Paddle::GetCurrentSpeed() const
+{
+	return this->currentSpeed;
+}
+
+const float Paddle::GetInitialSpeed() const
+{
+	return this->initialSpeed;
+}
+
+const sf::RectangleShape& Paddle::GetBody() const
+{
+	return this->body;
 }

@@ -1,37 +1,38 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
+enum PaddleScreenPosition
+{
+	Top = 1,
+	Bottom = 2,
+};
+
 class Paddle
 {
 protected:
 	sf::RectangleShape body;
+	sf::Color color;
+	PaddleScreenPosition screenPosition;
 	const float initialSpeed;
 	float currentSpeed;
 	int horizontalDirection;
 
-	Paddle(const sf::Vector2f& size, const sf::Vector2f& position, const sf::Color& color, const float& speed);
+public:
+	Paddle(const sf::Vector2f& size,const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, const sf::Color& initialColor, const float& speed);
 
-	virtual void Update(float deltaT) = 0;
+	virtual void Update(const float& deltaT) = 0;
 
-	virtual void Draw(const sf::RenderWindow& window);
+	virtual void Draw(sf::RenderTarget& target);
 
-	virtual void Reset() = 0;
+	virtual void Reset();
+
+	void SetPosition(const sf::Vector2f& newPosition);
 
 	~Paddle();
 
-public:
-	float getCurrentVelocity() const
-	{
-		return this->currentSpeed;
-	}
+	const float GetCurrentSpeed() const;
 
-	const float getInitialVelocity() const
-	{
-		return this->initialSpeed;
-	}
+	const float GetInitialSpeed() const;
 
-	sf::RectangleShape getBody() const
-	{
-		return this->body;
-	}
+	const sf::RectangleShape& GetBody() const;
 };
