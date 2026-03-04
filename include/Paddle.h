@@ -1,11 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-
-enum PaddleScreenPosition
-{
-	Top = 1,
-	Bottom = 2,
-};
+#include "Types.h"
 
 class Paddle
 {
@@ -16,9 +11,11 @@ protected:
 	const float initialSpeed;
 	float currentSpeed;
 	int horizontalDirection;
+	int windowWidth;
 
 public:
-	Paddle(const sf::Vector2f& size,const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, const sf::Color& initialColor, float speed);
+	Paddle(const sf::Vector2f& size,const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
+		const sf::Color& initialColor, float speed, int windowWidth);
 
 	virtual void Update(float deltaT) = 0;
 
@@ -28,7 +25,7 @@ public:
 
 	void SetPosition(const sf::Vector2f& newPosition);
 
-	~Paddle();
+	virtual ~Paddle() = default;
 
 	const float GetCurrentSpeed() const;
 

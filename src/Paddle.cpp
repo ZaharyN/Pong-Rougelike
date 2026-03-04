@@ -1,8 +1,8 @@
 #include "Paddle.h"
 
 Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
-	const sf::Color& initialColor, float speed)
-	: initialSpeed(speed), currentSpeed(speed), horizontalDirection(0), screenPosition(screenPos)
+	const sf::Color& initialColor, float speed, int windowWidth)
+	: initialSpeed(speed), currentSpeed(speed), horizontalDirection(0), screenPosition(screenPos), windowWidth(windowWidth)
 {
 	body = sf::RectangleShape(size);
 	body.setOrigin(body.getGeometricCenter());

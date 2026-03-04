@@ -50,7 +50,7 @@ public:
 
 	const sf::FloatRect& GetLocalBounds() const;
 
-	~Ball();
+	~Ball() = default;
 
 private:
 	void ResetAngle();
