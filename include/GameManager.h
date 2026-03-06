@@ -39,6 +39,7 @@ class GameManager
 	void CheckCollisions();
 	void Render();
 	void StartGame(GameMode gameMode);
+
 public:
 	GameManager();
 	void Run();

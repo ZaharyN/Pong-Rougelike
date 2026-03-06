@@ -24,7 +24,6 @@ void Ball::Update(float deltaT)
 	float ballNewX = ballX + deltaT * currentMovementSpeed * horizontalDirection;
 	float ballNewY = ballY + deltaT * currentMovementSpeed * verticalDirection;
 
-	std::cout << "Ball position: (X = " << ballNewX << ", Y = " << ballNewY << ")" << std::endl;
 	SetPosition({ ballNewX, ballNewY });
 	ChangeColor(deltaT);
 }
@@ -81,8 +80,6 @@ void Ball::SetInitialColorValues(const sf::Color& initialColor)
 
 void Ball::ChangeColor(float deltaT)
 {
-	std::cout << "currR:" << currR << ", currG: " << currG << ", currB: " << currB << std::endl;
-
 	switch (colorState)
 	{
 	case ColorState::Red:

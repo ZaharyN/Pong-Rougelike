@@ -1,8 +1,8 @@
 #include "Enemy.h"
 
 Enemy::Enemy(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
-	const sf::Color& initialColor, const float& speed, const Ball& ballRef, int windowWidth)
-	: Paddle(size, screenPos, startPosition, initialColor, speed, windowWidth), ball(ballRef)
+	const sf::Color& initialColor, float speed, const Ball& ballRef,int windowWidth, int initialEnergy)
+	: Paddle(size, screenPos, startPosition, initialColor, speed, windowWidth, initialEnergy), ball(ballRef)
 {
 	horizontalDirection = 1;
 }

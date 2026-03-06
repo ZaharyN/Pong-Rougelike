@@ -2,8 +2,8 @@
 #include <iostream>
 
 Player::Player(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
-	const sf::Color& initialColor, float speed, int windowWidth, const PlayerControls& playerControls)
-	: Paddle(size, screenPos, startPosition, initialColor, speed, windowWidth), controls(playerControls)
+	const sf::Color& initialColor, float speed, int windowWidth, int initialEnergy, const PlayerControls& playerControls)
+	: Paddle(size, screenPos, startPosition, initialColor, speed, windowWidth, initialEnergy), controls(playerControls)
 {
 
 }
