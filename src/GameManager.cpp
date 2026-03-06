@@ -87,7 +87,7 @@ void GameManager::ProcessEvents()
 void GameManager::StartGame(GameMode gameMode)
 {
 	ball = std::make_unique<Ball>(ballRadius, sf::Vector2f{ windowWidth / 2.f, windowHeight / 2.f },
-		ballInitialSpeed, initialMinAngle, initialMaxAngle, sf::Color::White);
+		ballInitialSpeed, initialMinAngle, initialMaxAngle, sf::Color::Red);
 
 	PlayerControls p1Controls;
 	PlayerControls p2Controls;
@@ -211,7 +211,7 @@ void GameManager::Render()
 
 	gameWindow.display();
 }
-
+ 
 GameManager::~GameManager()
 {
 

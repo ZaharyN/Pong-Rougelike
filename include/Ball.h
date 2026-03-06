@@ -1,16 +1,22 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Types.h"
 #include <iostream>
 #include <random>
+#include <cmath>
 
 class Ball
 {
 	const float INFLUENCE = 0.3f;
 	const float SPEED_MULTIPLIER = 0.01f;
+	const int COLOR_CHANGE_SPEED = 100;
 
 	sf::CircleShape body;
 	sf::Color color;
 	std::mt19937 rng;
+
+	ColorState colorState;
+	float currR, currG, currB;
 
 	const float initialMovementSpeed;
 	float currentMovementSpeed;
@@ -45,6 +51,10 @@ public:
 
 	void SetPosition(const sf::Vector2f& newPosition);
 
+	void SetInitialColorValues(const sf::Color& initialColor);
+
+	void ChangeColor(float deltaT);
+
 	float GetCurrentSpeed() const;
 
 	float GetInitialSpeed() const;
@@ -63,4 +73,6 @@ private:
 	void ResetAngle();
 
 	sf::Angle GenerateRandomStartingAngle(int min, int max);
+
+	static ColorState MapColorToState(const sf::Color& initialColor);
 };

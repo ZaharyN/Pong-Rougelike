@@ -19,6 +19,16 @@ enum class PaddleScreenPosition
 	Bottom = 2,
 };
 
+enum class ColorState
+{
+	Red = 1,
+	Yellow = 2,
+	Green = 3,
+	Turquoise = 4,
+	Blue = 5,
+	Purple = 6
+};
+
 struct PlayerControls
 {
 	sf::Keyboard::Scancode leftPrimary;

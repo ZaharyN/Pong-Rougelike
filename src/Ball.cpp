@@ -5,7 +5,8 @@ Ball::Ball(float initialRadius, const sf::Vector2f& initialPosition,
 	int maxAngle, const sf::Color& color)
 	:initialRadius(initialRadius), initialMovementSpeed(initialSpeed),
 	currentMovementSpeed(initialMovementSpeed), currentRadius(initialRadius),
-	initialMinAngle(minAngle), initialMaxAngle(maxAngle), color(color), rng(std::random_device{}())
+	initialMinAngle(minAngle), initialMaxAngle(maxAngle), color(color), 
+	rng(std::random_device{}()), colorState(MapColorToState(color))
 {
 	body = sf::CircleShape(initialRadius);
 	body.setOrigin(body.getGeometricCenter());
@@ -13,6 +14,7 @@ Ball::Ball(float initialRadius, const sf::Vector2f& initialPosition,
 	body.setFillColor(color);
 
 	ResetAngle();
+	SetInitialColorValues(color);
 }
 
 void Ball::Update(float deltaT)
@@ -24,6 +26,7 @@ void Ball::Update(float deltaT)
 
 	std::cout << "Ball position: (X = " << ballNewX << ", Y = " << ballNewY << ")" << std::endl;
 	SetPosition({ ballNewX, ballNewY });
+	ChangeColor(deltaT);
 }
 
 void Ball::Draw(sf::RenderTarget& target)
@@ -58,7 +61,7 @@ void Ball::ApplySpin(float paddleXDirection)
 	horizontalDirection += paddleXDirection * INFLUENCE;
 	verticalDirection *= -1;
 
-	float length = sqrt(pow(horizontalDirection, 2) + pow(verticalDirection, 2));
+	float length = sqrt(horizontalDirection * horizontalDirection + verticalDirection * verticalDirection);
 
 	horizontalDirection /= length;
 	verticalDirection /= length;
@@ -67,6 +70,77 @@ void Ball::ApplySpin(float paddleXDirection)
 void Ball::SetPosition(const sf::Vector2f& newPosition)
 {
 	body.setPosition(newPosition);
+}
+
+void Ball::SetInitialColorValues(const sf::Color& initialColor)
+{
+	currR = initialColor.r;
+	currG = initialColor.g;
+	currB = initialColor.b;
+}
+
+void Ball::ChangeColor(float deltaT)
+{
+	std::cout << "currR:" << currR << ", currG: " << currG << ", currB: " << currB << std::endl;
+
+	switch (colorState)
+	{
+	case ColorState::Red:
+		currG += COLOR_CHANGE_SPEED * deltaT;
+		if (currG >= 255)
+		{
+			currG = 255;
+			colorState = ColorState::Yellow;
+		}
+		break;
+
+	case ColorState::Yellow:
+		currR -= COLOR_CHANGE_SPEED * deltaT;
+		if (currR <= 0)
+		{
+			currR = 0;
+			colorState = ColorState::Green;
+		}
+		break;
+
+	case ColorState::Green:
+		currB += COLOR_CHANGE_SPEED * deltaT;
+		if (currB >= 255)
+		{
+			currB = 255;
+			colorState = ColorState::Turquoise; 
+		}
+		break;
+
+	case ColorState::Turquoise:
+		currG -= COLOR_CHANGE_SPEED * deltaT;
+		if (currG <= 0)
+		{
+			currG = 0;
+			colorState = ColorState::Blue;
+		}
+		break;
+
+	case ColorState::Blue:
+		currR += COLOR_CHANGE_SPEED * deltaT;
+		if (currR >= 255)
+		{
+			currR = 255;
+			colorState = ColorState::Purple;
+		}
+		break;
+
+	case ColorState::Purple:
+		currB -= COLOR_CHANGE_SPEED * deltaT;
+		if (currB <= 0)
+		{
+			currB = 0;
+			colorState = ColorState::Red;
+		}
+		break;
+	}
+
+	body.setFillColor(sf::Color(static_cast<uint8_t>(currR), static_cast<uint8_t>(currG), static_cast<uint8_t>(currB)));
 }
 
 float Ball::GetCurrentSpeed() const
@@ -114,4 +188,25 @@ sf::Angle Ball::GenerateRandomStartingAngle(int min, int max)
 	sf::Angle angle = sf::degrees(randomAngle);
 
 	return angle;
+}
+
+ColorState Ball::MapColorToState(const sf::Color& initialColor)
+{
+	if (initialColor.r == 255 && initialColor.g == 255)
+		return ColorState::Yellow;
+	
+	if (initialColor.g == 255 && initialColor.b == 255)
+		return ColorState::Turquoise;
+
+	if (initialColor.b == 255 && initialColor.r == 255)
+		return ColorState::Purple;
+
+	if (initialColor.r == 255)
+		return ColorState::Red;
+
+	if (initialColor.g == 255)
+		return ColorState::Green;
+
+	if (initialColor.b == 255)
+		return ColorState::Blue;
 }
