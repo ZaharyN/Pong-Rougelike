@@ -19,7 +19,7 @@ void Paddle::Draw(sf::RenderTarget& target)
 void Paddle::Reset()
 {
 	currentSpeed = initialSpeed;
-	horizontalDirection = 0;
+	horizontalDirection = 0; 
 }
 
 void Paddle::SetPosition(const sf::Vector2f& newPosition)
@@ -33,7 +33,7 @@ void Paddle::ReduceEnergy(int energyTake)
 
 	float ratio = (float)currentEnergy / initialEnergy;
 
-	currentSpeed *= ratio;
+	currentSpeed = initialSpeed * ratio;
 	ChangeColorFromRation(ratio);
 }
 
@@ -41,20 +41,26 @@ void Paddle::ChangeColorFromRation(float ratio)
 {
 	float greenValue;
 	float redValue;
-	if (ratio >= 0.5)
+	
+	if (ratio >= 0.75)
 	{
-		// Increase the red
-		redValue = std::clamp(255.f * (1 - ratio) * 2.f, 0.f, 255.f);
-		greenValue = color.g;
+		// Magic numbers until I figure out what exactly I want
+		redValue = std::clamp(255.f * (1 - ratio) * 4.f, 0.f, 255.f);
+		greenValue = 255.f;
 	}
 	else
 	{
-		// Decrease the green
-		greenValue = std::clamp(255 * ratio * 2, 0.f, 255.f);
-		redValue = color.r;
+		// Magic numbers until I figure out what exactly I want
+		greenValue = std::clamp(255 * ratio * 1.33f, 0.f, 255.f);
+		redValue = 255.f;
 	}
 
-	body.setFillColor(sf::Color(static_cast<uint8_t>(greenValue), static_cast<uint8_t>(redValue), color.b));
+	std::cout << "Ratio: " << ratio << std::endl;
+	std::cout << "Red value: " << redValue << std::endl;
+	std::cout << "Green value: " << greenValue << std::endl;
+	std::cout << "Paddle current speed: " << this->currentSpeed << std::endl;
+
+	body.setFillColor(sf::Color(static_cast<uint8_t>(redValue), static_cast<uint8_t>(greenValue), color.b));
 }
 
 const float Paddle::GetCurrentSpeed() const
