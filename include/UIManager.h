@@ -45,12 +45,12 @@ public:
 		return exitButton.getGlobalBounds().contains(mousePos);
 	}
 
-	bool IsOnePlayerClicked(const sf::Vector2f mousePos) const
+	bool IsOnePlayerClicked(const sf::Vector2f& mousePos) const
 	{
 		return onePlayerGameButton.getGlobalBounds().contains(mousePos);
 	}
 
-	bool IsTwoPlayerClicked(const sf::Vector2f mousePos) const
+	bool IsTwoPlayerClicked(const sf::Vector2f& mousePos) const
 	{
 		return twoPlayerGameButton.getGlobalBounds().contains(mousePos);
 	}

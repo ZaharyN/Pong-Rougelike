@@ -3,10 +3,12 @@
 #include "Ball.h"
 #include "AudioManager.h"
 #include "UIManager.h"
+#include "CollectibleManager.h"
 #include "Types.h"
 #include "Player.h"
 #include "Enemy.h"
 #include <memory>
+#include <vector>
 
 class GameManager
 {
@@ -18,7 +20,7 @@ class GameManager
 	const float playerHeight = 10.f;
 
 	const int initialMinAngle = 45;
-	const float initialMaxAngle = 135;
+	const int initialMaxAngle = 135;
 
 	const float playerSpeed= 300.f;
 	const float ballInitialSpeed = 300.f;
@@ -29,6 +31,7 @@ class GameManager
 
 	std::unique_ptr<AudioManager> audioManager;
 	std::unique_ptr<UIManager> uiManager;
+	std::unique_ptr<CollectibleManager> collectibleManager;
 
 	std::unique_ptr<Ball> ball;
 	std::unique_ptr<Paddle> player1;

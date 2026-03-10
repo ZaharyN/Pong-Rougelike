@@ -29,8 +29,9 @@ void Paddle::SetPosition(const sf::Vector2f& newPosition)
 
 void Paddle::ReduceEnergy(int energyTake)
 {
-	currentEnergy -= energyTake;
+	currentEnergy = std::clamp(currentEnergy -= energyTake, 0, initialEnergy);
 
+	std::cout << "Player energy:" << currentEnergy << std::endl;
 	float ratio = (float)currentEnergy / initialEnergy;
 
 	currentSpeed = initialSpeed * ratio;
@@ -54,11 +55,6 @@ void Paddle::ChangeColorFromRation(float ratio)
 		greenValue = std::clamp(255 * ratio * 1.33f, 0.f, 255.f);
 		redValue = 255.f;
 	}
-
-	std::cout << "Ratio: " << ratio << std::endl;
-	std::cout << "Red value: " << redValue << std::endl;
-	std::cout << "Green value: " << greenValue << std::endl;
-	std::cout << "Paddle current speed: " << this->currentSpeed << std::endl;
 
 	body.setFillColor(sf::Color(static_cast<uint8_t>(redValue), static_cast<uint8_t>(greenValue), color.b));
 }
@@ -86,4 +82,9 @@ const sf::RectangleShape& Paddle::GetBody() const
 sf::FloatRect Paddle::GetGlobalBounds() const
 {
 	return this->body.getGlobalBounds();
+}
+
+const PaddleScreenPosition Paddle::GetScreenPosition() const
+{
+	return this->screenPosition;
 }

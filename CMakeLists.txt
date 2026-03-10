@@ -12,7 +12,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(SFML)
 
-add_executable(PongGame src/main.cpp "include/Paddle.h" "src/Paddle.cpp" "include/Ball.h" "src/Ball.cpp" "include/Player.h" "include/Enemy.h"  "src/Player.cpp" "src/Enemy.cpp"  "include/GameManager.h" "include/AudioManager.h" "include/UIManager.h" "src/GameManager.cpp" "src/AudioManager.cpp" "src/UIManager.cpp" "include/Types.h")
+add_executable(PongGame src/main.cpp "include/Paddle.h" "src/Paddle.cpp" "include/Ball.h" "src/Ball.cpp" "include/Player.h" "include/Enemy.h"  "src/Player.cpp" "src/Enemy.cpp"  "include/GameManager.h" "include/AudioManager.h" "include/UIManager.h" "src/GameManager.cpp" "src/AudioManager.cpp" "src/UIManager.cpp" "include/Types.h" "include/Collectible.h" "include/CollectibleManager.h" "src/Collectible.cpp" "src/CollectibleManager.cpp")
 target_include_directories(PongGame PUBLIC "${PROJECT_SOURCE_DIR}/include")
 
 target_link_libraries(PongGame sfml-graphics sfml-window sfml-audio sfml-system)

@@ -8,6 +8,7 @@ GameManager::GameManager()
 
 	audioManager = std::make_unique<AudioManager>();
 	uiManager = std::make_unique<UIManager>(windowWidth);
+	collectibleManager = std::make_unique<CollectibleManager>(windowWidth, windowHeight);
 }
 
 void GameManager::Run()
@@ -142,6 +143,7 @@ void GameManager::Update(float deltaT)
 			ball->Update(deltaT);
 			player1->Update(deltaT);
 			player2->Update(deltaT);
+			collectibleManager->Update(deltaT, player1.get(), player2.get());
 		}
 	}
 	else
@@ -197,7 +199,10 @@ void GameManager::CheckCollisions()
 			audioManager->StopBackgroundMusic();
 
 			gameState = GameState::Menu;
+			return;
 		}
+
+		collectibleManager->CheckCollisions(player1.get(), player2.get());
 	}
 }
 
@@ -210,6 +215,7 @@ void GameManager::Render()
 		player1->Draw(gameWindow);
 		player2->Draw(gameWindow);
 		ball->Draw(gameWindow);
+		collectibleManager->Draw(gameWindow);
 	}
 	else
 	{

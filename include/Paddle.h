@@ -42,5 +42,7 @@ public:
 
 	const sf::RectangleShape& GetBody() const;
 
+	const PaddleScreenPosition GetScreenPosition() const;
+
 	sf::FloatRect GetGlobalBounds() const;
 };
