@@ -1,10 +1,16 @@
 #pragma once
+#include <string>
+#include <SFML/Window/Keyboard.hpp>
+#include <functional>
+#include <Ball.h>
+#include <Paddle.h>
 
 enum class GameState
 {
 	Menu,
 	ModeSelect,
 	Playing,
+	UpgradeSelect,
 };
 
 enum class GameMode
@@ -36,4 +42,19 @@ struct PlayerControls
 
 	sf::Keyboard::Scancode rightPrimary;
 	sf::Keyboard::Scancode rightSecondary = sf::Keyboard::Scancode::Unknown;
+};
+
+enum class UpgradeRarity
+{
+	Common,
+	Uncommon,
+	Legendary,
+};
+
+struct Upgrade
+{
+	std::string title;
+	std::string description;
+	UpgradeRarity rarity;
+	std::function<void(Paddle&, Paddle&, Ball&)> action;
 };

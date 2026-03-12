@@ -10,8 +10,8 @@
 
 class CollectibleManager
 {
-	const float COLLECTIBLE_WIDTH = 20.f;
-	const float COLLECTIBLE_HEIGHT = 20.f;
+	const float COLLECTIBLE_WIDTH = 40.f;
+	const float COLLECTIBLE_HEIGHT = 40.f;
 	const float COLLECTIBLE_SPAWN_DELAY = 10.f;
 	const float COLLECTIBLE_ENERGY = 5.f;
 
@@ -35,5 +35,4 @@ public:
 
 private:
 	void SpawnCollectible(PaddleScreenPosition screenPos, Paddle* player);
-	//const sf::Vector2f GenerateRandomPos();
 };

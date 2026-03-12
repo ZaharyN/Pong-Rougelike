@@ -16,6 +16,10 @@ protected:
 	int horizontalDirection;
 	int windowWidth;
 
+	// Modifiables:
+	float reducedCollectibleSpawnRange = 0.f;
+	float force = 1.0f;
+
 public:
 	Paddle(const sf::Vector2f& size,const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
 		const sf::Color& initialColor, float speed, int windowWidth, int initialEnergy);
@@ -45,4 +49,9 @@ public:
 	const PaddleScreenPosition GetScreenPosition() const;
 
 	sf::FloatRect GetGlobalBounds() const;
+
+	// Modifying methods:
+	void SetSpeed(float factor);
+
+	void SetSize(float factor);
 };

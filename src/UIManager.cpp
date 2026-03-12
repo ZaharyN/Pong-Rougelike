@@ -74,6 +74,14 @@ void UIManager::Render(GameState state, sf::RenderWindow& gameWindow)
 	}
 }
 
+void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades)
+{
+	for (size_t i = 0; i < upgrades.size(); i++)
+	{
+
+	}
+}
+
 void UIManager::InitializeSelectModeMenu()
 {
 	onePlayerGameButton = sf::RectangleShape({ BUTTON_WIDTH * 2, BUTTON_HEIGHT });

@@ -35,6 +35,8 @@ public:
 	void Update(GameState state, const sf::RenderWindow& gameWindow);
 	void Render(GameState state, sf::RenderWindow& gameWindow);
 
+	void ShowRandomUpgrades(const std::vector<Upgrade>& upgrades);
+
 	bool IsStartClicked(const sf::Vector2f& mousePos) const
 	{
 		return startButton.getGlobalBounds().contains(mousePos);
