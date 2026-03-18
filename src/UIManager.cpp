@@ -62,9 +62,8 @@ void UIManager::InitializeUpgradeMenu()
 		titles[i]->setOrigin(titles[i]->getGeometricCenter());
 		titles[i]->setPosition({ posX, posY - UPGRADE_CARD_HEIGHT / 2 + titles[i]->getGlobalBounds().size.y / 2});
 		titles[i]->setFillColor(sf::Color::White);
+		titles[i]->setOutlineThickness(OUTLINE_THICKNESS);
 	}
-
-	std::cout << "Upgrade menu initialized" << std::endl;
 }
 
 void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
@@ -98,7 +97,38 @@ void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
 	}
 	else if (state == GameState::UpgradeSelect)
 	{
+		int cardIndex = GetClickedCardIndex(mouseWorldPos);
+		if (cardIndex == -1)
+		{
+			ResetCardHoverEffect(upgradeCard1, card1Title, card1TitleText, card1DescriptionText);
+			ResetCardHoverEffect(upgradeCard2, card2Title, card2TitleText, card2DescriptionText);
+			ResetCardHoverEffect(upgradeCard3, card3Title, card3TitleText, card3DescriptionText);
+			return;
+		}
 
+		if (upgradeCard1.getGlobalBounds().contains(mouseWorldPos))
+		{
+			OnCardHoverEffect(upgradeCard1, card1Title, card1TitleText, card1DescriptionText);
+
+			ResetCardHoverEffect(upgradeCard2, card2Title, card2TitleText, card2DescriptionText);
+			ResetCardHoverEffect(upgradeCard3, card3Title, card3TitleText, card3DescriptionText);
+		}
+		
+		if (upgradeCard2.getGlobalBounds().contains(mouseWorldPos))
+		{
+			OnCardHoverEffect(upgradeCard2, card2Title, card2TitleText, card2DescriptionText);
+
+			ResetCardHoverEffect(upgradeCard1, card1Title, card1TitleText, card1DescriptionText);
+			ResetCardHoverEffect(upgradeCard3, card3Title, card3TitleText, card3DescriptionText);
+		}
+		
+		if (upgradeCard3.getGlobalBounds().contains(mouseWorldPos))
+		{
+			OnCardHoverEffect(upgradeCard3, card3Title, card3TitleText, card3DescriptionText);
+
+			ResetCardHoverEffect(upgradeCard1, card1Title, card1TitleText, card1DescriptionText);
+			ResetCardHoverEffect(upgradeCard2, card2Title, card2TitleText, card2DescriptionText);
+		}
 	}
 }
 
@@ -157,6 +187,7 @@ void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades)
 		sf::FloatRect tBounds = (*titleTexts[i])->getLocalBounds();
 		(*titleTexts[i])->setOrigin({ tBounds.size.x / 2, tBounds.size.y });
 		(*titleTexts[i])->setPosition(titles[i]->getPosition());
+		titles[i]->setOutlineColor(rarityColor);
 
 		// Set description texts
 		std::string wrapped = WrapText(upgrades[i].description, UPGRADE_CARD_WIDTH - 20.f, 20);
@@ -212,6 +243,24 @@ void UIManager::ResetHoverEffect(sf::RectangleShape& button, std::optional<sf::T
 	button.setScale({ 1.0f, 1.0f });
 }
 
+void UIManager::OnCardHoverEffect(sf::RectangleShape& card, sf::RectangleShape& title,
+	std::optional<sf::Text>& titleText, std::optional<sf::Text>& description)
+{
+	card.setFillColor(sf::Color::White);
+	title.setFillColor(sf::Color::White);
+	titleText->setFillColor(sf::Color::Black);
+	description->setFillColor(sf::Color::Black);
+}
+
+void UIManager::ResetCardHoverEffect(sf::RectangleShape& card, sf::RectangleShape& title,
+	std::optional<sf::Text>& titleText, std::optional<sf::Text>& description)
+{
+	card.setFillColor(sf::Color::Black);
+	title.setFillColor(sf::Color::Black);
+	titleText->setFillColor(sf::Color::White);
+	description->setFillColor(sf::Color::White);
+}
+
 sf::Color UIManager::GetColorFromRarity(UpgradeRarity rarity)
 {
 	switch (rarity)
@@ -228,5 +277,27 @@ sf::Color UIManager::GetColorFromRarity(UpgradeRarity rarity)
 
 std::string UIManager::WrapText(const std::string& str, float maxWidth, unsigned int fontSize)
 {
-	return "PLACEHOLDER TEXT";
+	std::string result;
+	std::string line;
+	std::stringstream ss(str);
+	std::string word;
+
+	sf::Text tempText(font, "", fontSize);
+
+	while (ss >> word)
+	{
+		std::string testLine = line + (line.empty() ? "" : " ") + word;
+		tempText.setString(testLine);
+
+		if (tempText.getGlobalBounds().size.x > maxWidth)
+		{
+			result += line + "\n";
+			line = word;
+		}
+		else
+		{
+			line = testLine;
+		}
+	}
+	return result + line;
 }

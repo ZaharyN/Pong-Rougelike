@@ -9,3 +9,9 @@
 5. Implement the other upgrades
 
 6. Make so you return UI enum of what is currently pressed by the mouse, not 10 methods for it
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Future Optimizations:
+
+1. Make a struct for the card in order to remove all the variables for each card and store a vector<UpgradeCard>. Also, you can add isHovered bool in the struct
+and keep track in the UIManger for the lastHovered card. This will prevent resetting the onHover state every frame which I find overkill.

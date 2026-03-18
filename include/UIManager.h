@@ -3,6 +3,7 @@
 #include "Types.h"
 #include <iostream>
 #include <string>
+#include <sstream>
 
 class UIManager
 {
@@ -50,9 +51,12 @@ class UIManager
 	void OnHoverEffect(sf::RectangleShape& button, std::optional<sf::Text>& text);
 
 	void ResetHoverEffect(sf::RectangleShape& button, std::optional<sf::Text>& text);
-
-	void DrawCardTitleAndDescription(sf::RectangleShape& titleButton, std::optional<sf::Text>& titleText, const std::string& titleValue, 
-		const std::string& descriptionValue, sf::RectangleShape& parent, int size, UpgradeRarity rarity);
+	
+	void OnCardHoverEffect(sf::RectangleShape& card, sf::RectangleShape& title, 
+		std::optional<sf::Text>& titleText, std::optional<sf::Text>& description);
+	
+	void ResetCardHoverEffect(sf::RectangleShape& card, sf::RectangleShape& title,
+		std::optional<sf::Text>& titleText, std::optional<sf::Text>& description);
 
 	sf::Color GetColorFromRarity(UpgradeRarity rarity);
 

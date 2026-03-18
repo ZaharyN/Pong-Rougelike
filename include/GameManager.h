@@ -15,6 +15,7 @@ class GameManager
 {
 	const unsigned int windowWidth = 1200;
 	const unsigned int windowHeight = 600;
+	const unsigned int collectibleCountForUpgrade = 5;
 
 	const float ballRadius = 5.f;
 	const float playerLength = 100.f;

@@ -217,7 +217,7 @@ void GameManager::CheckCollisions()
 
 		collectibleManager->CheckCollisions(player1.get(), player2.get(), *audioManager);
 
-		if (player1->GetCollectedEnergy() == 5)
+		if (player1->GetCollectedEnergy() == collectibleCountForUpgrade)
 		{
 			player1->ResetCollectedEnergy();
 			upgradeRecipient = player1.get();
@@ -228,7 +228,7 @@ void GameManager::CheckCollisions()
 
 			gameState = GameState::UpgradeSelect;
 		}
-		else if (player2->GetCollectedEnergy() == 5)
+		else if (player2->GetCollectedEnergy() == collectibleCountForUpgrade)
 		{
 			player2->ResetCollectedEnergy();
 			upgradeRecipient = player2.get();
