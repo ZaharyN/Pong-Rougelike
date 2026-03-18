@@ -1,14 +1,10 @@
-1. Fix audio -> add array of sounds and play them all at once. Currently they are interrupting each others
+1. When the game ends reset the first spawnCollectible to 10 seconds
 
-2. When the game ends reset the first spawnCollectible to 10 seconds
+2. When a collision happens near the edge, the ball sometimes gets stuck so fix it
 
-3. Think of a way to make hover effect on the cards
+3. Implement the other upgrades
 
-4. When a collision happens near the edge, the ball sometimes gets stuck so fix it
-
-5. Implement the other upgrades
-
-6. Make so you return UI enum of what is currently pressed by the mouse, not 10 methods for it
+4. Make so you return UI enum of what is currently pressed by the mouse, not 10 methods for it
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Future Optimizations:

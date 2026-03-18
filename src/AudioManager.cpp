@@ -28,12 +28,17 @@ AudioManager::AudioManager()
 
 void AudioManager::PlaySound(const std::string_view& soundName)
 {
-	auto it = buffers.find(std::string(soundName));
+	soundPool.remove_if([](sf::Sound& s)
+		{
+			return s.getStatus() == sf::Sound::Status::Stopped;
+		});
 	
+	auto it = buffers.find(std::string(soundName));
+
 	if (it != buffers.end())
 	{
-		sound.emplace(it->second);
-		sound->play();
+		soundPool.emplace_back(it->second);
+		soundPool.back().play();
 	}
 }
 
