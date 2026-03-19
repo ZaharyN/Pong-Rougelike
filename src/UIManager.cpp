@@ -48,7 +48,7 @@ void UIManager::InitializeUpgradeMenu()
 	card3Title = sf::RectangleShape({ UPGRADE_CARD_WIDTH, 60 });
 	sf::RectangleShape* titles[] = { &card1Title, &card2Title, &card3Title };
 
-	float posY = windowHeight / 2;
+	float posY = windowHeight / 2.f;
 
 	for (int i = 0; i < 3; i++)
 	{
@@ -273,6 +273,33 @@ sf::Color UIManager::GetColorFromRarity(UpgradeRarity rarity)
 		return sf::Color::Yellow;
 	}
 	return sf::Color::White;
+}
+
+ClickTarget UIManager::GetClickedTarget(const sf::Vector2f& mousePos, GameState gameState)
+{
+	switch (gameState)
+	{
+	case GameState::Menu:
+		if (startButton.getGlobalBounds().contains(mousePos))
+			return ClickTarget::StartButton;
+		if (exitButton.getGlobalBounds().contains(mousePos))
+			return ClickTarget::ExitButton;
+		break;
+	case GameState::ModeSelect:
+		if (onePlayerGameButton.getGlobalBounds().contains(mousePos))
+			return ClickTarget::OnePlayerOption;
+		if (twoPlayerGameButton.getGlobalBounds().contains(mousePos))
+			return ClickTarget::TwoPlayerOption;
+		break;
+	case GameState::UpgradeSelect:
+		if (upgradeCard1.getGlobalBounds().contains(mousePos))
+			return ClickTarget::UpgradeCard1;
+		if (upgradeCard2.getGlobalBounds().contains(mousePos))
+			return ClickTarget::UpgradeCard2;
+		if (upgradeCard3.getGlobalBounds().contains(mousePos))
+			return ClickTarget::UpgradeCard3;
+		break;
+	}
 }
 
 std::string UIManager::WrapText(const std::string& str, float maxWidth, unsigned int fontSize)

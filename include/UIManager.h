@@ -78,23 +78,5 @@ public:
 
 	int GetClickedCardIndex(const sf::Vector2f& mousePos) const;
 
-	bool IsStartClicked(const sf::Vector2f& mousePos) const
-	{
-		return startButton.getGlobalBounds().contains(mousePos);
-	}
-
-	bool IsExitClicked(const sf::Vector2f& mousePos) const
-	{
-		return exitButton.getGlobalBounds().contains(mousePos);
-	}
-
-	bool IsOnePlayerClicked(const sf::Vector2f& mousePos) const
-	{
-		return onePlayerGameButton.getGlobalBounds().contains(mousePos);
-	}
-
-	bool IsTwoPlayerClicked(const sf::Vector2f& mousePos) const
-	{
-		return twoPlayerGameButton.getGlobalBounds().contains(mousePos);
-	}
+	ClickTarget GetClickedTarget(const sf::Vector2f& mousePos, GameState gameState);
 };

@@ -54,19 +54,19 @@ void GameManager::ProcessEvents()
 
 				if (gameState == GameState::Menu)
 				{
-					if (uiManager->IsStartClicked(mouseWorldPos))
+					if (uiManager->GetClickedTarget(mouseWorldPos, gameState) == ClickTarget::StartButton)
 					{
 						gameState = GameState::ModeSelect;
 						audioManager->PlaySound("select");
 					}
-					else if (uiManager->IsExitClicked(mouseWorldPos))
+					else if (uiManager->GetClickedTarget(mouseWorldPos, gameState) == ClickTarget::ExitButton)
 					{
 						gameWindow.close();
 					}
 				}
 				else if (gameState == GameState::ModeSelect)
 				{
-					if (uiManager->IsOnePlayerClicked(mouseWorldPos))
+					if (uiManager->GetClickedTarget(mouseWorldPos, gameState) == ClickTarget::OnePlayerOption)
 					{
 						gameState = GameState::Playing;
 						audioManager->PlaySound("select");
@@ -74,7 +74,7 @@ void GameManager::ProcessEvents()
 
 						StartGame(GameMode::OnePlayer);
 					}
-					else if (uiManager->IsTwoPlayerClicked(mouseWorldPos))
+					else if (uiManager->GetClickedTarget(mouseWorldPos, gameState) == ClickTarget::TwoPlayerOption)
 					{
 						gameState = GameState::Playing;
 						audioManager->PlaySound("select");

@@ -22,18 +22,36 @@ enum class GameMode
 
 enum class PaddleScreenPosition
 {
-	Top = 1,
-	Bottom = 2,
+	Top,
+	Bottom,
 };
 
 enum class ColorState
 {
-	Red = 1,
-	Yellow = 2,
-	Green = 3,
-	Turquoise = 4,
-	Blue = 5,
-	Purple = 6
+	Red,
+	Yellow,
+	Green,
+	Turquoise,
+	Blue,
+	Purple,
+};
+
+enum class ClickTarget
+{
+	StartButton,
+	ExitButton,
+	OnePlayerOption,
+	TwoPlayerOption,
+	UpgradeCard1,
+	UpgradeCard2,
+	UpgradeCard3,
+};
+
+enum class UpgradeRarity
+{
+	Common,
+	Uncommon,
+	Legendary,
 };
 
 struct PlayerControls
@@ -43,13 +61,6 @@ struct PlayerControls
 
 	sf::Keyboard::Scancode rightPrimary = sf::Keyboard::Scancode::Unknown;
 	sf::Keyboard::Scancode rightSecondary = sf::Keyboard::Scancode::Unknown;
-};
-
-enum class UpgradeRarity
-{
-	Common,
-	Uncommon,
-	Legendary,
 };
 
 struct Upgrade

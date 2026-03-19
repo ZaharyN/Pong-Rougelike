@@ -1,8 +1,5 @@
-1. When a collision happens near the edge, the ball sometimes gets stuck so fix it
 
-2. Implement the other upgrades
-
-3. Make so you return UI enum of what is currently pressed by the mouse, not 10 methods for it
+- Implement the other upgrades
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Future Optimizations:
