@@ -170,9 +170,15 @@ void GameManager::CheckCollisions()
 	if (gameState == GameState::Playing)
 	{
 		// 1.Hits wall
-		if (ball->GetBody().getPosition().x + ballRadius >= windowWidth
-			|| ball->GetBody().getPosition().x - ballRadius <= 0)
+		if (ball->GetBody().getPosition().x + ballRadius >= windowWidth)
 		{
+			ball->SetPosition({ windowWidth - ballRadius, ball->GetBody().getPosition().y });
+			ball->SwapHorizontalDirection();
+			audioManager->PlaySound("hit");
+		}
+		else if (ball->GetBody().getPosition().x - ballRadius <= 0)
+		{
+			ball->SetPosition({ 0.f + ballRadius, ball->GetBody().getPosition().y });
 			ball->SwapHorizontalDirection();
 			audioManager->PlaySound("hit");
 		}
@@ -260,7 +266,7 @@ void GameManager::Render()
 
 	gameWindow.display();
 }
- 
+
 GameManager::~GameManager()
 {
 

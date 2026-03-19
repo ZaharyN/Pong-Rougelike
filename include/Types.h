@@ -38,10 +38,10 @@ enum class ColorState
 
 struct PlayerControls
 {
-	sf::Keyboard::Scancode leftPrimary;
+	sf::Keyboard::Scancode leftPrimary = sf::Keyboard::Scancode::Unknown;
 	sf::Keyboard::Scancode leftSecondary = sf::Keyboard::Scancode::Unknown;
 
-	sf::Keyboard::Scancode rightPrimary;
+	sf::Keyboard::Scancode rightPrimary = sf::Keyboard::Scancode::Unknown;
 	sf::Keyboard::Scancode rightSecondary = sf::Keyboard::Scancode::Unknown;
 };
 
