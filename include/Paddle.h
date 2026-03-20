@@ -16,9 +16,12 @@ protected:
 	int horizontalDirection;
 	int windowWidth;
 	int energyCollected;
+
 	// Modifiables:
 	float reducedCollectibleSpawnRange = 0.f;
 	float force = 1.0f;
+	float spinMultiplier = 1.0f;
+	float energyRangeModifier = 0.f;
 
 public:
 	Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
@@ -56,8 +59,16 @@ public:
 
 	sf::FloatRect GetGlobalBounds() const;
 
+	float GetSpinMultiplier() const;
+
+	float GetEnergySpawnRangeModifier() const;
+
 	// Modifying methods:
 	void SetSpeed(float factor);
 
 	void SetSize(float factor);
+
+	void SetSpin(float factor);
+
+	void ModifyEnergySpawnRange(float value);
 };

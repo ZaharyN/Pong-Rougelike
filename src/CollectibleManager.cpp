@@ -104,8 +104,17 @@ void CollectibleManager::SpawnCollectible(PaddleScreenPosition screenPos, Paddle
 	std::uniform_real_distribution<float> random(minX, maxX);
 	x = random(rng);
 
+	std::cout << "Energy spawn location X:" << x << std::endl;
+
+	float energyRangeModifier = player->GetEnergySpawnRangeModifier();
+
+	float modifiedX = leftFreeSpace >= rightFreeSpace ? x - energyRangeModifier : x + energyRangeModifier;
+	float clampedX = std::clamp(modifiedX, 0 + COLLECTIBLE_WIDTH / 2, gameScreenWidth - COLLECTIBLE_WIDTH / 2);
+
+	std::cout << "Energy spawn location after range modification: " << clampedX << std::endl;
+
 	std::unique_ptr<Collectible> collectible = std::make_unique<Collectible>(
-		sf::Vector2f{ x,y },
+		sf::Vector2f{ clampedX,y },
 		energyTexture,
 		COLLECTIBLE_WIDTH,
 		COLLECTIBLE_HEIGHT,

@@ -55,9 +55,9 @@ void Ball::IncreaseSpeed()
 	currentMovementSpeed += currentMovementSpeed * SPEED_MULTIPLIER;
 }
 
-void Ball::ApplySpin(float paddleXDirection)
+void Ball::ApplySpin(float paddleXDirection, float spinMultiplier)
 {
-	horizontalDirection += paddleXDirection * INFLUENCE;
+	horizontalDirection += paddleXDirection * INFLUENCE * spinMultiplier;
 	verticalDirection *= -1;
 
 	float length = sqrt(horizontalDirection * horizontalDirection + verticalDirection * verticalDirection);

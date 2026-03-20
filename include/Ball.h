@@ -47,7 +47,7 @@ public:
 
 	void IncreaseSpeed();
 
-	void ApplySpin(float paddleXDirection);
+	void ApplySpin(float paddleXDirection, float spinMultiplier);
 
 	void SetPosition(const sf::Vector2f& newPosition);
 

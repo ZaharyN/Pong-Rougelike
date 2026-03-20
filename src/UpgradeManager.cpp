@@ -51,16 +51,16 @@ void UpgradeManager::LoadUpgradesData()
 	// Common upgrades:
 
 	allUpgrades.push_back({
-		"FASTER!",
+		"SONIC",
 		"INCREASSE SPEED BY 10%",
 		UpgradeRarity::Common,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-			p.SetSize(1.1f);
+			p.SetSpeed(1.1f);
 		} });
 
 	allUpgrades.push_back({
-		"-FASTER",
+		"SNAIL",
 		"OPPONENT'S SPEED IS REDUCED BY 10%",
 		UpgradeRarity::Common,
 		[](Paddle& p, Paddle& opp, Ball& ball)
@@ -78,7 +78,7 @@ void UpgradeManager::LoadUpgradesData()
 		} });
 
 	allUpgrades.push_back({
-		"-GOLIATH",
+		"MIDGET",
 		"OPPONENT'S PADDLE WIDTH IS REDUCED BY 10%",
 		UpgradeRarity::Common,
 		[](Paddle& p, Paddle& opp, Ball& ball)
@@ -87,39 +87,39 @@ void UpgradeManager::LoadUpgradesData()
 		} });
 
 	allUpgrades.push_back({
-		"THE FORCE IS WITH YOU",
-		"YOUR HITS APPLY MORE FORCE TO THE BALL",
+		"MORE SPIN",
+		"YOUR HITS APPLY 50% MORE SPIN TO THE BALL",
 		UpgradeRarity::Common,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-
+			p.SetSpin(0.5f);
 		} });
 
 	allUpgrades.push_back({
-		"-THE FORCE IS WITH YOU",
-		"ENEMIES' HITS APPLY LESS FORCE TO THE BALL",
+		"LESS SPIN",
+		"ENEMIES' HITS APPLY 50% LESS SPIN TO THE BALL",
 		UpgradeRarity::Common,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-
+			opp.SetSpin(-0.5f);
 		} });
 
 	allUpgrades.push_back({
-		"NEARER ENERGY",
+		"NEAR",
 		"SPAWN ENERGY RANGE IS REDUCED",
 		UpgradeRarity::Common,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-
+			p.ModifyEnergySpawnRange(-50.f);
 		} });
 
 	allUpgrades.push_back({
-		"-NEARER ENERGY",
+		"FAR",
 		"OPPONENT'S SPAWN ENERGY RANGE IS INCREASED",
 		UpgradeRarity::Common,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-
+			opp.ModifyEnergySpawnRange(+50.f);
 		} });
 
 	// Uncommon upgrades:
@@ -131,8 +131,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	allUpgrades.push_back({
 		"OBSTACLES",
@@ -141,8 +140,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	allUpgrades.push_back({
 		"SOMETHING IS MISSING",
@@ -151,8 +149,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	allUpgrades.push_back({
 		"SPING",
@@ -161,8 +158,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	allUpgrades.push_back({
 		"FORESIGHT",
@@ -171,8 +167,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	// Legendary upgrades:
 
@@ -183,8 +178,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	allUpgrades.push_back({
 		"DUPLICATION",
@@ -193,8 +187,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	allUpgrades.push_back({
 		"DUPLICATION",
@@ -203,8 +196,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 
 	allUpgrades.push_back({
 		"EXTRAVAGANZA",
@@ -213,6 +205,5 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 
-		}
-		});
+		} });
 }
