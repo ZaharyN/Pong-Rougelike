@@ -13,7 +13,6 @@ std::vector<Upgrade> UpgradeManager::ChooseThreeRandomUpgrades()
 
 	std::discrete_distribution<int> rarityDist({ 60, 30, 10 });
 
-	// Find a way to optimize this because it is O(n^3)
 	while (selected.size() < 3)
 	{
 		int rolledRarityIndex = rarityDist(rng);
@@ -130,12 +129,12 @@ void UpgradeManager::LoadUpgradesData()
 		UpgradeRarity::Uncommon,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-
+			p.EnableDash();
 		} });
 
 	allUpgrades.push_back({
 		"OBSTACLES",
-		"OBSTACLES ARE PLACED IN OPPONENTS FIELD",
+		"OBSTACLE IS PLACED IN OPPONENTS FIELD",
 		UpgradeRarity::Uncommon,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
@@ -143,7 +142,7 @@ void UpgradeManager::LoadUpgradesData()
 		} });
 
 	allUpgrades.push_back({
-		"SOMETHING IS MISSING",
+		"SM'S MISSING",
 		"MAKE A WHOLE IN OPPONENTS BODY",
 		UpgradeRarity::Uncommon,
 		[](Paddle& p, Paddle& opp, Ball& ball)
@@ -199,7 +198,7 @@ void UpgradeManager::LoadUpgradesData()
 		} });
 
 	allUpgrades.push_back({
-		"EXTRAVAGANZA",
+		"EXTRAGANZA",
 		"YOU CAN NOW MOVE UP AND DOWN",
 		UpgradeRarity::Legendary,
 		[](Paddle& p, Paddle& opp, Ball& ball)

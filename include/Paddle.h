@@ -22,6 +22,11 @@ protected:
 	float force = 1.0f;
 	float spinMultiplier = 1.0f;
 	float energyRangeModifier = 0.f;
+	bool hasDashUpgrade = false;
+	bool isDashing = false;
+	float dashTimer = 0.1f;
+	float dashCooldown = 0.f; 
+	float dashSpeedMultiplier = 1.f;
 
 public:
 	Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
@@ -62,6 +67,10 @@ public:
 	float GetSpinMultiplier() const;
 
 	float GetEnergySpawnRangeModifier() const;
+
+	void EnableDash();
+
+	void StartDash();
 
 	// Modifying methods:
 	void SetSpeed(float factor);

@@ -14,6 +14,19 @@ Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, c
 
 void Paddle::Draw(sf::RenderTarget& target)
 {
+	if (isDashing)
+	{
+		body.setFillColor(sf::Color::Transparent);
+		body.setOutlineColor(sf::Color::Cyan);
+		body.setOutlineThickness(3.f);
+	}
+	else
+	{
+		body.setFillColor(sf::Color::White);
+		body.setOutlineColor(sf::Color::White);
+		body.setOutlineThickness(0.f);
+	}
+
 	target.draw(body);
 }
 
@@ -94,6 +107,18 @@ void Paddle::SetSpin(float factor)
 void Paddle::ModifyEnergySpawnRange(float value)
 {
 	energyRangeModifier += value;
+}
+
+void Paddle::EnableDash()
+{
+	hasDashUpgrade = true;
+}
+
+void Paddle::StartDash()
+{
+	isDashing = true;
+	dashTimer = 0.1f;
+	dashSpeedMultiplier = 5.f;
 }
 
 const float Paddle::GetCurrentSpeed() const
