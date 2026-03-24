@@ -33,6 +33,23 @@ void Paddle::Reset()
 {
 	currentSpeed = initialSpeed;
 	horizontalDirection = 0;
+	ResetCollectedEnergy();
+
+	// Reset modifiers:
+	uniqueUpgrades.clear();
+	stackableUpgrades.clear();
+	obstacles.clear();
+
+	reducedCollectibleSpawnRange = 0.f;
+	force = 1.f;
+	spinMultiplier = 1.f;
+	energyRangeModifier = 0.f;
+	hasDashUpgrade = false;
+	isDashing = false;
+	dashTimer = 0.1f;
+	dashCooldown = 0.f;
+	dashSpeedMultiplier = 1.f;
+	isNeverExhausted = false;
 }
 
 void Paddle::SetPosition(const sf::Vector2f& newPosition)
@@ -40,9 +57,11 @@ void Paddle::SetPosition(const sf::Vector2f& newPosition)
 	body.setPosition(newPosition);
 }
 
-void Paddle::ReduceEnergy(int energyTake)
+void Paddle::UpdateEnergy(int energyTake)
 {
-	currentEnergy = std::clamp(currentEnergy -= energyTake, 0, initialEnergy);
+	if (energyTake < 0 && isNeverExhausted) return;
+
+	currentEnergy = std::clamp(currentEnergy += energyTake, 0, initialEnergy);
 
 	std::cout << "Player energy:" << currentEnergy << std::endl;
 	float ratio = (float)currentEnergy / initialEnergy;
@@ -151,6 +170,11 @@ void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight)
 	obstacle.setOutlineColor(sf::Color::White);
 
 	obstacles.push_back(obstacle);
+}
+
+void Paddle::DisableExhaustion()
+{
+	isNeverExhausted = true;
 }
 
 const float Paddle::GetCurrentSpeed() const

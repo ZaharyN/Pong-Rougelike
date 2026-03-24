@@ -4,6 +4,10 @@ TO DO:
 
 - Add which player is picking the current upgrades because there is no way to know
 
+- Make a second rectangle showing the dash cooldown
+
+- Make proper resets
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Bugs:
 - When the player gets the reduce spin upgrade it has negative spin which is not correct
@@ -16,8 +20,6 @@ and keep track in the UIManger for the lastHovered card. This will prevent reset
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Ideas:
-
-- Think of how you can show the dash cooldown so the player knows when it is available
 
 - Make the game continue when the ball touches the dead zone. When a player fails to return the ball, the opponent gets a point. The game ends when a player 
   reaches 11 points. This way, there is sense to stack the power ups and they become relevant. The ball's speed should be reset.

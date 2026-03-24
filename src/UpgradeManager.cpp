@@ -227,6 +227,7 @@ void UpgradeManager::LoadUpgradesData()
 		true,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
+			p.DisableExhaustion();
 			p.AddUpgrade(UpgradeType::Crank, true);
 		} });
 

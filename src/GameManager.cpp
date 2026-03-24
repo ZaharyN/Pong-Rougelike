@@ -194,7 +194,7 @@ void GameManager::CheckCollisions()
 			audioManager->PlaySound("hit");
 			audioManager->SetPitch(ball->GetCurrentSpeed() / ball->GetInitialSpeed());
 
-			player1->ReduceEnergy(1);
+			player1->UpdateEnergy(-1);
 		}
 		else if (ball->GetGlobalBounds().findIntersection(player2->GetGlobalBounds()))
 		{
@@ -205,7 +205,7 @@ void GameManager::CheckCollisions()
 			audioManager->PlaySound("hit");
 			audioManager->SetPitch(ball->GetCurrentSpeed() / ball->GetInitialSpeed());
 
-			player2->ReduceEnergy(1);
+			player2->UpdateEnergy(-1);
 		}
 
 		// 3. Check obstacle collisions

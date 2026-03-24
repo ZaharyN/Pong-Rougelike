@@ -36,6 +36,7 @@ protected:
 	float dashTimer = 0.1f;
 	float dashCooldown = 0.f; 
 	float dashSpeedMultiplier = 1.f;
+	bool isNeverExhausted = false;
 
 public:
 	Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
@@ -49,7 +50,7 @@ public:
 
 	void SetPosition(const sf::Vector2f& newPosition);
 
-	void ReduceEnergy(int energyTaken);
+	void UpdateEnergy(int energyTaken);
 
 	void CollectEnergy();
 
@@ -99,4 +100,6 @@ public:
 	void StartDash();
 
 	void PlaceObstacle(float obstacleWidth, float obstacleHeight);
+
+	void DisableExhaustion();
 };
