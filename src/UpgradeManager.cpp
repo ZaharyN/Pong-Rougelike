@@ -6,7 +6,7 @@ UpgradeManager::UpgradeManager()
 	LoadUpgradesData();
 }
 
-std::vector<Upgrade> UpgradeManager::ChooseThreeRandomUpgrades()
+std::vector<Upgrade> UpgradeManager::ChooseThreeRandomUpgrades(const std::unordered_set<UpgradeType>& ownedUniqueUpgrades)
 {
 	std::vector<Upgrade> selected;
 	selected.reserve(3);
@@ -22,6 +22,8 @@ std::vector<Upgrade> UpgradeManager::ChooseThreeRandomUpgrades()
 		for (size_t i = 0; i < allUpgrades.size(); i++)
 		{
 			if (allUpgrades[i].rarity != targetRarity) continue;
+			if (ownedUniqueUpgrades.find(allUpgrades[i].type) != ownedUniqueUpgrades.end())
+				continue;
 
 			bool alreadyPicked = false;
 			for (const Upgrade& s : selected)

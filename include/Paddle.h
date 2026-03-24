@@ -79,6 +79,8 @@ public:
 
 	const std::vector<sf::RectangleShape>& GetObstacles()  const;
 
+	const std::unordered_set<UpgradeType>& GetOwnedUniqueUpgrades() const;
+
 	// Modifying methods:
 	void AddUpgrade(UpgradeType type, bool isUnique);
 

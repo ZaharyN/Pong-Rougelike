@@ -53,5 +53,5 @@ class GameManager
 public:
 	GameManager();
 	void Run();
-	~GameManager();
+	~GameManager() = default;
 };

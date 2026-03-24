@@ -3,6 +3,7 @@
 #include "Paddle.h"
 #include <vector>
 #include <random>
+#include <unordered_set>
 
 class UpgradeManager
 {
@@ -10,7 +11,7 @@ class UpgradeManager
 	std::mt19937 rng;
 public:
 	UpgradeManager();
-	std::vector<Upgrade> ChooseThreeRandomUpgrades();
+	std::vector<Upgrade> ChooseThreeRandomUpgrades(const std::unordered_set<UpgradeType>& ownedUniqueUpgrades);
 
 private:
 	void LoadUpgradesData();

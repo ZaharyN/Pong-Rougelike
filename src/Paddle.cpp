@@ -202,3 +202,8 @@ const std::vector<sf::RectangleShape>& Paddle::GetObstacles() const
 {
 	return obstacles;
 }
+
+const std::unordered_set<UpgradeType>& Paddle::GetOwnedUniqueUpgrades() const
+{
+	return uniqueUpgrades;
+}

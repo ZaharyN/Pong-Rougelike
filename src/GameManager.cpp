@@ -91,6 +91,7 @@ void GameManager::ProcessEvents()
 					{
 						currentUpgradeOptions[pickedCard].action(*upgradeRecipient, *upgradeVictim, *ball);
 						gameState = GameState::Playing;
+						audioManager->PlaySound("select");
 					}
 				}
 			}
@@ -257,7 +258,7 @@ void GameManager::CheckCollisions()
 			upgradeRecipient = player1.get();
 			upgradeVictim = player2.get();
 
-			currentUpgradeOptions = upgradeManager->ChooseThreeRandomUpgrades();
+			currentUpgradeOptions = upgradeManager->ChooseThreeRandomUpgrades(player1->GetOwnedUniqueUpgrades());
 			uiManager->ShowRandomUpgrades(currentUpgradeOptions);
 
 			gameState = GameState::UpgradeSelect;
@@ -268,7 +269,7 @@ void GameManager::CheckCollisions()
 			upgradeRecipient = player2.get();
 			upgradeVictim = player1.get();
 
-			currentUpgradeOptions = upgradeManager->ChooseThreeRandomUpgrades();
+			currentUpgradeOptions = upgradeManager->ChooseThreeRandomUpgrades(player2->GetOwnedUniqueUpgrades());
 			uiManager->ShowRandomUpgrades(currentUpgradeOptions);
 
 			gameState = GameState::UpgradeSelect;
@@ -300,9 +301,4 @@ void GameManager::Render()
 	}
 
 	gameWindow.display();
-}
-
-GameManager::~GameManager()
-{
-
 }
