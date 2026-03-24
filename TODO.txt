@@ -2,12 +2,11 @@ TO DO:
 
 - Implement the other upgrades
 
+- Add which player is picking the current upgrades because there is no way to know
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Bugs:
 - When the player gets the reduce spin upgrade it has negative spin which is not correct
-
-
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Future Optimizations:

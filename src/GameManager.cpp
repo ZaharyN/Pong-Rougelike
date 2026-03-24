@@ -118,7 +118,7 @@ void GameManager::StartGame(GameMode gameMode)
 			sf::Vector2f{ playerLength, playerHeight }, PaddleScreenPosition::Top,
 			sf::Vector2f{ windowWidth / 2.f, 0 + playerHeight / 2.f },
 			sf::Color::Green,
-			playerSpeed, *ball, windowWidth, 100);
+			playerSpeed, *ball, windowWidth, windowHeight, 100);
 	}
 	else
 	{
@@ -137,14 +137,14 @@ void GameManager::StartGame(GameMode gameMode)
 			sf::Vector2f{ playerLength, playerHeight }, PaddleScreenPosition::Top,
 			sf::Vector2f{ windowWidth / 2.f, 0 + playerHeight / 2 },
 			sf::Color::Green,
-			playerSpeed, windowWidth, 100, p2Controls);
+			playerSpeed, windowWidth, windowHeight, 100, p2Controls);
 	}
 
 	player1 = std::make_unique<Player>(
 		sf::Vector2f{ playerLength, playerHeight }, PaddleScreenPosition::Bottom,
 		sf::Vector2f{ windowWidth / 2.f, windowHeight - playerHeight / 2 },
 		sf::Color::Green,
-		playerSpeed, windowWidth, 100, p1Controls);
+		playerSpeed, windowWidth, windowHeight, 100, p1Controls);
 }
 
 void GameManager::Update(float deltaT)
@@ -207,7 +207,35 @@ void GameManager::CheckCollisions()
 			player2->ReduceEnergy(1);
 		}
 
-		// 3.Hits dead zone
+		// 3. Check obstacle collisions
+		// Check if ball is towards top player
+		if (ball->GetVerticalDirection() == -1)
+		{
+			for (const auto& obs : player1->GetObstacles())
+			{
+				if (ball->GetGlobalBounds().findIntersection(obs.getGlobalBounds()))
+				{
+					ball->SwapVerticalDirection();
+					audioManager->PlaySound("hit");
+					break;
+				}
+			}
+		}
+		// Check if ball is towards bottom player
+		if (ball->GetVerticalDirection() == 1)
+		{
+			for (const auto& obs : player2->GetObstacles())
+			{
+				if (ball->GetGlobalBounds().findIntersection(obs.getGlobalBounds()))
+				{
+					ball->SwapVerticalDirection();
+					audioManager->PlaySound("hit");
+					break;
+				}
+			}
+		}
+
+		// 4.Hits dead zone
 		if (ball->GetBody().getPosition().y - ballRadius <= 0
 			|| ball->GetBody().getPosition().y + ballRadius >= windowHeight)
 		{
@@ -257,6 +285,13 @@ void GameManager::Render()
 		player1->Draw(gameWindow);
 		player2->Draw(gameWindow);
 		ball->Draw(gameWindow);
+
+		for (const auto& obs : player1->GetObstacles())
+			gameWindow.draw(obs);
+
+		for (const auto& obs : player2->GetObstacles())
+			gameWindow.draw(obs);
+
 		collectibleManager->Draw(gameWindow);
 	}
 	else

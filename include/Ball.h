@@ -61,6 +61,8 @@ public:
 
 	float GetCurrentRadius() const;
 
+	float GetVerticalDirection() const;
+
 	const sf::CircleShape& GetBody() const;
 
 	sf::FloatRect GetGlobalBounds() const;

@@ -155,6 +155,11 @@ float Ball::GetCurrentRadius() const
 	return this->currentRadius;
 }
 
+float Ball::GetVerticalDirection() const
+{
+	return this->verticalDirection;
+}
+
 const sf::CircleShape& Ball::GetBody() const
 {
 	return this->body;

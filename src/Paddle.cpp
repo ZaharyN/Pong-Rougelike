@@ -1,10 +1,10 @@
 #include "Paddle.h"
 
 Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
-	const sf::Color& initialColor, float speed, int windowWidth, int initialEnergy)
+	const sf::Color& initialColor, float speed, int windowWidth, int windowHeight, int initialEnergy)
 	: initialSpeed(speed), currentSpeed(speed), horizontalDirection(0), screenPosition(screenPos),
-	windowWidth(windowWidth), initialEnergy(initialEnergy), currentEnergy(initialEnergy),
-	color(initialColor), energyCollected(0)
+	windowWidth(windowWidth), windowHeight(windowHeight), initialEnergy(initialEnergy), currentEnergy(initialEnergy),
+	color(initialColor), energyCollected(0), rng(std::random_device{}())
 {
 	body = sf::RectangleShape(size);
 	body.setOrigin(body.getGeometricCenter());
@@ -22,8 +22,7 @@ void Paddle::Draw(sf::RenderTarget& target)
 	}
 	else
 	{
-		body.setFillColor(sf::Color::White);
-		body.setOutlineColor(sf::Color::White);
+		body.setFillColor(color);
 		body.setOutlineThickness(0.f);
 	}
 
@@ -70,7 +69,8 @@ void Paddle::ChangeColorFromRation(float ratio)
 		redValue = 255.f;
 	}
 
-	body.setFillColor(sf::Color(static_cast<uint8_t>(redValue), static_cast<uint8_t>(greenValue), color.b));
+	color = sf::Color(static_cast<uint8_t>(redValue), static_cast<uint8_t>(greenValue), color.b);
+	body.setFillColor(color);
 }
 
 void Paddle::CollectEnergy()
@@ -81,6 +81,22 @@ void Paddle::CollectEnergy()
 void Paddle::ResetCollectedEnergy()
 {
 	energyCollected = 0;
+}
+
+void Paddle::AddUpgrade(UpgradeType type, bool isUnique)
+{
+	if (isUnique)
+	{
+		uniqueUpgrades.insert(type);
+		return;
+	}
+
+	stackableUpgrades[type]++;
+}
+
+bool Paddle::HasUniqueUpgrade(UpgradeType type)
+{
+	return uniqueUpgrades.find(type) != uniqueUpgrades.end();
 }
 
 void Paddle::SetSpeed(float factor)
@@ -119,6 +135,22 @@ void Paddle::StartDash()
 	isDashing = true;
 	dashTimer = 0.1f;
 	dashSpeedMultiplier = 5.f;
+}
+
+void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight)
+{
+	std::uniform_real_distribution<float> random(obstacleWidth / 2.f, windowWidth - obstacleWidth / 2.f);
+	float obstacleX = random(rng);
+	float obstacleY = windowHeight / 2.f;
+
+	sf::RectangleShape obstacle({ obstacleWidth, obstacleHeight });
+	obstacle.setOrigin(obstacle.getGeometricCenter());
+	obstacle.setPosition({ obstacleX, obstacleY });
+	obstacle.setFillColor(sf::Color(100, 100, 100));
+	obstacle.setOutlineThickness(2.f);
+	obstacle.setOutlineColor(sf::Color::White);
+
+	obstacles.push_back(obstacle);
 }
 
 const float Paddle::GetCurrentSpeed() const
@@ -164,4 +196,9 @@ float Paddle::GetSpinMultiplier() const
 float Paddle::GetEnergySpawnRangeModifier() const
 {
 	return energyRangeModifier;
+}
+
+const std::vector<sf::RectangleShape>& Paddle::GetObstacles() const
+{
+	return obstacles;
 }

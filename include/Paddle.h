@@ -2,6 +2,10 @@
 #include <SFML/Graphics.hpp>
 #include "Types.h"
 #include <iostream>
+#include <unordered_set>
+#include <unordered_map>
+#include <vector>
+#include <random>
 
 class Paddle
 {
@@ -15,9 +19,14 @@ protected:
 	int currentEnergy;
 	int horizontalDirection;
 	int windowWidth;
+	int windowHeight;
 	int energyCollected;
 
 	// Modifiables:
+	std::mt19937 rng;
+	std::unordered_set<UpgradeType> uniqueUpgrades;
+	std::unordered_map<UpgradeType, int> stackableUpgrades;
+	std::vector<sf::RectangleShape> obstacles;
 	float reducedCollectibleSpawnRange = 0.f;
 	float force = 1.0f;
 	float spinMultiplier = 1.0f;
@@ -30,7 +39,7 @@ protected:
 
 public:
 	Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
-		const sf::Color& initialColor, float speed, int windowWidth, int initialEnergy);
+		const sf::Color& initialColor, float speed, int windowWidth, int windowHeight, int initialEnergy);
 
 	virtual void Update(float deltaT) = 0;
 
@@ -68,11 +77,13 @@ public:
 
 	float GetEnergySpawnRangeModifier() const;
 
-	void EnableDash();
-
-	void StartDash();
+	const std::vector<sf::RectangleShape>& GetObstacles()  const;
 
 	// Modifying methods:
+	void AddUpgrade(UpgradeType type, bool isUnique);
+
+	bool HasUniqueUpgrade(UpgradeType type);
+
 	void SetSpeed(float factor);
 
 	void SetSize(float factor);
@@ -80,4 +91,10 @@ public:
 	void SetSpin(float factor);
 
 	void ModifyEnergySpawnRange(float value);
+
+	void EnableDash();
+
+	void StartDash();
+
+	void PlaceObstacle(float obstacleWidth, float obstacleHeight);
 };

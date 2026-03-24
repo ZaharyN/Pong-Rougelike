@@ -22,7 +22,7 @@ The classic pong game created with SFML 3.0 with some rougelike elements. Player
 
 ## 🏗 Architecture Highlights
 
-- **Manager Pattern**: Each game system is isolated. `GameManager acts as the brain of the application`. `AudioManager` handles a non-blocking sound pool; `UpgradeManager` handles weighted probability logic.
+- **Manager Pattern**: Each game system is isolated. `GameManager` acts as the brain of the application. `AudioManager` handles a non-blocking sound pool; `UpgradeManager` handles weighted probability logic.
 - **Polymorphism**: The `Paddle` base class allows the game to treat `Player` and `Enemy` identically in the update loop.
 - **Data-Driven Upgrades**: Upgrades are stored as a "pool" of functional objects, making it trivial to add new game mechanics without modifying existing class logic.
 
@@ -35,4 +35,4 @@ The classic pong game created with SFML 3.0 with some rougelike elements. Player
 
 ## 📦 How to Play (Release)
 
-I will add soon the release files
+- I will add soon the release files
