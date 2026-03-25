@@ -48,5 +48,5 @@ void Enemy::Update(float deltaT)
 	}
 
 	newPosition = std::clamp(newPosition, 0 + body.getSize().x / 2.f, windowWidth - body.getSize().x / 2.f);
-	this->SetPosition({ newPosition, body.getPosition().y });
+	SetPosition({ newPosition, body.getPosition().y });
 }

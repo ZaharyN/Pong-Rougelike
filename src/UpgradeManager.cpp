@@ -174,17 +174,6 @@ void UpgradeManager::LoadUpgradesData()
 		} });
 
 	allUpgrades.push_back({
-		UpgradeType::SMSMissing,
-		"SM'S MISSING",
-		"MAKE A WHOLE IN OPPONENTS BODY",
-		UpgradeRarity::Uncommon,
-		true,
-		[](Paddle& p, Paddle& opp, Ball& ball)
-		{
-			opp.AddUpgrade(UpgradeType::SMSMissing, true);
-		} });
-
-	allUpgrades.push_back({
 		UpgradeType::Sping,
 		"SPING",
 		"YOUR HITS APPLY CURVATURE TO THE BALL",
@@ -213,10 +202,11 @@ void UpgradeManager::LoadUpgradesData()
 		"DUMB BUDDY",
 		"ADD SECOND RECTANGLE WITH DUMMY MOVEMENT",
 		UpgradeRarity::Legendary,
-		true,
+		false,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-			p.AddUpgrade(UpgradeType::DumbBuddy, true);
+			p.AddBuddy();
+			p.AddUpgrade(UpgradeType::DumbBuddy, false);
 		} });
 
 	allUpgrades.push_back({

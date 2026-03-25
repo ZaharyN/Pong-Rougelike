@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <vector>
 #include <random>
+#include <memory>
 
 class Paddle
 {
@@ -28,6 +29,7 @@ protected:
 	std::unordered_set<UpgradeType> uniqueUpgrades;
 	std::unordered_map<UpgradeType, int> stackableUpgrades;
 	std::vector<sf::RectangleShape> obstacles;
+	std::vector<std::unique_ptr<Paddle>> buddies;
 	float reducedCollectibleSpawnRange = 0.f;
 	float force = 1.0f;
 	float spinMultiplier = 1.0f;
@@ -38,7 +40,7 @@ protected:
 	float dashCooldown = 0.f; 
 	float dashSpeedMultiplier = 1.f;
 	bool isNeverExhausted = false;
-	bool canMoveUpAndDown = true;
+	bool canMoveUpAndDown = false;
 
 public:
 	Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
@@ -84,6 +86,8 @@ public:
 
 	const std::unordered_set<UpgradeType>& GetOwnedUniqueUpgrades() const;
 
+	const std::vector<std::unique_ptr<Paddle>>& GetBuddies() const;
+
 	// Modifying methods:
 	void AddUpgrade(UpgradeType type, bool isUnique);
 
@@ -106,4 +110,6 @@ public:
 	void DisableExhaustion();
 
 	void EnableUpAndDownMomvement();
+
+	void AddBuddy();
 };

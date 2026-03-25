@@ -1,4 +1,5 @@
 #include "Paddle.h"
+#include "Buddy.h"
 
 Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
 	const sf::Color& initialColor, float speed, int windowWidth, int windowHeight, int initialEnergy)
@@ -43,6 +44,7 @@ void Paddle::Reset()
 	uniqueUpgrades.clear();
 	stackableUpgrades.clear();
 	obstacles.clear();
+	buddies.clear();
 
 	reducedCollectibleSpawnRange = 0.f;
 	force = 1.f;
@@ -165,14 +167,20 @@ void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight)
 {
 	std::uniform_real_distribution<float> random(obstacleWidth / 2.f, windowWidth - obstacleWidth / 2.f);
 	float obstacleX = random(rng);
-	float obstacleY = windowHeight / 2.f;
+	float obstacleY = screenPosition == PaddleScreenPosition::Top 
+		? windowHeight / 2.f - obstacleHeight / 2.f - 2.f
+		: windowHeight / 2.f + obstacleHeight / 2.f + 2.f;
+
+	sf::Color outlineColor = screenPosition == PaddleScreenPosition::Top
+		? sf::Color::Red
+		: sf::Color::Green;
 
 	sf::RectangleShape obstacle({ obstacleWidth, obstacleHeight });
-	obstacle.setOrigin(obstacle.getGeometricCenter());
 	obstacle.setPosition({ obstacleX, obstacleY });
-	obstacle.setFillColor(sf::Color(100, 100, 100));
 	obstacle.setOutlineThickness(2.f);
-	obstacle.setOutlineColor(sf::Color::White);
+	obstacle.setOrigin(obstacle.getGeometricCenter());
+	obstacle.setFillColor(sf::Color(100, 100, 100));
+	obstacle.setOutlineColor(outlineColor);
 
 	obstacles.push_back(obstacle);
 }
@@ -185,6 +193,22 @@ void Paddle::DisableExhaustion()
 void Paddle::EnableUpAndDownMomvement()
 {
 	canMoveUpAndDown = true;
+}
+
+void Paddle::AddBuddy()
+{
+	float buddyYPos = body.getPosition().y;
+	float buddyXPos = windowWidth / 2.f;
+
+	std::unique_ptr<Buddy> newBuddy = std::make_unique<Buddy>(
+		sf::Vector2f({ 80.f, 10.f }),
+		this->screenPosition,
+		sf::Vector2f({ buddyXPos, buddyYPos }),
+		sf::Color(255, 255, 255, 150),
+		initialSpeed / 2.f,
+		windowWidth, windowHeight, initialEnergy);
+
+	buddies.push_back(std::move(newBuddy));
 }
 
 const float Paddle::GetCurrentSpeed() const
@@ -240,4 +264,9 @@ const std::vector<sf::RectangleShape>& Paddle::GetObstacles() const
 const std::unordered_set<UpgradeType>& Paddle::GetOwnedUniqueUpgrades() const
 {
 	return uniqueUpgrades;
+}
+
+const std::vector<std::unique_ptr<Paddle>>& Paddle::GetBuddies() const
+{
+	return buddies;
 }

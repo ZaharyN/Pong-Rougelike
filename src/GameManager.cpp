@@ -164,6 +164,12 @@ void GameManager::Update(float deltaT)
 			player1->Update(deltaT);
 			player2->Update(deltaT);
 			collectibleManager->Update(deltaT, player1.get(), player2.get());
+
+			for (const auto& buddy : player1->GetBuddies())
+				buddy->Update(deltaT);
+
+			for (const auto& buddy : player2->GetBuddies())
+				buddy->Update(deltaT);
 		}
 	}
 	else
@@ -193,7 +199,7 @@ void GameManager::CheckCollisions()
 		// 2.Ricochets from player
 		if (ball->GetVerticalDirection() > 0 && ball->GetGlobalBounds().findIntersection(player1->GetGlobalBounds()))
 		{
-			ball->SetPosition({ ball->GetBody().getPosition().x, player1->GetBody().getPosition().y - (ballRadius + playerHeight / 2) - 1 });
+			ball->SetPosition({ ball->GetBody().getPosition().x, player1->GetBody().getPosition().y - (ballRadius + playerHeight / 2.f) - 1 });
 			ball->ApplySpin(player1->GetXDirection(), player1->GetSpinMultiplier());
 			ball->IncreaseSpeed();
 
@@ -204,7 +210,7 @@ void GameManager::CheckCollisions()
 		}
 		else if (ball->GetVerticalDirection() < 0 && ball->GetGlobalBounds().findIntersection(player2->GetGlobalBounds()))
 		{
-			ball->SetPosition({ ball->GetBody().getPosition().x, player2->GetBody().getPosition().y + (ballRadius + playerHeight / 2) + 1 });
+			ball->SetPosition({ ball->GetBody().getPosition().x, player2->GetBody().getPosition().y + (ballRadius + playerHeight / 2.f) + 1 });
 			ball->ApplySpin(player2->GetXDirection(), player2->GetSpinMultiplier());
 			ball->IncreaseSpeed();
 
@@ -214,7 +220,39 @@ void GameManager::CheckCollisions()
 			player2->UpdateEnergy(-1);
 		}
 
-		// 3. Check obstacle collisions
+		// 3. Check buddies collisions
+		if (ball->GetVerticalDirection() > 0)
+		{
+			for (const auto& buddy : player1->GetBuddies())
+			{
+				if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
+				{
+					ball->SetPosition({ ball->GetBody().getPosition().x, buddy->GetBody().getPosition().y - (ballRadius + playerHeight / 2.f) - 1 });
+					ball->SwapVerticalDirection();
+					ball->IncreaseSpeed();
+
+					audioManager->PlaySound("hit");
+					break;
+				}
+			}
+		}
+		if (ball->GetVerticalDirection() < 0)
+		{
+			for (const auto& buddy : player2->GetBuddies())
+			{
+				if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
+				{
+					ball->SetPosition({ ball->GetBody().getPosition().x, player2->GetBody().getPosition().y + (ballRadius + playerHeight / 2.f) + 1 });
+					ball->SwapVerticalDirection();
+					ball->IncreaseSpeed();
+
+					audioManager->PlaySound("hit");
+					break;
+				}
+			}
+		}
+
+		// 4. Check obstacle collisions
 		// Check if ball is towards top player
 		if (ball->GetVerticalDirection() < 0)
 		{
@@ -242,7 +280,7 @@ void GameManager::CheckCollisions()
 			}
 		}
 
-		// 4.Hits dead zone
+		// 5.Hits dead zone
 		if (ball->GetBody().getPosition().y - ballRadius <= 0
 			|| ball->GetBody().getPosition().y + ballRadius >= windowHeight)
 		{
@@ -256,6 +294,7 @@ void GameManager::CheckCollisions()
 			return;
 		}
 
+		// 6. Check collectibles pickup
 		collectibleManager->CheckCollisions(player1.get(), player2.get(), *audioManager);
 
 		if (player1->GetCollectedEnergy() == collectibleCountForUpgrade)
@@ -298,6 +337,12 @@ void GameManager::Render()
 
 		for (const auto& obs : player2->GetObstacles())
 			gameWindow.draw(obs);
+
+		for (const auto& buddy : player1->GetBuddies())
+			gameWindow.draw(buddy->GetBody());
+
+		for (const auto& buddy : player2->GetBuddies())
+			gameWindow.draw(buddy->GetBody());
 
 		collectibleManager->Draw(gameWindow);
 	}
