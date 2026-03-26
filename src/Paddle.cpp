@@ -55,6 +55,7 @@ void Paddle::Reset()
 	isNeverExhausted = false;
 	canMoveUpAndDown = false;
 	hasForesight = false;
+	curvaturePower = 0.f;
 }
 
 void Paddle::SetPosition(const sf::Vector2f& newPosition)
@@ -275,6 +276,11 @@ void Paddle::DrawForesight(sf::RenderTarget& target) const
 		target.draw(dot);
 }
 
+void Paddle::AddCurvaturePower(float power)
+{
+	curvaturePower += power;
+}
+
 // Getters:
 
 float Paddle::GetCurrentSpeed() const
@@ -340,4 +346,9 @@ const std::vector<std::unique_ptr<Paddle>>& Paddle::GetBuddies() const
 bool Paddle::HasForesight() const
 {
 	return hasForesight;
+}
+
+float Paddle::GetCurvaturePower() const
+{
+	return curvaturePower;
 }

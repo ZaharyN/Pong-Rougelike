@@ -46,6 +46,7 @@ protected:
 	bool isNeverExhausted = false;
 	bool canMoveUpAndDown = false;
 	bool hasForesight = false;
+	float curvaturePower = 0.f;
 
 public:
 	Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
@@ -95,6 +96,8 @@ public:
 
 	bool HasForesight() const;
 
+	float GetCurvaturePower() const;
+
 	// Modifying methods:
 	void AddUpgrade(UpgradeType type, bool isUnique);
 
@@ -116,7 +119,7 @@ public:
 
 	void DisableExhaustion();
 
-	void EnableUpAndDownMomvement();
+	void EnableUpAndDownMovement();
 
 	void AddBuddy();
 
@@ -127,4 +130,6 @@ public:
 	void DrawForesight(sf::RenderTarget& target) const;
 
 	void TrimForesight(float ballY, float verticalDirection);
+
+	void AddCurvaturePower(float power);
 };

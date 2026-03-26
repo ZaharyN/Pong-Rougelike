@@ -19,10 +19,19 @@ Ball::Ball(float initialRadius, const sf::Vector2f& initialPosition,
 
 void Ball::Update(float deltaT)
 {
-	float ballX = body.getPosition().x;
-	float ballY = body.getPosition().y;
-	float ballNewX = ballX + deltaT * currentMovementSpeed * horizontalDirection;
-	float ballNewY = ballY + deltaT * currentMovementSpeed * verticalDirection;
+	horizontalDirection += -currentCurvature * deltaT;
+
+	float length = std::sqrt(horizontalDirection * horizontalDirection + verticalDirection * verticalDirection);
+	horizontalDirection /= length;
+	verticalDirection /= length;
+
+	if (std::abs(currentCurvature) > 0.01f)
+	{
+		currentCurvature -= currentCurvature * CURVATURE_DECAY;
+	}
+
+	float ballNewX = body.getPosition().x + deltaT * currentMovementSpeed * horizontalDirection;
+	float ballNewY = body.getPosition().y + deltaT * currentMovementSpeed * verticalDirection;
 
 	SetPosition({ ballNewX, ballNewY });
 	ChangeColor(deltaT);
@@ -37,6 +46,7 @@ void Ball::Reset()
 {
 	currentMovementSpeed = initialMovementSpeed;
 	currentRadius = initialRadius;
+	ResetCurvature();
 	ResetAngle();
 }
 
@@ -55,10 +65,12 @@ void Ball::IncreaseSpeed()
 	currentMovementSpeed += currentMovementSpeed * SPEED_MULTIPLIER;
 }
 
-void Ball::ApplySpin(float paddleXDirection, float spinMultiplier)
+void Ball::ApplySpin(float paddleXDirection, float spinMultiplier, float curvaturePower)
 {
 	horizontalDirection += paddleXDirection * INFLUENCE * spinMultiplier;
 	verticalDirection *= -1;
+
+	currentCurvature = paddleXDirection * curvaturePower;
 
 	float length = sqrt(horizontalDirection * horizontalDirection + verticalDirection * verticalDirection);
 
@@ -140,6 +152,13 @@ void Ball::ChangeColor(float deltaT)
 	body.setFillColor(sf::Color(static_cast<uint8_t>(currR), static_cast<uint8_t>(currG), static_cast<uint8_t>(currB)));
 }
 
+void Ball::ResetCurvature()
+{
+	currentCurvature = 0.f;
+}
+
+// Getters:
+
 float Ball::GetCurrentSpeed() const
 {
 	return currentMovementSpeed;
@@ -218,4 +237,9 @@ ColorState Ball::MapColorToState(const sf::Color& initialColor)
 		return ColorState::Blue;
 
 	return ColorState::White;
+}
+
+float Ball::GetCurvature() const
+{
+	return currentCurvature;
 }

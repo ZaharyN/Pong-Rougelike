@@ -192,12 +192,14 @@ void GameManager::CheckCollisions()
 		{
 			ball->SetPosition({ windowWidth - ballRadius, ball->GetBody().getPosition().y });
 			ball->SwapHorizontalDirection();
+			ball->ResetCurvature();
 			audioManager->PlaySound("hit");
 		}
 		else if (ball->GetBody().getPosition().x - ballRadius <= 0)
 		{
 			ball->SetPosition({ ballRadius, ball->GetBody().getPosition().y });
 			ball->SwapHorizontalDirection();
+			ball->ResetCurvature();
 			audioManager->PlaySound("hit");
 		}
 
@@ -205,7 +207,7 @@ void GameManager::CheckCollisions()
 		if (ball->GetVerticalDirection() > 0 && ball->GetGlobalBounds().findIntersection(player1->GetGlobalBounds()))
 		{
 			ball->SetPosition({ ball->GetBody().getPosition().x, player1->GetBody().getPosition().y - (ballRadius + playerHeight / 2.f) - 1 });
-			ball->ApplySpin(player1->GetXDirection(), player1->GetSpinMultiplier());
+			ball->ApplySpin(player1->GetXDirection(), player1->GetSpinMultiplier(), player1->GetCurvaturePower());
 			ball->IncreaseSpeed();
 
 			if (player2->HasForesight())
@@ -219,7 +221,7 @@ void GameManager::CheckCollisions()
 		else if (ball->GetVerticalDirection() < 0 && ball->GetGlobalBounds().findIntersection(player2->GetGlobalBounds()))
 		{
 			ball->SetPosition({ ball->GetBody().getPosition().x, player2->GetBody().getPosition().y + (ballRadius + playerHeight / 2.f) + 1 });
-			ball->ApplySpin(player2->GetXDirection(), player2->GetSpinMultiplier());
+			ball->ApplySpin(player2->GetXDirection(), player2->GetSpinMultiplier(), player2->GetCurvaturePower());
 			ball->IncreaseSpeed();
 
 			if (player1->HasForesight())

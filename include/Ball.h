@@ -10,6 +10,7 @@ class Ball
 	const float INFLUENCE = 0.3f;
 	const float SPEED_MULTIPLIER = 0.01f;
 	const int COLOR_CHANGE_SPEED = 100;
+	const float CURVATURE_DECAY = 0.05F;
 
 	sf::CircleShape body;
 	sf::Color color;
@@ -29,6 +30,7 @@ class Ball
 
 	float horizontalDirection;
 	float verticalDirection;
+	float currentCurvature = 0.f;
 
 public:
 	Ball(float initialRadius, const sf::Vector2f& initialPosition,
@@ -47,13 +49,15 @@ public:
 
 	void IncreaseSpeed();
 
-	void ApplySpin(float paddleXDirection, float spinMultiplier);
+	void ApplySpin(float paddleXDirection, float spinMultiplier, float curvaturePower);
 
 	void SetPosition(const sf::Vector2f& newPosition);
 
 	void SetInitialColorValues(const sf::Color& initialColor);
 
 	void ChangeColor(float deltaT);
+
+	void ResetCurvature();
 
 	float GetCurrentSpeed() const;
 
@@ -70,6 +74,8 @@ public:
 	sf::FloatRect GetGlobalBounds() const;
 
 	sf::FloatRect GetLocalBounds() const;
+
+	float GetCurvature() const;
 
 	~Ball() = default;
 

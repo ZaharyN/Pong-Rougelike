@@ -181,6 +181,7 @@ void UpgradeManager::LoadUpgradesData()
 		false,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
+			p.AddCurvaturePower(0.5f);
 			p.AddUpgrade(UpgradeType::Sping, false);
 		} });
 
