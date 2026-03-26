@@ -15,7 +15,7 @@ class AudioManager
 public:
 	AudioManager();
 
-	void PlaySound(const std::string_view& soundName);
+	void PlaySound(const std::string_view soundName);
 
 	void PlayBackgroundMusic();
 

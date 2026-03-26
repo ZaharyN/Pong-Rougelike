@@ -26,7 +26,7 @@ AudioManager::AudioManager()
 	}
 }
 
-void AudioManager::PlaySound(const std::string_view& soundName)
+void AudioManager::PlaySound(const std::string_view soundName)
 {
 	soundPool.remove_if([](sf::Sound& s)
 		{

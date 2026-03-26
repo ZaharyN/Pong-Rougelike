@@ -3,10 +3,9 @@ The classic pong game created with SFML 3.0 with some rougelike elements. Player
 
 ## 🚀 Features
 
-- **Roguelike Progression**: Collect 5 energy "apples" to trigger a Level Up. Choose from 3 random upgrades with varying rarities (**Common, Uncommon, Legendary**).
+- **Roguelike Progression**: Collect 3 energy to trigger a Level Up. Choose from 3 random upgrades with varying rarities (**Common, Uncommon, Legendary**).
 - **Advanced OOP Architecture**: Built using a Manager-based design pattern (GameManager, AudioManager, UIManager, UpgradeManager) for high scalability and clean code.
 - **Smart AI**: An adaptive Enemy AI that tracks ball trajectory and utilizes "Dash" abilities strategically.
-- **Physics**: Implementation of spin (curvature), variable force, and multi-ball support.
 
 ## 🛠 Tech Stack
 
@@ -16,9 +15,18 @@ The classic pong game created with SFML 3.0 with some rougelike elements. Player
 
 ## 🎮 Controls
 
+### vs AI (One Player)
 - **Player 1**: `A` / `D` or `Left` / `Right` arrows to move.
 - **Ability**: `Space` to Dash (once unlocked).
+
+### vs Player (Two Player)
+- **Player 1 (Bottom)**: `Left` / `Right` arrows to move.
+- **Player 2 (Top)**: `A` / `D` to move.
+- **Ability**: `Space` to Dash (once unlocked).
+
+### General
 - **UI**: Mouse Left-Click to navigate menus and select upgrades.
+- **Exit**: `Escape` to quit.
 
 ## 🏗 Architecture Highlights
 

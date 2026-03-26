@@ -41,6 +41,7 @@ void Paddle::Reset()
 	stackableUpgrades.clear();
 	obstacles.clear();
 	buddies.clear();
+	foresightDots.clear();
 
 	reducedCollectibleSpawnRange = 0.f;
 	force = 1.f;
@@ -187,7 +188,7 @@ void Paddle::DisableExhaustion()
 	isNeverExhausted = true;
 }
 
-void Paddle::EnableUpAndDownMomvement()
+void Paddle::EnableUpAndDownMovement()
 {
 	canMoveUpAndDown = true;
 }

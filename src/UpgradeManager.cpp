@@ -54,7 +54,7 @@ void UpgradeManager::LoadUpgradesData()
 	allUpgrades.push_back({
 		UpgradeType::Sonic,
 		"SONIC",
-		"INCREASSE SPEED BY 10%",
+		"INCREASE SPEED BY 10%",
 		UpgradeRarity::Common,
 		false,
 		[](Paddle& p, Paddle& opp, Ball& ball)
@@ -230,7 +230,7 @@ void UpgradeManager::LoadUpgradesData()
 		true,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-			p.EnableUpAndDownMomvement();
+			p.EnableUpAndDownMovement();
 			p.AddUpgrade(UpgradeType::Extraganza, true);
 		} });
 }
