@@ -13,7 +13,7 @@ class CollectibleManager
 	const float COLLECTIBLE_WIDTH = 40.f;
 	const float COLLECTIBLE_HEIGHT = 40.f;
 	const float COLLECTIBLE_SPAWN_DELAY = 10.f;
-	const float COLLECTIBLE_ENERGY = 5.f;
+	const int COLLECTIBLE_ENERGY = 5.f;
 
 	std::mt19937 rng;
 	float spawnDelay;

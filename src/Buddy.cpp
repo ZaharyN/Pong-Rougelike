@@ -4,11 +4,6 @@ Buddy::Buddy(const sf::Vector2f& size, const PaddleScreenPosition screenPos, con
 	const sf::Color& color, float speed, int windowWidth, int windowHeight, int initialEnergy)
 	: Paddle(size, screenPos, startPosition, color, speed, windowWidth, windowHeight, initialEnergy)
 {
-	body = sf::RectangleShape(size);
-	body.setOrigin(body.getGeometricCenter());
-	body.setPosition(startPosition);
-	body.setFillColor(color);
-
 	horizontalDirection = 1;
 }
 

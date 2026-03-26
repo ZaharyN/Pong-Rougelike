@@ -39,6 +39,7 @@ enum class ColorState
 
 enum class ClickTarget
 {
+	None,
 	StartButton,
 	ExitButton,
 	OnePlayerOption,

@@ -72,7 +72,7 @@ void Ball::ApplySpin(float paddleXDirection, float spinMultiplier, float curvatu
 
 	currentCurvature = paddleXDirection * curvaturePower;
 
-	float length = sqrt(horizontalDirection * horizontalDirection + verticalDirection * verticalDirection);
+	float length = std::sqrt(horizontalDirection * horizontalDirection + verticalDirection * verticalDirection);
 
 	horizontalDirection /= length;
 	verticalDirection /= length;

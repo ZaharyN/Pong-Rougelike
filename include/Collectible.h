@@ -4,7 +4,6 @@
 class Collectible
 {
 	sf::Sprite sprite;
-	sf::Vector2f position;
 
 public:
 	Collectible(const sf::Vector2f& screenPos, const sf::Texture& texture);

@@ -299,6 +299,8 @@ ClickTarget UIManager::GetClickedTarget(const sf::Vector2f& mousePos, GameState 
 		if (upgradeCard3.getGlobalBounds().contains(mousePos))
 			return ClickTarget::UpgradeCard3;
 		break;
+	default:
+		return ClickTarget::None;
 	}
 }
 

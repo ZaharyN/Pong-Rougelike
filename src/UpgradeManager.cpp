@@ -28,7 +28,7 @@ std::vector<Upgrade> UpgradeManager::ChooseThreeRandomUpgrades(const std::unorde
 			bool alreadyPicked = false;
 			for (const Upgrade& s : selected)
 			{
-				if (s.title == allUpgrades[i].title)
+				if (s.type == allUpgrades[i].type)
 					alreadyPicked = true;
 			}
 
@@ -213,7 +213,7 @@ void UpgradeManager::LoadUpgradesData()
 
 	allUpgrades.push_back({
 		UpgradeType::Crank,
-		"Crank",
+		"CRANK",
 		"YOU ARE NEVER EXHAUSTED",
 		UpgradeRarity::Legendary,
 		true,

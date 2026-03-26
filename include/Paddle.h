@@ -101,7 +101,7 @@ public:
 	// Modifying methods:
 	void AddUpgrade(UpgradeType type, bool isUnique);
 
-	bool HasUniqueUpgrade(UpgradeType type);
+	bool HasUniqueUpgrade(UpgradeType type) const;
 
 	void SetSpeed(float factor);
 

@@ -43,7 +43,7 @@ void Enemy::Update(float deltaT)
 	}
 	else
 	{
-		horizontalDirection = distance > 1 ? 1 : -1;
+		horizontalDirection = distance > 0 ? 1 : -1;
 		newPosition = body.getPosition().x + currentStep * horizontalDirection;
 	}
 

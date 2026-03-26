@@ -4,26 +4,24 @@ AudioManager::AudioManager()
 {
 	sf::SoundBuffer selectBuffer;
 	if (selectBuffer.loadFromFile("Assets/Audio/UI_select.ogg"))
-	{
 		buffers["select"] = std::move(selectBuffer);
-	}
+	else
+		std::cout << "Could not load select sound\n";
 
 	sf::SoundBuffer hitBuffer;
 	if (hitBuffer.loadFromFile("Assets/Audio/paddle_hit.wav"))
-	{
 		buffers["hit"] = std::move(hitBuffer);
-	}
+	else
+		std::cout << "Could not load hit sound\n";
 
 	sf::SoundBuffer energyPickUpBuffer;
 	if (energyPickUpBuffer.loadFromFile("Assets/Audio/energy_picked.ogg"))
-	{
 		buffers["energy_picked"] = std::move(energyPickUpBuffer);
-	}
+	else
+		std::cout << "Could not load energy_picked sound\n";
 
 	if (!backgroundMusic.openFromFile("Assets/Audio/background.mp3"))
-	{
-		std::cout << "Error: Could not find background music in Assets/Audio folder!" << std::endl;
-	}
+		std::cout << "Error: Could not find background music in Assets/Audio folder!\n";
 }
 
 void AudioManager::PlaySound(const std::string_view soundName)
@@ -32,7 +30,7 @@ void AudioManager::PlaySound(const std::string_view soundName)
 		{
 			return s.getStatus() == sf::Sound::Status::Stopped;
 		});
-	
+
 	auto it = buffers.find(std::string(soundName));
 
 	if (it != buffers.end())
@@ -49,9 +47,9 @@ void AudioManager::PlayBackgroundMusic()
 	backgroundMusic.play();
 }
 
-void AudioManager::SetPitch(float speedRation)
+void AudioManager::SetPitch(float speedRatio)
 {
-	float newPitch = 1.f + (speedRation - 1.0) * DAMPING_FACTOR;
+	float newPitch = 1.f + (speedRatio - 1.0) * DAMPING_FACTOR;
 	backgroundMusic.setPitch(newPitch);
 }
 

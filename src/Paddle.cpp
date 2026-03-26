@@ -69,7 +69,6 @@ void Paddle::UpdateEnergy(int energyTake)
 
 	currentEnergy = std::clamp(currentEnergy + energyTake, 0, initialEnergy);
 
-	std::cout << "Player energy:" << currentEnergy << std::endl;
 	float ratio = (float)currentEnergy / initialEnergy;
 
 	currentSpeed = initialSpeed * ratio;
@@ -83,14 +82,12 @@ void Paddle::ChangeColorFromRation(float ratio)
 
 	if (ratio >= 0.75)
 	{
-		// Magic numbers until I figure out what exactly I want
 		redValue = std::clamp(255.f * (1 - ratio) * 4.f, 0.f, 255.f);
 		greenValue = 255.f;
 	}
 	else
 	{
-		// Magic numbers until I figure out what exactly I want
-		greenValue = std::clamp(255 * ratio * 1.33f, 0.f, 255.f);
+		greenValue = std::clamp(255.f * ratio * 1.33f, 0.f, 255.f);
 		redValue = 255.f;
 	}
 
@@ -119,7 +116,7 @@ void Paddle::AddUpgrade(UpgradeType type, bool isUnique)
 	stackableUpgrades[type]++;
 }
 
-bool Paddle::HasUniqueUpgrade(UpgradeType type)
+bool Paddle::HasUniqueUpgrade(UpgradeType type) const
 {
 	return uniqueUpgrades.find(type) != uniqueUpgrades.end();
 }
@@ -270,7 +267,7 @@ void Paddle::TrimForesight(float ballY, float verticalDirection)
 
 void Paddle::DrawForesight(sf::RenderTarget& target) const
 {
-	if (foresightDots.size() == 0) return;
+	if (foresightDots.empty()) return;
 
 	for (const auto& dot : foresightDots)
 		target.draw(dot);

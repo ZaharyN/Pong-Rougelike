@@ -31,8 +31,8 @@ void CollectibleManager::CheckCollisions(Paddle* player1, Paddle* player2, Audio
 		{
 			if (player1->GetGlobalBounds().findIntersection(c->GetBounds()))
 			{
-				player1->UpdateEnergy(COLLECTIBLE_ENERGY);
 				player1->CollectEnergy();
+				player1->UpdateEnergy(COLLECTIBLE_ENERGY);
 				audioManager.PlaySound("energy_picked");
 
 				return true;
@@ -53,12 +53,7 @@ void CollectibleManager::CheckCollisions(Paddle* player1, Paddle* player2, Audio
 void CollectibleManager::Draw(sf::RenderTarget& window)
 {
 	for (const auto& collectible : collectibles)
-	{
-		if (collectible)
-		{
-			collectible->Draw(window);
-		}
-	}
+		collectible->Draw(window);
 }
 
 void CollectibleManager::Reset()
