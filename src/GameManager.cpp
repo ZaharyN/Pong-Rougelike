@@ -1,14 +1,14 @@
 #include "GameManager.h"
 
 GameManager::GameManager()
-	: gameWindow(sf::VideoMode({ windowWidth, windowHeight }), "PONG GAME"),
+	: gameWindow(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGHT }), "PONG GAME"),
 	gameState(GameState::Menu)
 {
 	gameWindow.setFramerateLimit(60);
 
 	audioManager = std::make_unique<AudioManager>();
-	uiManager = std::make_unique<UIManager>(windowWidth, windowHeight);
-	collectibleManager = std::make_unique<CollectibleManager>(windowWidth, windowHeight);
+	uiManager = std::make_unique<UIManager>(WINDOW_WIDTH, WINDOW_HEIGHT);
+	collectibleManager = std::make_unique<CollectibleManager>(WINDOW_WIDTH, WINDOW_HEIGHT);
 	upgradeManager = std::make_unique<UpgradeManager>();
 
 	currentUpgradeOptions.reserve(3);
@@ -105,8 +105,8 @@ void GameManager::ProcessEvents()
 
 void GameManager::StartGame(GameMode gameMode)
 {
-	ball = std::make_unique<Ball>(ballRadius, sf::Vector2f{ windowWidth / 2.f, windowHeight / 2.f },
-		ballInitialSpeed, initialMinAngle, initialMaxAngle, sf::Color::Red);
+	ball = std::make_unique<Ball>(BALL_RADIUS, sf::Vector2f{ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f },
+		BALL_INITIAL_SPEED, INITIAL_MIN_ANGLE, INITIAL_MAX_ANGLE, sf::Color::Red);
 
 	PlayerControls p1Controls;
 	PlayerControls p2Controls;
@@ -122,10 +122,10 @@ void GameManager::StartGame(GameMode gameMode)
 		};
 
 		player2 = std::make_unique<Enemy>(
-			sf::Vector2f{ playerLength, playerHeight }, PaddleScreenPosition::Top,
-			sf::Vector2f{ windowWidth / 2.f, playerHeight / 2.f },
+			sf::Vector2f{ PLAYER_WIDTH, PLAYER_HEIGHT }, PaddleScreenPosition::Top,
+			sf::Vector2f{ WINDOW_WIDTH / 2.f, PLAYER_HEIGHT / 2.f },
 			sf::Color::Green,
-			playerSpeed, *ball, windowWidth, windowHeight, 100);
+			PLAYER_INITIAL_SPEED, *ball, WINDOW_WIDTH, WINDOW_HEIGHT, 100);
 	}
 	else
 	{
@@ -145,17 +145,17 @@ void GameManager::StartGame(GameMode gameMode)
 		};
 
 		player2 = std::make_unique<Player>(
-			sf::Vector2f{ playerLength, playerHeight }, PaddleScreenPosition::Top,
-			sf::Vector2f{ windowWidth / 2.f, playerHeight / 2 },
+			sf::Vector2f{ PLAYER_WIDTH, PLAYER_HEIGHT }, PaddleScreenPosition::Top,
+			sf::Vector2f{ WINDOW_WIDTH / 2.f, PLAYER_HEIGHT / 2 },
 			sf::Color::Green,
-			playerSpeed, windowWidth, windowHeight, 100, p2Controls);
+			PLAYER_INITIAL_SPEED, WINDOW_WIDTH, WINDOW_HEIGHT, 100, p2Controls);
 	}
 
 	player1 = std::make_unique<Player>(
-		sf::Vector2f{ playerLength, playerHeight }, PaddleScreenPosition::Bottom,
-		sf::Vector2f{ windowWidth / 2.f, windowHeight - playerHeight / 2 },
+		sf::Vector2f{ PLAYER_WIDTH, PLAYER_HEIGHT }, PaddleScreenPosition::Bottom,
+		sf::Vector2f{ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT - PLAYER_HEIGHT / 2 },
 		sf::Color::Green,
-		playerSpeed, windowWidth, windowHeight, 100, p1Controls);
+		PLAYER_INITIAL_SPEED, WINDOW_WIDTH, WINDOW_HEIGHT, 100, p1Controls);
 }
 
 void GameManager::Update(float deltaT)
@@ -201,16 +201,16 @@ void GameManager::CheckCollisions()
 
 void GameManager::CheckWallCollisions()
 {
-	if (ball->GetBody().getPosition().x + ballRadius >= windowWidth)
+	if (ball->GetBody().getPosition().x + BALL_RADIUS >= WINDOW_WIDTH)
 	{
-		ball->SetPosition({ windowWidth - ballRadius, ball->GetBody().getPosition().y });
+		ball->SetPosition({ WINDOW_WIDTH - BALL_RADIUS, ball->GetBody().getPosition().y });
 		ball->SwapHorizontalDirection();
 		ball->ResetCurvature();
 		audioManager->PlaySound("hit");
 	}
-	else if (ball->GetBody().getPosition().x - ballRadius <= 0)
+	else if (ball->GetBody().getPosition().x - BALL_RADIUS <= 0)
 	{
-		ball->SetPosition({ ballRadius, ball->GetBody().getPosition().y });
+		ball->SetPosition({ BALL_RADIUS, ball->GetBody().getPosition().y });
 		ball->SwapHorizontalDirection();
 		ball->ResetCurvature();
 		audioManager->PlaySound("hit");
@@ -221,12 +221,12 @@ void GameManager::CheckPaddleCollisions()
 {
 	if (ball->GetVerticalDirection() > 0 && ball->GetGlobalBounds().findIntersection(player1->GetGlobalBounds()))
 	{
-		ball->SetPosition({ ball->GetBody().getPosition().x, player1->GetBody().getPosition().y - (ballRadius + playerHeight / 2.f) - 1 });
+		ball->SetPosition({ ball->GetBody().getPosition().x, player1->GetBody().getPosition().y - (BALL_RADIUS + PLAYER_HEIGHT / 2.f) - 1 });
 		ball->ApplySpin(player1->GetXDirection(), player1->GetSpinMultiplier(), player1->GetCurvaturePower());
 		ball->IncreaseSpeed();
 
 		if (player2->HasForesight())
-			player2->ComputeForesight(*ball, windowWidth, windowHeight);
+			player2->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
 
 		audioManager->PlaySound("hit");
 		audioManager->SetPitch(ball->GetCurrentSpeed() / ball->GetInitialSpeed());
@@ -235,12 +235,12 @@ void GameManager::CheckPaddleCollisions()
 	}
 	else if (ball->GetVerticalDirection() < 0 && ball->GetGlobalBounds().findIntersection(player2->GetGlobalBounds()))
 	{
-		ball->SetPosition({ ball->GetBody().getPosition().x, player2->GetBody().getPosition().y + (ballRadius + playerHeight / 2.f) + 1 });
+		ball->SetPosition({ ball->GetBody().getPosition().x, player2->GetBody().getPosition().y + (BALL_RADIUS + PLAYER_HEIGHT / 2.f) + 1 });
 		ball->ApplySpin(player2->GetXDirection(), player2->GetSpinMultiplier(), player2->GetCurvaturePower());
 		ball->IncreaseSpeed();
 
 		if (player1->HasForesight())
-			player1->ComputeForesight(*ball, windowWidth, windowHeight);
+			player1->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
 
 		audioManager->PlaySound("hit");
 		audioManager->SetPitch(ball->GetCurrentSpeed() / ball->GetInitialSpeed());
@@ -257,12 +257,12 @@ void GameManager::CheckBuddyCollisions()
 		{
 			if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
 			{
-				ball->SetPosition({ ball->GetBody().getPosition().x, buddy->GetBody().getPosition().y - (ballRadius + playerHeight / 2.f) - 1 });
+				ball->SetPosition({ ball->GetBody().getPosition().x, buddy->GetBody().getPosition().y - (BALL_RADIUS + PLAYER_HEIGHT / 2.f) - 1 });
 				ball->SwapVerticalDirection();
 				ball->IncreaseSpeed();
 
 				if (player2->HasForesight())
-					player2->ComputeForesight(*ball, windowWidth, windowHeight);
+					player2->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
 
 				audioManager->PlaySound("hit");
 				break;
@@ -275,12 +275,12 @@ void GameManager::CheckBuddyCollisions()
 		{
 			if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
 			{
-				ball->SetPosition({ ball->GetBody().getPosition().x, buddy->GetBody().getPosition().y + (ballRadius + playerHeight / 2.f) + 1 });
+				ball->SetPosition({ ball->GetBody().getPosition().x, buddy->GetBody().getPosition().y + (BALL_RADIUS + PLAYER_HEIGHT / 2.f) + 1 });
 				ball->SwapVerticalDirection();
 				ball->IncreaseSpeed();
 
 				if (player1->HasForesight())
-					player1->ComputeForesight(*ball, windowWidth, windowHeight);
+					player1->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
 
 				audioManager->PlaySound("hit");
 				break;
@@ -320,8 +320,8 @@ void GameManager::CheckObstacleCollisions()
 
 void GameManager::CheckDeadZone()
 {
-	if (ball->GetBody().getPosition().y - ballRadius <= 0
-		|| ball->GetBody().getPosition().y + ballRadius >= windowHeight)
+	if (ball->GetBody().getPosition().y - BALL_RADIUS <= 0
+		|| ball->GetBody().getPosition().y + BALL_RADIUS >= WINDOW_HEIGHT)
 	{
 		player1->Reset();
 		player2->Reset();
@@ -338,7 +338,7 @@ void GameManager::CheckCollectibleCollisions()
 {
 	collectibleManager->CheckCollisions(player1.get(), player2.get(), *audioManager);
 
-	if (player1->GetCollectedEnergy() == collectibleCountForUpgrade)
+	if (player1->GetCollectedEnergy() == COLLECTIBLE_COUNT_FOR_UPGRADE)
 	{
 		player1->ResetCollectedEnergy();
 		upgradeRecipient = player1.get();
@@ -349,7 +349,7 @@ void GameManager::CheckCollectibleCollisions()
 
 		gameState = GameState::UpgradeSelect;
 	}
-	else if (player2->GetCollectedEnergy() == collectibleCountForUpgrade)
+	else if (player2->GetCollectedEnergy() == COLLECTIBLE_COUNT_FOR_UPGRADE)
 	{
 		player2->ResetCollectedEnergy();
 		upgradeRecipient = player2.get();

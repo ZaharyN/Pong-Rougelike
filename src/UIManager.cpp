@@ -1,7 +1,7 @@
 #include "UIManager.h"
 
 UIManager::UIManager(const unsigned int windowWidth, const unsigned int windowHeight)
-	: windowWidth(windowWidth), windowHeight(windowHeight)
+	: WINDOW_WIDTH(windowWidth), WINDOW_HEIGHT(windowHeight)
 {
 	if (!font.openFromFile("Assets/Fonts/game_font.ttf"))
 	{
@@ -20,8 +20,8 @@ void UIManager::InitializeStartMenu()
 	exitButton = sf::RectangleShape({ BUTTON_WIDTH, BUTTON_HEIGHT });
 	CreateButton(exitButton, startButton.getPosition().y + BUTTON_HEIGHT / 2.0 + 100);
 
-	CreateButtonText(startButtonText, "START GAME", 40, startButton);
-	CreateButtonText(exitButtonText, "EXIT", 40, exitButton);
+	CreateButtonText(startButtonText, "START GAME", FONT_SIZE_BUTTON, startButton);
+	CreateButtonText(exitButtonText, "EXIT", FONT_SIZE_BUTTON, exitButton);
 }
 
 void UIManager::InitializeSelectModeMenu()
@@ -32,8 +32,8 @@ void UIManager::InitializeSelectModeMenu()
 	twoPlayerGameButton = sf::RectangleShape({ BUTTON_WIDTH * 2, BUTTON_HEIGHT });
 	CreateButton(twoPlayerGameButton, onePlayerGameButton.getPosition().y + BUTTON_HEIGHT / 2.0 + 100);
 
-	CreateButtonText(onePlayerButtonText, "ONE PLAYER GAME", 40, onePlayerGameButton);
-	CreateButtonText(twoPlayerButtonText, "TWO PLAYER GAME", 40, twoPlayerGameButton);
+	CreateButtonText(onePlayerButtonText, "ONE PLAYER GAME", FONT_SIZE_BUTTON, onePlayerGameButton);
+	CreateButtonText(twoPlayerButtonText, "TWO PLAYER GAME", FONT_SIZE_BUTTON, twoPlayerGameButton);
 }
 
 void UIManager::InitializeUpgradeMenu()
@@ -43,12 +43,12 @@ void UIManager::InitializeUpgradeMenu()
 	upgradeCard3 = sf::RectangleShape({ UPGRADE_CARD_WIDTH, UPGRADE_CARD_HEIGHT });
 	sf::RectangleShape* cards[] = { &upgradeCard1, &upgradeCard2, &upgradeCard3 };
 
-	card1Title = sf::RectangleShape({ UPGRADE_CARD_WIDTH, 60 });
-	card2Title = sf::RectangleShape({ UPGRADE_CARD_WIDTH, 60 });
-	card3Title = sf::RectangleShape({ UPGRADE_CARD_WIDTH, 60 });
+	card1Title = sf::RectangleShape({ UPGRADE_CARD_WIDTH, UPGRADE_CARD_TITLE_HEGITH });
+	card2Title = sf::RectangleShape({ UPGRADE_CARD_WIDTH, UPGRADE_CARD_TITLE_HEGITH });
+	card3Title = sf::RectangleShape({ UPGRADE_CARD_WIDTH, UPGRADE_CARD_TITLE_HEGITH });
 	sf::RectangleShape* titles[] = { &card1Title, &card2Title, &card3Title };
 
-	float posY = windowHeight / 2.f;
+	float posY = WINDOW_HEIGHT / 2.f;
 
 	for (int i = 0; i < 3; i++)
 	{
@@ -188,7 +188,7 @@ void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const s
 		cards[i]->setOutlineColor(rarityColor);
 
 		// Set title texts
-		titleTexts[i]->emplace(font, upgrades[i].title, 40);
+		titleTexts[i]->emplace(font, upgrades[i].title, FONT_SIZE_BUTTON);
 		(*titleTexts[i])->setFillColor(sf::Color::Black);
 		sf::FloatRect tBounds = (*titleTexts[i])->getLocalBounds();
 		(*titleTexts[i])->setOrigin({ tBounds.size.x / 2, tBounds.size.y });
@@ -196,15 +196,15 @@ void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const s
 		titles[i]->setOutlineColor(rarityColor);
 
 		// Set description texts
-		std::string wrapped = WrapText(upgrades[i].description, UPGRADE_CARD_WIDTH - 20.f, 20);
-		descriptionTexts[i]->emplace(font, wrapped, 20);
+		std::string wrapped = WrapText(upgrades[i].description, UPGRADE_CARD_WIDTH - 20.f, FONT_SIZE_CARD_DESCRIPTION);
+		descriptionTexts[i]->emplace(font, wrapped, FONT_SIZE_CARD_DESCRIPTION);
 		(*descriptionTexts[i])->setFillColor(sf::Color::White);
 		sf::FloatRect dBounds = (*descriptionTexts[i])->getGlobalBounds();
 		(*descriptionTexts[i])->setOrigin({ dBounds.size.x / 2, dBounds.size.y });
 		(*descriptionTexts[i])->setPosition({ cards[i]->getPosition().x, cards[i]->getPosition().y });
 	}
 
-	CreateButtonText(playerPickingText, std::string(playerName), 40, playerPickingBox);
+	CreateButtonText(playerPickingText, std::string(playerName), FONT_SIZE_BUTTON, playerPickingBox);
 }
 
 int UIManager::GetClickedCardIndex(const sf::Vector2f& mousePos) const
@@ -219,7 +219,7 @@ int UIManager::GetClickedCardIndex(const sf::Vector2f& mousePos) const
 void UIManager::CreateButton(sf::RectangleShape& button, float yPosition)
 {
 	button.setOrigin(button.getGeometricCenter());
-	button.setPosition({ windowWidth / 2.f, yPosition });
+	button.setPosition({ WINDOW_WIDTH / 2.f, yPosition });
 	button.setFillColor(sf::Color::Black);
 	button.setOutlineThickness(OUTLINE_THICKNESS);
 	button.setOutlineColor(sf::Color::White);
@@ -240,7 +240,7 @@ void UIManager::CreateButtonText(std::optional<sf::Text>& text, const std::strin
 void UIManager::OnHoverEffect(sf::RectangleShape& button, std::optional<sf::Text>& text)
 {
 	button.setFillColor(sf::Color::White);
-	button.setScale({ 1.05f, 1.05f });
+	button.setScale({ ON_HOVER_SCALE, ON_HOVER_SCALE });
 	text->setFillColor(sf::Color::Black);
 }
 

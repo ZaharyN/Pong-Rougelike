@@ -6,7 +6,7 @@
 
 class AudioManager
 {
-	const float DAMPING_FACTOR = 0.3f;
+	static constexpr float DAMPING_FACTOR = 0.3f;
 
 	std::unordered_map<std::string, sf::SoundBuffer> buffers;
 	std::list<sf::Sound> soundPool;

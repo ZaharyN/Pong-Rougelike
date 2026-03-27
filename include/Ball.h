@@ -7,10 +7,10 @@
 
 class Ball
 {
-	const float INFLUENCE = 0.3f;
-	const float SPEED_MULTIPLIER = 0.01f;
-	const int COLOR_CHANGE_SPEED = 100;
-	const float CURVATURE_DECAY = 0.05F;
+	static constexpr float INFLUENCE = 0.3f;
+	static constexpr float SPEED_MULTIPLIER = 0.01f;
+	static constexpr int COLOR_CHANGE_SPEED = 100;
+	static constexpr float CURVATURE_DECAY = 0.05F;
 
 	sf::CircleShape body;
 	sf::Color color;
@@ -19,13 +19,13 @@ class Ball
 	ColorState colorState;
 	float currR, currG, currB;
 
-	const float initialMovementSpeed;
+	const float INITIAL_MOVEMENT_SPEED;
 	float currentMovementSpeed;
 
-	const int initialMinAngle;
-	const int initialMaxAngle;
+	const int INITIAL_MIN_ANGLE;
+	const int INITIAL_MAX_ANGLE;
 
-	const float initialRadius;
+	const float INITIAL_RADIUS;
 	float currentRadius;
 
 	float horizontalDirection;

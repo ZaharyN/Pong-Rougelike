@@ -13,19 +13,19 @@
 
 class GameManager
 {
-	const unsigned int windowWidth = 1200;
-	const unsigned int windowHeight = 600;
-	const unsigned int collectibleCountForUpgrade = 3;
+	static constexpr unsigned int WINDOW_WIDTH = 1200;
+	static constexpr unsigned int WINDOW_HEIGHT = 600;
+	static constexpr unsigned int COLLECTIBLE_COUNT_FOR_UPGRADE = 3;
 
-	const float ballRadius = 5.f;
-	const float playerLength = 100.f;
-	const float playerHeight = 10.f;
+	static constexpr float BALL_RADIUS = 5.f;
+	static constexpr float PLAYER_WIDTH = 100.f;
+	static constexpr float PLAYER_HEIGHT = 10.f;
 
-	const int initialMinAngle = 45;
-	const int initialMaxAngle = 135;
+	static constexpr unsigned int INITIAL_MIN_ANGLE = 45;
+	static constexpr unsigned int INITIAL_MAX_ANGLE = 135;
 
-	const float playerSpeed= 300.f;
-	const float ballInitialSpeed = 300.f;
+	static constexpr float PLAYER_INITIAL_SPEED = 300.f;
+	static constexpr float BALL_INITIAL_SPEED = 300.f;
 
 	sf::RenderWindow gameWindow;
 	sf::Clock clock;
@@ -50,6 +50,12 @@ class GameManager
 	void Render();
 	void StartGame(GameMode gameMode);
 
+	void CheckWallCollisions();
+	void CheckPaddleCollisions();
+	void CheckBuddyCollisions();
+	void CheckObstacleCollisions();
+	void CheckDeadZone();
+	void CheckCollectibleCollisions();
 public:
 	GameManager();
 	void Run();

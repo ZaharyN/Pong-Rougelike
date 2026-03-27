@@ -10,17 +10,17 @@
 
 class CollectibleManager
 {
-	const float COLLECTIBLE_WIDTH = 40.f;
-	const float COLLECTIBLE_HEIGHT = 40.f;
-	const float COLLECTIBLE_SPAWN_DELAY = 10.f;
-	const int COLLECTIBLE_ENERGY = 5.f;
+	static constexpr float COLLECTIBLE_WIDTH = 40.f;
+	static constexpr float COLLECTIBLE_HEIGHT = 40.f;
+	static constexpr float COLLECTIBLE_SPAWN_DELAY = 10.f;
+	static constexpr int COLLECTIBLE_ENERGY = 5.f;
+
+	const unsigned int GAMESCREEN_WIDTH;
+	const unsigned int GAMESCREEN_HEIGHT;
 
 	std::mt19937 rng;
 	float spawnDelay;
 	float spawnTimer;
-
-	int gameScreenWidth;
-	int gameScreenHeight;
 
 	sf::Texture energyTexture;
 

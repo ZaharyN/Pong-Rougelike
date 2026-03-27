@@ -3,9 +3,9 @@
 Ball::Ball(float initialRadius, const sf::Vector2f& initialPosition,
 	float initialSpeed, int minAngle,
 	int maxAngle, const sf::Color& color)
-	:initialRadius(initialRadius), initialMovementSpeed(initialSpeed),
-	currentMovementSpeed(initialMovementSpeed), currentRadius(initialRadius),
-	initialMinAngle(minAngle), initialMaxAngle(maxAngle), color(color),
+	:INITIAL_RADIUS(initialRadius), INITIAL_MOVEMENT_SPEED(initialSpeed),
+	currentMovementSpeed(INITIAL_MOVEMENT_SPEED), currentRadius(initialRadius),
+	INITIAL_MIN_ANGLE(minAngle), INITIAL_MAX_ANGLE(maxAngle), color(color),
 	rng(std::random_device{}()), colorState(MapColorToState(color))
 {
 	body = sf::CircleShape(initialRadius);
@@ -44,8 +44,8 @@ void Ball::Draw(sf::RenderTarget& target)
 
 void Ball::Reset()
 {
-	currentMovementSpeed = initialMovementSpeed;
-	currentRadius = initialRadius;
+	currentMovementSpeed = INITIAL_MOVEMENT_SPEED;
+	currentRadius = INITIAL_RADIUS;
 	ResetCurvature();
 	ResetAngle();
 }
@@ -166,7 +166,7 @@ float Ball::GetCurrentSpeed() const
 
 float Ball::GetInitialSpeed() const
 {
-	return initialMovementSpeed;
+	return INITIAL_MOVEMENT_SPEED;
 }
 
 float Ball::GetCurrentRadius() const
@@ -201,7 +201,7 @@ sf::FloatRect Ball::GetLocalBounds() const
 
 void Ball::ResetAngle()
 {
-	sf::Angle startingAngle = Ball::GenerateRandomStartingAngle(initialMinAngle, initialMaxAngle);
+	sf::Angle startingAngle = Ball::GenerateRandomStartingAngle(INITIAL_MIN_ANGLE, INITIAL_MAX_ANGLE);
 	horizontalDirection = cos(startingAngle.asRadians());
 	verticalDirection = sin(startingAngle.asRadians());
 }

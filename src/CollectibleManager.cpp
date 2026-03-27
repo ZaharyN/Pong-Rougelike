@@ -1,7 +1,7 @@
 #include "CollectibleManager.h"
 
 CollectibleManager::CollectibleManager(int windowWidth, int windowHeight)
-	: gameScreenWidth(windowWidth), gameScreenHeight(windowHeight),
+	: GAMESCREEN_WIDTH(windowWidth), GAMESCREEN_HEIGHT(windowHeight),
 	spawnDelay(COLLECTIBLE_SPAWN_DELAY), spawnTimer(0.f),
 	rng(std::random_device{}())
 {
@@ -74,7 +74,7 @@ void CollectibleManager::SpawnCollectible(PaddleScreenPosition screenPos, Paddle
 	float x;
 	float y = screenPos == PaddleScreenPosition::Top
 		? COLLECTIBLE_HEIGHT / 2
-		: gameScreenHeight - COLLECTIBLE_HEIGHT / 2;
+		: GAMESCREEN_HEIGHT - COLLECTIBLE_HEIGHT / 2;
 
 	float minX;
 	float maxX;
@@ -82,7 +82,7 @@ void CollectibleManager::SpawnCollectible(PaddleScreenPosition screenPos, Paddle
 	const sf::Vector2f& playerPosition = player->GetBody().getPosition();
 
 	float leftFreeSpace = playerPosition.x - player->GetBody().getSize().x / 2;
-	float rightFreeSpace = gameScreenWidth - (playerPosition.x + player->GetBody().getSize().x / 2);
+	float rightFreeSpace = GAMESCREEN_WIDTH - (playerPosition.x + player->GetBody().getSize().x / 2);
 
 	if (leftFreeSpace >= rightFreeSpace)
 	{
@@ -92,7 +92,7 @@ void CollectibleManager::SpawnCollectible(PaddleScreenPosition screenPos, Paddle
 	else
 	{
 		minX = playerPosition.x + COLLECTIBLE_WIDTH / 2;
-		maxX = gameScreenWidth - COLLECTIBLE_WIDTH / 2;
+		maxX = GAMESCREEN_WIDTH - COLLECTIBLE_WIDTH / 2;
 	}
 
 	std::uniform_real_distribution<float> random(minX, maxX);
@@ -100,7 +100,7 @@ void CollectibleManager::SpawnCollectible(PaddleScreenPosition screenPos, Paddle
 
 	float energyRangeModifier = player->GetEnergySpawnRangeModifier();
 	float modifiedX = leftFreeSpace >= rightFreeSpace ? x - energyRangeModifier : x + energyRangeModifier;
-	float clampedX = std::clamp(modifiedX, COLLECTIBLE_WIDTH / 2, gameScreenWidth - COLLECTIBLE_WIDTH / 2);
+	float clampedX = std::clamp(modifiedX, COLLECTIBLE_WIDTH / 2, GAMESCREEN_WIDTH - COLLECTIBLE_WIDTH / 2);
 
 	std::unique_ptr<Collectible> collectible = std::make_unique<Collectible>(
 		sf::Vector2f{ clampedX,y },

@@ -12,18 +12,28 @@
 
 class Paddle
 {
+	static constexpr float DASH_COOLDOWN_DURATION = 5.f;
+	static constexpr float DASH_DURATION = 0.1f;
+
+	static constexpr float BUDDY_WIDTH = 80.f;
+	static constexpr float BUDDY_HEIGHT = 10.f;
+
+	static constexpr float FORESIGHT_DOT_SPACING = 30.f;
+	static constexpr float FORESIGHT_DOT_RADIUS = 3.f;
+
 protected:
+	const PaddleScreenPosition SCREEN_POSITION;
+	const unsigned int WINDOW_WIDTH;
+	const unsigned int WINDOW_HEIGHT;
+	const float INITIAL_SPEED;
+	const int INITIAL_ENERGY;
+
 	sf::RectangleShape body;
 	sf::Color color;
-	PaddleScreenPosition screenPosition;
-	const float initialSpeed;
 	float currentSpeed;
-	int initialEnergy;
 	int currentEnergy;
 	int horizontalDirection;
 	int verticalDirection;
-	int windowWidth;
-	int windowHeight;
 	int energyCollected;
 
 	// Modifiables:
@@ -33,14 +43,13 @@ protected:
 	std::vector<sf::RectangleShape> obstacles;
 	std::vector<std::unique_ptr<Paddle>> buddies;
 	std::list<sf::CircleShape> foresightDots;
-
 	float reducedCollectibleSpawnRange = 0.f;
 	float force = 1.0f;
 	float spinMultiplier = 1.0f;
 	float energyRangeModifier = 0.f;
 	bool hasDashUpgrade = false;
 	bool isDashing = false;
-	float dashTimer = 0.1f;
+	float dashTimer = DASH_DURATION;
 	float dashCooldown = 0.f; 
 	float dashSpeedMultiplier = 1.f;
 	bool isNeverExhausted = false;
@@ -97,6 +106,8 @@ public:
 	bool HasForesight() const;
 
 	float GetCurvaturePower() const;
+
+	float GetDashCooldownRatio() const;
 
 	// Modifying methods:
 	void AddUpgrade(UpgradeType type, bool isUnique);

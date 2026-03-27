@@ -56,19 +56,19 @@ void Player::Update(float deltaT)
 	float minY;
 	float maxY;
 
-	if (screenPosition == PaddleScreenPosition::Top)
+	if (SCREEN_POSITION == PaddleScreenPosition::Top)
 	{
 		minY = body.getSize().y / 2.f;
-		maxY = windowHeight / 2.f - body.getSize().y / 2.f;
+		maxY = WINDOW_HEIGHT / 2.f - body.getSize().y / 2.f;
 	}
 	else
 	{
-		minY = windowHeight / 2.f + body.getSize().y / 2.f;
-		maxY = windowHeight - body.getSize().y / 2.f;
+		minY = WINDOW_HEIGHT / 2.f + body.getSize().y / 2.f;
+		maxY = WINDOW_HEIGHT - body.getSize().y / 2.f;
 	}
 
 	newYPosition = std::clamp(newYPosition, minY, maxY);
-	newXPosition = std::clamp(newXPosition, body.getSize().x / 2, windowWidth - body.getSize().x / 2);
+	newXPosition = std::clamp(newXPosition, body.getSize().x / 2, WINDOW_WIDTH - body.getSize().x / 2);
 
 	this->SetPosition({ newXPosition, newYPosition });
 }

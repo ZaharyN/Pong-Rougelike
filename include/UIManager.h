@@ -7,15 +7,23 @@
 
 class UIManager
 {
-	const float BUTTON_WIDTH = 300.f;
-	const float BUTTON_HEIGHT = 100.f;
-	const float OUTLINE_THICKNESS = 5.f;
-	const float UPGRADE_CARD_WIDTH = 300.f;
-	const float UPGRADE_CARD_HEIGHT = 400.f;
-	const float UPGRADE_CARD_GAP = 75.f;
+	static constexpr float BUTTON_WIDTH = 300.f;
+	static constexpr float BUTTON_HEIGHT = 100.f;
+	static constexpr float OUTLINE_THICKNESS = 5.f;
 
-	const unsigned int windowWidth;
-	const unsigned int windowHeight;
+	static constexpr float UPGRADE_CARD_WIDTH = 300.f;
+	static constexpr float UPGRADE_CARD_HEIGHT = 400.f;
+	static constexpr float UPGRADE_CARD_GAP = 75.f;
+	static constexpr float UPGRADE_CARD_TITLE_HEGITH = 60.f;
+
+	static constexpr unsigned int FONT_SIZE_BUTTON = 40;
+	static constexpr unsigned int FONT_SIZE_CARD_DESCRIPTION = 20;
+
+	static constexpr float ON_HOVER_SCALE = 1.05f;
+
+	const unsigned int WINDOW_WIDTH;
+	const unsigned int WINDOW_HEIGHT;
+
 	sf::Font font;
 
 	sf::RectangleShape startButton;

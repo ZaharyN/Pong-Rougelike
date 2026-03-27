@@ -3,8 +3,8 @@
 
 Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
 	const sf::Color& initialColor, float speed, int windowWidth, int windowHeight, int initialEnergy)
-	: initialSpeed(speed), currentSpeed(speed), horizontalDirection(0), verticalDirection(0), screenPosition(screenPos),
-	windowWidth(windowWidth), windowHeight(windowHeight), initialEnergy(initialEnergy), currentEnergy(initialEnergy),
+	: INITIAL_SPEED(speed), currentSpeed(speed), horizontalDirection(0), verticalDirection(0), SCREEN_POSITION(screenPos),
+	WINDOW_WIDTH(windowWidth), WINDOW_HEIGHT(windowHeight), INITIAL_ENERGY(initialEnergy), currentEnergy(initialEnergy),
 	color(initialColor), energyCollected(0), rng(std::random_device{}())
 {
 	body = sf::RectangleShape(size);
@@ -32,7 +32,7 @@ void Paddle::Draw(sf::RenderTarget& target)
 
 void Paddle::Reset()
 {
-	currentSpeed = initialSpeed;
+	currentSpeed = INITIAL_SPEED;
 	horizontalDirection = 0;
 	ResetCollectedEnergy();
 
@@ -49,7 +49,7 @@ void Paddle::Reset()
 	energyRangeModifier = 0.f;
 	hasDashUpgrade = false;
 	isDashing = false;
-	dashTimer = 0.1f;
+	dashTimer = DASH_DURATION;
 	dashCooldown = 0.f;
 	dashSpeedMultiplier = 1.f;
 	isNeverExhausted = false;
@@ -67,11 +67,11 @@ void Paddle::UpdateEnergy(int energyTake)
 {
 	if (energyTake < 0 && isNeverExhausted) return;
 
-	currentEnergy = std::clamp(currentEnergy + energyTake, 0, initialEnergy);
+	currentEnergy = std::clamp(currentEnergy + energyTake, 0, INITIAL_ENERGY);
 
-	float ratio = (float)currentEnergy / initialEnergy;
+	float ratio = (float)currentEnergy / INITIAL_ENERGY;
 
-	currentSpeed = initialSpeed * ratio;
+	currentSpeed = INITIAL_SPEED * ratio;
 	ChangeColorFromRation(ratio);
 }
 
@@ -132,7 +132,7 @@ void Paddle::SetSize(float factor)
 	body.setOrigin(body.getGeometricCenter());
 
 	float halfWidth = body.getSize().x / 2;
-	float clampedX = std::clamp(body.getPosition().x, halfWidth, windowWidth - halfWidth);
+	float clampedX = std::clamp(body.getPosition().x, halfWidth, WINDOW_WIDTH - halfWidth);
 
 	body.setPosition({ clampedX, body.getPosition().y });
 }
@@ -161,13 +161,13 @@ void Paddle::StartDash()
 
 void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight)
 {
-	std::uniform_real_distribution<float> random(obstacleWidth / 2.f, windowWidth - obstacleWidth / 2.f);
+	std::uniform_real_distribution<float> random(obstacleWidth / 2.f, WINDOW_WIDTH - obstacleWidth / 2.f);
 	float obstacleX = random(rng);
-	float obstacleY = screenPosition == PaddleScreenPosition::Top
-		? windowHeight / 2.f - obstacleHeight / 2.f - 2.f
-		: windowHeight / 2.f + obstacleHeight / 2.f + 2.f;
+	float obstacleY = SCREEN_POSITION == PaddleScreenPosition::Top
+		? WINDOW_HEIGHT / 2.f - obstacleHeight / 2.f - 2.f
+		: WINDOW_HEIGHT / 2.f + obstacleHeight / 2.f + 2.f;
 
-	sf::Color outlineColor = screenPosition == PaddleScreenPosition::Top
+	sf::Color outlineColor = SCREEN_POSITION == PaddleScreenPosition::Top
 		? sf::Color::Red
 		: sf::Color::Green;
 
@@ -194,15 +194,15 @@ void Paddle::EnableUpAndDownMovement()
 void Paddle::AddBuddy()
 {
 	float buddyYPos = body.getPosition().y;
-	float buddyXPos = windowWidth / 2.f;
+	float buddyXPos = WINDOW_WIDTH / 2.f;
 
 	std::unique_ptr<Buddy> newBuddy = std::make_unique<Buddy>(
-		sf::Vector2f({ 80.f, 10.f }),
-		this->screenPosition,
+		sf::Vector2f({ BUDDY_WIDTH, BUDDY_HEIGHT }),
+		this->SCREEN_POSITION,
 		sf::Vector2f({ buddyXPos, buddyYPos }),
 		sf::Color(255, 255, 255, 150),
-		initialSpeed / 2.f,
-		windowWidth, windowHeight, initialEnergy);
+		INITIAL_SPEED / 2.f,
+		WINDOW_WIDTH, WINDOW_HEIGHT, INITIAL_ENERGY);
 
 	buddies.push_back(std::move(newBuddy));
 }
@@ -216,9 +216,6 @@ void Paddle::ComputeForesight(const Ball& ball, int windowWidth, int windowHeigh
 {
 	foresightDots.clear();
 
-	const float dotSpacing = 30.f;
-	const float dotRadius = 3.f;
-
 	sf::Vector2f direction({ ball.GetHorizontalDirection(), ball.GetVerticalDirection() });
 	sf::Vector2f position(ball.GetBody().getPosition());
 
@@ -226,8 +223,8 @@ void Paddle::ComputeForesight(const Ball& ball, int windowWidth, int windowHeigh
 
 	while ((direction.y < 0 && position.y > targetY) || (direction.y > 0 && position.y < targetY))
 	{
-		position.x += direction.x * dotSpacing;
-		position.y += direction.y * dotSpacing;
+		position.x += direction.x * FORESIGHT_DOT_SPACING;
+		position.y += direction.y * FORESIGHT_DOT_SPACING;
 
 		if (position.x + ball.GetCurrentRadius() >= windowWidth)
 		{
@@ -240,7 +237,7 @@ void Paddle::ComputeForesight(const Ball& ball, int windowWidth, int windowHeigh
 			direction.x *= -1;
 		}
 
-		sf::CircleShape dot(dotRadius);
+		sf::CircleShape dot(FORESIGHT_DOT_RADIUS);
 		dot.setOrigin(dot.getGeometricCenter());
 		dot.setPosition({ position.x, position.y });
 		dot.setFillColor(sf::Color(255, 255, 255, 120));
@@ -287,7 +284,7 @@ float Paddle::GetCurrentSpeed() const
 
 float Paddle::GetInitialSpeed() const
 {
-	return initialSpeed;
+	return INITIAL_SPEED;
 }
 
 int Paddle::GetXDirection() const
@@ -312,7 +309,7 @@ sf::FloatRect Paddle::GetGlobalBounds() const
 
 PaddleScreenPosition Paddle::GetScreenPosition() const
 {
-	return screenPosition;
+	return SCREEN_POSITION;
 }
 
 float Paddle::GetSpinMultiplier() const
@@ -348,4 +345,10 @@ bool Paddle::HasForesight() const
 float Paddle::GetCurvaturePower() const
 {
 	return curvaturePower;
+}
+
+float Paddle::GetDashCooldownRatio() const
+{
+	if (!hasDashUpgrade) return 1.f;
+	return 1.f - std::clamp(dashCooldown / DASH_COOLDOWN_DURATION, 0.f, 1.f);
 }
