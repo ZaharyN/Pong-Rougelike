@@ -159,23 +159,48 @@ void Paddle::StartDash()
 	dashSpeedMultiplier = 5.f;
 }
 
-void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight)
+void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight, const sf::Color outlineColor)
 {
 	std::uniform_real_distribution<float> random(obstacleWidth / 2.f, WINDOW_WIDTH - obstacleWidth / 2.f);
 	float obstacleX = random(rng);
-	float obstacleY = SCREEN_POSITION == PaddleScreenPosition::Top
-		? WINDOW_HEIGHT / 2.f - obstacleHeight / 2.f - 2.f
-		: WINDOW_HEIGHT / 2.f + obstacleHeight / 2.f + 2.f;
+	bool moved = true;
 
-	sf::Color outlineColor = SCREEN_POSITION == PaddleScreenPosition::Top
-		? sf::Color::Red
-		: sf::Color::Green;
+	while (moved)
+	{
+		moved = false;
+
+		for (const auto& obs : obstacles)
+		{
+			float existingLeft  = obs.getPosition().x - obstacleWidth / 2.f;
+			float existingRight = obs.getPosition().x + obstacleWidth / 2.f;
+			float newLeft       = obstacleX - obstacleWidth / 2.f;
+			float newRight      = obstacleX + obstacleWidth / 2.f;
+
+			if (newLeft < existingRight && newRight > existingLeft)
+			{
+				// Obstacle will be placed left side
+				if (obstacleX < obs.getPosition().x)
+					obstacleX = existingLeft - obstacleWidth / 2.f;
+				else
+					obstacleX = existingRight + obstacleWidth / 2.f;
+
+				moved = true;
+				break;
+			}
+		}
+	}
+	obstacleX = std::clamp(obstacleX, obstacleWidth / 2.f, WINDOW_WIDTH - obstacleWidth / 2.f);
 
 	sf::RectangleShape obstacle({ obstacleWidth, obstacleHeight });
-	obstacle.setPosition({ obstacleX, obstacleY });
-	obstacle.setOutlineThickness(2.f);
 	obstacle.setOrigin(obstacle.getGeometricCenter());
+
+	float obstacleY = SCREEN_POSITION == PaddleScreenPosition::Top
+		? WINDOW_HEIGHT / 2.f - obstacleHeight / 2.f - 1.f
+		: WINDOW_HEIGHT / 2.f + obstacleHeight / 2.f + 1.f;
+
+	obstacle.setPosition({ obstacleX, obstacleY });
 	obstacle.setFillColor(sf::Color(100, 100, 100));
+	obstacle.setOutlineThickness(1.f);
 	obstacle.setOutlineColor(outlineColor);
 
 	obstacles.push_back(obstacle);

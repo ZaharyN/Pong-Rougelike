@@ -60,7 +60,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			p.AddUpgrade(UpgradeType::Sonic, false);
-			p.SetSpeed(1.1f);
+			p.SetSpeed(SONIC_FACTOR);
 		} });
 
 	allUpgrades.push_back({
@@ -72,7 +72,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			opp.AddUpgrade(UpgradeType::Snail, false);
-			opp.SetSpeed(0.9f);
+			opp.SetSpeed(SNAIL_FACTOR);
 		} });
 
 	allUpgrades.push_back({
@@ -84,7 +84,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			p.AddUpgrade(UpgradeType::Goliath, false);
-			p.SetSize(1.1f);
+			p.SetSize(GOLIATH_FACTOR);
 		} });
 
 	allUpgrades.push_back({
@@ -96,7 +96,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			opp.AddUpgrade(UpgradeType::Midget, false);
-			opp.SetSize(0.9f);
+			opp.SetSize(MIDGET_FACTOR);
 		} });
 
 	allUpgrades.push_back({
@@ -108,7 +108,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			p.AddUpgrade(UpgradeType::MoreSpin, false);
-			p.SetSpin(1.5f);
+			p.SetSpin(MORE_SPIN_FACTOR);
 		} });
 
 	allUpgrades.push_back({
@@ -120,7 +120,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			opp.AddUpgrade(UpgradeType::LessSpin, false);
-			opp.SetSpin(0.5f);
+			opp.SetSpin(LESS_SPIN_FACTOR);
 		} });
 
 	allUpgrades.push_back({
@@ -132,7 +132,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			p.AddUpgrade(UpgradeType::Near, false);
-			p.ModifyEnergySpawnRange(-50.f);
+			p.ModifyEnergySpawnRange(NEAR_FACTOR);
 		} });
 
 	allUpgrades.push_back({
@@ -144,7 +144,7 @@ void UpgradeManager::LoadUpgradesData()
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
 			opp.AddUpgrade(UpgradeType::Far, false);
-			opp.ModifyEnergySpawnRange(+50.f);
+			opp.ModifyEnergySpawnRange(FAR_FACTOR);
 		} });
 
 	// Uncommon upgrades:
@@ -169,7 +169,10 @@ void UpgradeManager::LoadUpgradesData()
 		false,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-			opp.PlaceObstacle(50.f, 10.f);
+			sf::Color placerColor = p.GetScreenPosition() == PaddleScreenPosition::Bottom
+				? sf::Color::Green
+				: sf::Color::Red;
+			opp.PlaceObstacle(OBSTACLE_WIDTH, OBSTACLE_HEIGHT, placerColor);
 			opp.AddUpgrade(UpgradeType::Obstacles, false);
 		} });
 
@@ -181,7 +184,7 @@ void UpgradeManager::LoadUpgradesData()
 		false,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-			p.AddCurvaturePower(0.5f);
+			p.AddCurvaturePower(CURVATURE_POWER);
 			p.AddUpgrade(UpgradeType::Sping, false);
 		} });
 

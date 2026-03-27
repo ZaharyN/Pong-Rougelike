@@ -126,7 +126,7 @@ public:
 
 	void StartDash();
 
-	void PlaceObstacle(float obstacleWidth, float obstacleHeight);
+	void PlaceObstacle(float obstacleWidth, float obstacleHeight, const sf::Color outlineColor);
 
 	void DisableExhaustion();
 
