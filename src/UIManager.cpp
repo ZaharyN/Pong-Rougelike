@@ -60,10 +60,13 @@ void UIManager::InitializeUpgradeMenu()
 		cards[i]->setOutlineThickness(OUTLINE_THICKNESS);
 
 		titles[i]->setOrigin(titles[i]->getGeometricCenter());
-		titles[i]->setPosition({ posX, posY - UPGRADE_CARD_HEIGHT / 2 + titles[i]->getGlobalBounds().size.y / 2});
+		titles[i]->setPosition({ posX, posY - UPGRADE_CARD_HEIGHT / 2 + titles[i]->getGlobalBounds().size.y / 2 });
 		titles[i]->setFillColor(sf::Color::White);
 		titles[i]->setOutlineThickness(OUTLINE_THICKNESS);
 	}
+
+	playerPickingBox = sf::RectangleShape({ BUTTON_WIDTH, BUTTON_HEIGHT / 2.f });
+	CreateButton(playerPickingBox, BUTTON_HEIGHT / 4.f + 10);
 }
 
 void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
@@ -113,7 +116,7 @@ void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
 			ResetCardHoverEffect(upgradeCard2, card2Title, card2TitleText, card2DescriptionText);
 			ResetCardHoverEffect(upgradeCard3, card3Title, card3TitleText, card3DescriptionText);
 		}
-		
+
 		if (upgradeCard2.getGlobalBounds().contains(mouseWorldPos))
 		{
 			OnCardHoverEffect(upgradeCard2, card2Title, card2TitleText, card2DescriptionText);
@@ -121,7 +124,7 @@ void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
 			ResetCardHoverEffect(upgradeCard1, card1Title, card1TitleText, card1DescriptionText);
 			ResetCardHoverEffect(upgradeCard3, card3Title, card3TitleText, card3DescriptionText);
 		}
-		
+
 		if (upgradeCard3.getGlobalBounds().contains(mouseWorldPos))
 		{
 			OnCardHoverEffect(upgradeCard3, card3Title, card3TitleText, card3DescriptionText);
@@ -166,10 +169,13 @@ void UIManager::Draw(GameState state, sf::RenderWindow& gameWindow)
 		gameWindow.draw(card3Title);
 		gameWindow.draw(*card3TitleText);
 		gameWindow.draw(*card3DescriptionText);
+
+		gameWindow.draw(playerPickingBox);
+		gameWindow.draw(*playerPickingText);
 	}
 }
 
-void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades)
+void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const std::string_view playerName)
 {
 	std::optional<sf::Text>* titleTexts[] = { &card1TitleText, &card2TitleText, &card3TitleText };
 	std::optional<sf::Text>* descriptionTexts[] = { &card1DescriptionText, &card2DescriptionText, &card3DescriptionText };
@@ -197,6 +203,8 @@ void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades)
 		(*descriptionTexts[i])->setOrigin({ dBounds.size.x / 2, dBounds.size.y });
 		(*descriptionTexts[i])->setPosition({ cards[i]->getPosition().x, cards[i]->getPosition().y });
 	}
+
+	CreateButtonText(playerPickingText, std::string(playerName), 40, playerPickingBox);
 }
 
 int UIManager::GetClickedCardIndex(const sf::Vector2f& mousePos) const

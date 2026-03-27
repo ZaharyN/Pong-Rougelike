@@ -44,6 +44,9 @@ class UIManager
 	std::optional<sf::Text> card2DescriptionText;
 	std::optional<sf::Text> card3DescriptionText;
 
+	sf::RectangleShape playerPickingBox;
+	std::optional<sf::Text> playerPickingText;
+
 	void CreateButton(sf::RectangleShape& button, float yPosition);
 
 	void CreateButtonText(std::optional<sf::Text>& text, const std::string& value, int size, const sf::RectangleShape& parent);
@@ -74,7 +77,7 @@ public:
 
 	void Draw(GameState state, sf::RenderWindow& gameWindow);
 
-	void ShowRandomUpgrades(const std::vector<Upgrade>& upgrades);
+	void ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const std::string_view playerName);
 
 	int GetClickedCardIndex(const sf::Vector2f& mousePos) const;
 
