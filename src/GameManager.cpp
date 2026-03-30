@@ -201,121 +201,97 @@ void GameManager::CheckCollisions()
 
 void GameManager::CheckWallCollisions()
 {
+	auto handleWallCollision = [&](float correctedX)
+		{
+			ball->SetPosition({ correctedX, ball->GetBody().getPosition().y });
+			ball->SwapHorizontalDirection();
+			ball->ResetCurvature();
+			audioManager->PlaySound("hit");
+		};
+
 	if (ball->GetBody().getPosition().x + BALL_RADIUS >= WINDOW_WIDTH)
-	{
-		ball->SetPosition({ WINDOW_WIDTH - BALL_RADIUS, ball->GetBody().getPosition().y });
-		ball->SwapHorizontalDirection();
-		ball->ResetCurvature();
-		audioManager->PlaySound("hit");
-	}
+		handleWallCollision(WINDOW_WIDTH - BALL_RADIUS);
 	else if (ball->GetBody().getPosition().x - BALL_RADIUS <= 0)
-	{
-		ball->SetPosition({ BALL_RADIUS, ball->GetBody().getPosition().y });
-		ball->SwapHorizontalDirection();
-		ball->ResetCurvature();
-		audioManager->PlaySound("hit");
-	}
+		handleWallCollision(BALL_RADIUS);
 }
 
 void GameManager::CheckPaddleCollisions()
 {
+	auto handlePaddleCollissions = [&](Paddle* hitter, Paddle* receiver, float correctedY)
+		{
+			ball->SetPosition({ ball->GetBody().getPosition().x, correctedY });
+			ball->ApplySpin(player1->GetXDirection(), hitter->GetSpinMultiplier(), hitter->GetCurvaturePower());
+			ball->IncreaseSpeed();
+
+			if (receiver->HasForesight())
+				receiver->ComputeForesight(*ball);
+
+			audioManager->PlaySound("hit");
+			audioManager->SetPitch(ball->GetCurrentSpeed() / ball->GetInitialSpeed());
+
+			hitter->UpdateEnergy(-1);
+		};
+
 	if (ball->GetVerticalDirection() > 0 && ball->GetGlobalBounds().findIntersection(player1->GetGlobalBounds()))
 	{
-		ball->SetPosition({ ball->GetBody().getPosition().x, player1->GetBody().getPosition().y - (BALL_RADIUS + PLAYER_HEIGHT / 2.f) - 1 });
-		ball->ApplySpin(player1->GetXDirection(), player1->GetSpinMultiplier(), player1->GetCurvaturePower());
-		ball->IncreaseSpeed();
-
-		if (player2->HasForesight())
-			player2->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
-
-		audioManager->PlaySound("hit");
-		audioManager->SetPitch(ball->GetCurrentSpeed() / ball->GetInitialSpeed());
-
-		player1->UpdateEnergy(-1);
+		float correctedY = player1->GetBody().getPosition().y - (BALL_RADIUS + PLAYER_HEIGHT / 2.f) - BALL_OVERLAP_CORRECTION;
+		handlePaddleCollissions(player1.get(), player2.get(), correctedY);
 	}
 	else if (ball->GetVerticalDirection() < 0 && ball->GetGlobalBounds().findIntersection(player2->GetGlobalBounds()))
 	{
-		ball->SetPosition({ ball->GetBody().getPosition().x, player2->GetBody().getPosition().y + (BALL_RADIUS + PLAYER_HEIGHT / 2.f) + 1 });
-		ball->ApplySpin(player2->GetXDirection(), player2->GetSpinMultiplier(), player2->GetCurvaturePower());
-		ball->IncreaseSpeed();
-
-		if (player1->HasForesight())
-			player1->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
-
-		audioManager->PlaySound("hit");
-		audioManager->SetPitch(ball->GetCurrentSpeed() / ball->GetInitialSpeed());
-
-		player2->UpdateEnergy(-1);
+		float correctedY = player2->GetBody().getPosition().y + (BALL_RADIUS + PLAYER_HEIGHT / 2.f) + BALL_OVERLAP_CORRECTION;
+		handlePaddleCollissions(player2.get(), player1.get(), correctedY);
 	}
 }
 
 void GameManager::CheckBuddyCollisions()
 {
+	auto handleBuddyCollisions = [&](Paddle* buddyOwner, Paddle* receiver, float directionY)
+		{
+			for (const auto& buddy : buddyOwner->GetBuddies())
+			{
+				if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
+				{
+					float correctedY = buddy->GetBody().getPosition().y 
+						+ directionY * (BALL_RADIUS + PLAYER_HEIGHT / 2.f + BALL_OVERLAP_CORRECTION);
+					ball->SetPosition({ ball->GetBody().getPosition().x, correctedY });
+					ball->SwapVerticalDirection();
+					ball->IncreaseSpeed();
+
+					if (receiver->HasForesight())
+						receiver->ComputeForesight(*ball);
+
+					audioManager->PlaySound("hit");
+					break;
+				}
+			}
+		};
+
 	if (ball->GetVerticalDirection() > 0)
-	{
-		for (const auto& buddy : player1->GetBuddies())
-		{
-			if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
-			{
-				ball->SetPosition({ ball->GetBody().getPosition().x, buddy->GetBody().getPosition().y - (BALL_RADIUS + PLAYER_HEIGHT / 2.f) - 1 });
-				ball->SwapVerticalDirection();
-				ball->IncreaseSpeed();
-
-				if (player2->HasForesight())
-					player2->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
-
-				audioManager->PlaySound("hit");
-				break;
-			}
-		}
-	}
+		handleBuddyCollisions(player1.get(), player2.get(), -1.f);
 	if (ball->GetVerticalDirection() < 0)
-	{
-		for (const auto& buddy : player2->GetBuddies())
-		{
-			if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
-			{
-				ball->SetPosition({ ball->GetBody().getPosition().x, buddy->GetBody().getPosition().y + (BALL_RADIUS + PLAYER_HEIGHT / 2.f) + 1 });
-				ball->SwapVerticalDirection();
-				ball->IncreaseSpeed();
-
-				if (player1->HasForesight())
-					player1->ComputeForesight(*ball, WINDOW_WIDTH, WINDOW_HEIGHT);
-
-				audioManager->PlaySound("hit");
-				break;
-			}
-		}
-	}
+		handleBuddyCollisions(player2.get(), player1.get(), 1.f);
 }
 
 void GameManager::CheckObstacleCollisions()
 {
+	auto handleObstacleCollisions = [&](Paddle* owner)
+		{
+			for (const auto& obs : owner->GetObstacles())
+			{
+				if (ball->GetGlobalBounds().findIntersection(obs.getGlobalBounds()))
+				{
+					ball->SwapVerticalDirection();
+					audioManager->PlaySound("hit");
+					break;
+				}
+			}
+		};
+
 	if (ball->GetVerticalDirection() < 0)
-	{
-		for (const auto& obs : player2->GetObstacles())
-		{
-			if (ball->GetGlobalBounds().findIntersection(obs.getGlobalBounds()))
-			{
-				ball->SwapVerticalDirection();
-				audioManager->PlaySound("hit");
-				break;
-			}
-		}
-	}
-	// Check if ball is towards bottom player
+		handleObstacleCollisions(player2.get());
 	if (ball->GetVerticalDirection() > 0)
-	{
-		for (const auto& obs : player1->GetObstacles())
-		{
-			if (ball->GetGlobalBounds().findIntersection(obs.getGlobalBounds()))
-			{
-				ball->SwapVerticalDirection();
-				audioManager->PlaySound("hit");
-				break;
-			}
-		}
-	}
+		handleObstacleCollisions(player1.get());
 }
 
 void GameManager::CheckDeadZone()
@@ -338,28 +314,20 @@ void GameManager::CheckCollectibleCollisions()
 {
 	collectibleManager->CheckCollisions(player1.get(), player2.get(), *audioManager);
 
+	auto handleUpgradeSelection = [&](Paddle* recipient, Paddle* victim, std::string_view name)
+		{
+			recipient->ResetCollectedEnergy();
+			upgradeRecipient = recipient;
+			upgradeVictim = victim;
+			currentUpgradeOptions = upgradeManager->ChooseThreeRandomUpgrades(recipient->GetOwnedUniqueUpgrades());
+			uiManager->ShowRandomUpgrades(currentUpgradeOptions, name);
+			gameState = GameState::UpgradeSelect;
+		};
+
 	if (player1->GetCollectedEnergy() == COLLECTIBLE_COUNT_FOR_UPGRADE)
-	{
-		player1->ResetCollectedEnergy();
-		upgradeRecipient = player1.get();
-		upgradeVictim = player2.get();
-
-		currentUpgradeOptions = upgradeManager->ChooseThreeRandomUpgrades(player1->GetOwnedUniqueUpgrades());
-		uiManager->ShowRandomUpgrades(currentUpgradeOptions, "PLAYER 1");
-
-		gameState = GameState::UpgradeSelect;
-	}
+		handleUpgradeSelection(player1.get(), player2.get(), "PLAYER_1");
 	else if (player2->GetCollectedEnergy() == COLLECTIBLE_COUNT_FOR_UPGRADE)
-	{
-		player2->ResetCollectedEnergy();
-		upgradeRecipient = player2.get();
-		upgradeVictim = player1.get();
-
-		currentUpgradeOptions = upgradeManager->ChooseThreeRandomUpgrades(player2->GetOwnedUniqueUpgrades());
-		uiManager->ShowRandomUpgrades(currentUpgradeOptions, "PLAYER 2");
-
-		gameState = GameState::UpgradeSelect;
-	}
+		handleUpgradeSelection(player2.get(), player1.get(), "PLAYER_2");
 }
 
 void GameManager::Render()

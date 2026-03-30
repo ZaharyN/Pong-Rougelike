@@ -2,7 +2,6 @@
 #include <SFML/Graphics.hpp>
 #include "Types.h"
 #include "Ball.h"
-#include <iostream>
 #include <unordered_set>
 #include <unordered_map>
 #include <vector>
@@ -136,7 +135,7 @@ public:
 
 	void EnableForesight();
 
-	void ComputeForesight(const Ball& ballRef, int windowWidth, int windowHeight);
+	void ComputeForesight(const Ball& ballRef);
 
 	void DrawForesight(sf::RenderTarget& target) const;
 

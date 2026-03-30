@@ -202,8 +202,8 @@ sf::FloatRect Ball::GetLocalBounds() const
 void Ball::ResetAngle()
 {
 	sf::Angle startingAngle = Ball::GenerateRandomStartingAngle(INITIAL_MIN_ANGLE, INITIAL_MAX_ANGLE);
-	horizontalDirection = cos(startingAngle.asRadians());
-	verticalDirection = sin(startingAngle.asRadians());
+	horizontalDirection = std::cos(startingAngle.asRadians());
+	verticalDirection = std::sin(startingAngle.asRadians());
 }
 
 sf::Angle Ball::GenerateRandomStartingAngle(int min, int max)

@@ -69,7 +69,7 @@ void Paddle::UpdateEnergy(int energyTake)
 
 	currentEnergy = std::clamp(currentEnergy + energyTake, 0, INITIAL_ENERGY);
 
-	float ratio = (float)currentEnergy / INITIAL_ENERGY;
+	float ratio = static_cast<float>(currentEnergy) / INITIAL_ENERGY;
 
 	currentSpeed = INITIAL_SPEED * ratio;
 	ChangeColorFromRation(ratio);
@@ -237,23 +237,23 @@ void Paddle::EnableForesight()
 	hasForesight = true;
 }
 
-void Paddle::ComputeForesight(const Ball& ball, int windowWidth, int windowHeight)
+void Paddle::ComputeForesight(const Ball& ball)
 {
 	foresightDots.clear();
 
 	sf::Vector2f direction({ ball.GetHorizontalDirection(), ball.GetVerticalDirection() });
 	sf::Vector2f position(ball.GetBody().getPosition());
 
-	float targetY = direction.y < 0 ? 0 : windowHeight;
+	float targetY = direction.y < 0 ? 0 : WINDOW_HEIGHT;
 
 	while ((direction.y < 0 && position.y > targetY) || (direction.y > 0 && position.y < targetY))
 	{
 		position.x += direction.x * FORESIGHT_DOT_SPACING;
 		position.y += direction.y * FORESIGHT_DOT_SPACING;
 
-		if (position.x + ball.GetCurrentRadius() >= windowWidth)
+		if (position.x + ball.GetCurrentRadius() >= WINDOW_WIDTH)
 		{
-			position.x = windowWidth - ball.GetCurrentRadius();
+			position.x = WINDOW_WIDTH - ball.GetCurrentRadius();
 			direction.x *= -1;
 		}
 		else if (position.x - ball.GetCurrentRadius() <= 0)

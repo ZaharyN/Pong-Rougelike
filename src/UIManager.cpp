@@ -292,13 +292,15 @@ ClickTarget UIManager::GetClickedTarget(const sf::Vector2f& mousePos, GameState 
 			return ClickTarget::StartButton;
 		if (exitButton.getGlobalBounds().contains(mousePos))
 			return ClickTarget::ExitButton;
-		break;
+		return ClickTarget::None;
+
 	case GameState::ModeSelect:
 		if (onePlayerGameButton.getGlobalBounds().contains(mousePos))
 			return ClickTarget::OnePlayerOption;
 		if (twoPlayerGameButton.getGlobalBounds().contains(mousePos))
 			return ClickTarget::TwoPlayerOption;
-		break;
+		return ClickTarget::None;
+
 	case GameState::UpgradeSelect:
 		if (upgradeCard1.getGlobalBounds().contains(mousePos))
 			return ClickTarget::UpgradeCard1;
@@ -306,10 +308,12 @@ ClickTarget UIManager::GetClickedTarget(const sf::Vector2f& mousePos, GameState 
 			return ClickTarget::UpgradeCard2;
 		if (upgradeCard3.getGlobalBounds().contains(mousePos))
 			return ClickTarget::UpgradeCard3;
-		break;
+		return ClickTarget::None;
+
 	default:
 		return ClickTarget::None;
 	}
+
 }
 
 std::string UIManager::WrapText(const std::string& str, float maxWidth, unsigned int fontSize)

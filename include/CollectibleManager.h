@@ -13,7 +13,7 @@ class CollectibleManager
 	static constexpr float COLLECTIBLE_WIDTH = 40.f;
 	static constexpr float COLLECTIBLE_HEIGHT = 40.f;
 	static constexpr float COLLECTIBLE_SPAWN_DELAY = 10.f;
-	static constexpr int COLLECTIBLE_ENERGY = 5.f;
+	static constexpr int COLLECTIBLE_ENERGY = 5;
 
 	const unsigned int GAMESCREEN_WIDTH;
 	const unsigned int GAMESCREEN_HEIGHT;

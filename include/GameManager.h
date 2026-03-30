@@ -26,6 +26,7 @@ class GameManager
 
 	static constexpr float PLAYER_INITIAL_SPEED = 300.f;
 	static constexpr float BALL_INITIAL_SPEED = 300.f;
+	static constexpr float BALL_OVERLAP_CORRECTION = 1.f;
 
 	sf::RenderWindow gameWindow;
 	sf::Clock clock;

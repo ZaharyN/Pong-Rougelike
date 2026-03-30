@@ -7,7 +7,7 @@ CollectibleManager::CollectibleManager(int windowWidth, int windowHeight)
 {
 	if (!energyTexture.loadFromFile("Assets/Textures/energy.png"))
 	{
-		std::cout << "EnergyTexture could not be loaded" << std::endl;
+		std::cout << "EnergyTexture could not be loaded\n";
 	}
 }
 
@@ -29,25 +29,34 @@ void CollectibleManager::CheckCollisions(Paddle* player1, Paddle* player2, Audio
 {
 	std::erase_if(collectibles, [&](const std::unique_ptr<Collectible>& c)
 		{
-			if (player1->GetGlobalBounds().findIntersection(c->GetBounds()))
-			{
-				player1->CollectEnergy();
-				player1->UpdateEnergy(COLLECTIBLE_ENERGY);
-				audioManager.PlaySound("energy_picked");
+			auto checkPaddleAndBuddies = [&](Paddle* owner)
+				{
+					if (owner->GetGlobalBounds().findIntersection(c->GetBounds()))
+					{
+						owner->CollectEnergy();
+						owner->UpdateEnergy(COLLECTIBLE_ENERGY);
+						audioManager.PlaySound("energy_picked");
+						return true;
+					}
 
-				return true;
-			}
-			if (player2->GetGlobalBounds().findIntersection(c->GetBounds()))
-			{
-				player2->CollectEnergy();
-				player2->UpdateEnergy(COLLECTIBLE_ENERGY);
-				audioManager.PlaySound("energy_picked");
+					for (const auto& buddy : owner->GetBuddies())
+					{
+						if (buddy->GetGlobalBounds().findIntersection(c->GetBounds()))
+						{
+							owner->CollectEnergy();
+							owner->UpdateEnergy(COLLECTIBLE_ENERGY);
+							audioManager.PlaySound("energy_picked");
+							return true;
+						}
+					}
 
-				return true;
-			}
+					return false;
+				};
+
+			if (checkPaddleAndBuddies(player1)) return true;
+			if (checkPaddleAndBuddies(player2)) return true;
 			return false;
-		}
-	);
+		});
 }
 
 void CollectibleManager::Draw(sf::RenderTarget& window)
