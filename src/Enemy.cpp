@@ -18,7 +18,7 @@ void Enemy::Update(float deltaT)
 		{
 			isDashing = false;
 			dashSpeedMultiplier = 1.f;
-			dashCooldown = 5.f;
+			dashCooldown = DASH_COOLDOWN_DURATION;
 		}
 	}
 
@@ -26,7 +26,7 @@ void Enemy::Update(float deltaT)
 
 	if (hasDashUpgrade && !isDashing && dashCooldown <= 0)
 	{
-		if (std::abs(distance) > 150.f)
+		if (std::abs(distance) > MIN_DASH_THRESHOLD)
 		{
 			StartDash();
 		}

@@ -11,6 +11,7 @@
 
 class Paddle
 {
+protected:
 	static constexpr float DASH_COOLDOWN_DURATION = 5.f;
 	static constexpr float DASH_DURATION = 0.1f;
 
@@ -20,7 +21,6 @@ class Paddle
 	static constexpr float FORESIGHT_DOT_SPACING = 30.f;
 	static constexpr float FORESIGHT_DOT_RADIUS = 3.f;
 
-protected:
 	const PaddleScreenPosition SCREEN_POSITION;
 	const unsigned int WINDOW_WIDTH;
 	const unsigned int WINDOW_HEIGHT;
@@ -103,8 +103,6 @@ public:
 	bool HasForesight() const;
 
 	float GetCurvaturePower() const;
-
-	float GetDashCooldownRatio() const;
 
 	// Modifying methods:
 	void AddUpgrade(UpgradeType type, bool isUnique);

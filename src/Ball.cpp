@@ -235,8 +235,6 @@ ColorState Ball::MapColorToState(const sf::Color& initialColor)
 
 	if (initialColor.b == 255)
 		return ColorState::Blue;
-
-	return ColorState::White;
 }
 
 float Ball::GetCurvature() const

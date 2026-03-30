@@ -29,7 +29,6 @@ enum class PaddleScreenPosition
 
 enum class ColorState
 {
-	White,
 	Red,
 	Yellow,
 	Green,

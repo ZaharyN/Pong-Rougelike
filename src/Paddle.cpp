@@ -350,9 +350,3 @@ float Paddle::GetCurvaturePower() const
 {
 	return curvaturePower;
 }
-
-float Paddle::GetDashCooldownRatio() const
-{
-	if (!hasDashUpgrade) return 1.f;
-	return 1.f - std::clamp(dashCooldown / DASH_COOLDOWN_DURATION, 0.f, 1.f);
-}

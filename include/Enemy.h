@@ -4,6 +4,8 @@
 
 class Enemy : public Paddle
 {
+	static constexpr float MIN_DASH_THRESHOLD = 150.f;
+
 	const Ball& ball;
 public:
 	Enemy(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
