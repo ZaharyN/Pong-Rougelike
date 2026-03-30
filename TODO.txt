@@ -1,27 +1,9 @@
-TO DO:
-
-- Implement the other upgrades
-
-- Add which player is picking the current upgrades because there is no way to know
-
-- Make a second rectangle showing the dash cooldown
-
-- Make proper resets
-
-- Separate CheckCollisions method into different methods for corresponding functionality
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Bugs:
-- When the player gets the reduce spin upgrade it has negative spin which is not correct
-- Fix the obstacles - think of a better way to design them
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Future Optimizations:
+Future Improvements:
 
 1. Make a struct for the card in order to remove all the variables for each card and store a vector<UpgradeCard>. Also, you can add isHovered bool in the struct
 and keep track in the UIManger for the lastHovered card. This will prevent resetting the onHover state every frame which I find overkill.
 
-2. Check collisions method in GameManager
+2. Think of using lambdas in CheckCollisions
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Ideas:
@@ -29,4 +11,4 @@ Ideas:
 - Make the game continue when the ball touches the dead zone. When a player fails to return the ball, the opponent gets a point. The game ends when a player 
   reaches 11 points. This way, there is sense to stack the power ups and they become relevant. The ball's speed should be reset.
 
-- The buddy can also pick up the enrgy
+- The buddy can also pick up the energy
