@@ -130,7 +130,7 @@ void GameManager::StartGame(GameMode gameMode)
 		player2 = std::make_unique<Enemy>(
 			sf::Vector2f{ PLAYER_WIDTH, PLAYER_HEIGHT }, PaddleScreenPosition::Top,
 			sf::Vector2f{ WINDOW_WIDTH / 2.f, PLAYER_HEIGHT / 2.f },
-			sf::Color::Green,
+			sf::Color::Red,
 			PLAYER_INITIAL_SPEED, *ball, WINDOW_WIDTH, WINDOW_HEIGHT, 100);
 	}
 	else
@@ -153,7 +153,7 @@ void GameManager::StartGame(GameMode gameMode)
 		player2 = std::make_unique<Player>(
 			sf::Vector2f{ PLAYER_WIDTH, PLAYER_HEIGHT }, PaddleScreenPosition::Top,
 			sf::Vector2f{ WINDOW_WIDTH / 2.f, PLAYER_HEIGHT / 2 },
-			sf::Color::Green,
+			sf::Color::Red,
 			PLAYER_INITIAL_SPEED, WINDOW_WIDTH, WINDOW_HEIGHT, 100, p2Controls);
 	}
 
@@ -339,8 +339,8 @@ void GameManager::CheckDeadZone()
 			audioManager->PlaySound("hit");
 		};
 
-	if (player1Score) handleBounce(BALL_RADIUS);
-	if (player2Score) handleBounce(WINDOW_HEIGHT - BALL_RADIUS);
+	if (player1Score) handleBounce(BALL_RADIUS + BALL_OVERLAP_CORRECTION);
+	if (player2Score) handleBounce(WINDOW_HEIGHT - (BALL_RADIUS + BALL_OVERLAP_CORRECTION));
 }
 
 void GameManager::CheckCollectibleCollisions()

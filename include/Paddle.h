@@ -72,8 +72,6 @@ public:
 
 	void CollectEnergy();
 
-	void ChangeColorFromRation(float ratio);
-
 	virtual ~Paddle() = default;
 
 	float GetCurrentSpeed() const;

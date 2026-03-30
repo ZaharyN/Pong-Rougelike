@@ -1,10 +1,12 @@
 Future Improvements:
 
-1. Make a struct for the card in order to remove all the variables for each card and store a vector<UpgradeCard>. Also, you can add isHovered bool in the struct
-and keep track in the UIManger for the lastHovered card. This will prevent resetting the onHover state every frame which I find overkill.
+1. Think of a way to separate the upgrades
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Ideas:
+2. Upload it to GitHub and add game icon
 
-- Make the game continue when the ball touches the dead zone. When a player fails to return the ball, the opponent gets a point. The game ends when a player 
-  reaches 11 points. This way, there is sense to stack the power ups and they become relevant. The ball's speed should be reset.
+-------------------------------------------------------------------------------------------------------------------
+Bugs:
+
+- Obstacles are inverted - fix them
+
+- When the ball collided with the paddle and dead zone it glitched and then started to just come from the bottom dead zone over and over

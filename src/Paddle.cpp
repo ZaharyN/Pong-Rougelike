@@ -72,27 +72,6 @@ void Paddle::UpdateEnergy(int energyTake)
 	float ratio = static_cast<float>(currentEnergy) / INITIAL_ENERGY;
 
 	currentSpeed = INITIAL_SPEED * ratio;
-	ChangeColorFromRation(ratio);
-}
-
-void Paddle::ChangeColorFromRation(float ratio)
-{
-	float greenValue;
-	float redValue;
-
-	if (ratio >= 0.75)
-	{
-		redValue = std::clamp(255.f * (1 - ratio) * 4.f, 0.f, 255.f);
-		greenValue = 255.f;
-	}
-	else
-	{
-		greenValue = std::clamp(255.f * ratio * 1.33f, 0.f, 255.f);
-		redValue = 255.f;
-	}
-
-	color = sf::Color(static_cast<uint8_t>(redValue), static_cast<uint8_t>(greenValue), color.b);
-	body.setFillColor(color);
 }
 
 void Paddle::CollectEnergy()

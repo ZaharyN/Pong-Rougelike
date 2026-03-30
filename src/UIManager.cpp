@@ -54,7 +54,6 @@ void UIManager::InitializeUpgradeMenu()
 void UIManager::InitializeScoreTexts()
 {
 	player1ScoreText.emplace(font, "0", FONT_SIZE_BUTTON);
-	player1ScoreText->setFillColor(sf::Color::White);
 	player1ScoreText->setOrigin({
 		player1ScoreText->getLocalBounds().size.x / 2.f,
 		player1ScoreText->getLocalBounds().size.y / 2.f
@@ -65,7 +64,6 @@ void UIManager::InitializeScoreTexts()
 		});
 
 	player2ScoreText.emplace(font, "0", FONT_SIZE_BUTTON);
-	player2ScoreText->setFillColor(sf::Color::White);
 	player2ScoreText->setOrigin({
 		player2ScoreText->getLocalBounds().size.x / 2.f,
 		player2ScoreText->getLocalBounds().size.y / 2.f
