@@ -12,6 +12,7 @@ enum class GameState
 	ModeSelect,
 	Playing,
 	UpgradeSelect,
+	GameOver
 };
 
 enum class GameMode

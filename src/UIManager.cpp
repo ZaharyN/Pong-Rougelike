@@ -10,6 +10,7 @@ UIManager::UIManager(const unsigned int windowWidth, const unsigned int windowHe
 	InitializeStartMenu();
 	InitializeSelectModeMenu();
 	InitializeUpgradeMenu();
+	InitializeScoreTexts();
 }
 
 void UIManager::InitializeStartMenu()
@@ -48,6 +49,31 @@ void UIManager::InitializeUpgradeMenu()
 
 	playerPickingBox = sf::RectangleShape({ BUTTON_WIDTH, BUTTON_HEIGHT / 2.f });
 	CreateButton(playerPickingBox, BUTTON_HEIGHT / 4.f + 10);
+}
+
+void UIManager::InitializeScoreTexts()
+{
+	player1ScoreText.emplace(font, "0", FONT_SIZE_BUTTON);
+	player1ScoreText->setFillColor(sf::Color::White);
+	player1ScoreText->setOrigin({
+		player1ScoreText->getLocalBounds().size.x / 2.f,
+		player1ScoreText->getLocalBounds().size.y / 2.f
+		});
+	player1ScoreText->setPosition({
+		WINDOW_WIDTH - player1ScoreText->getGlobalBounds().size.x / 2.f,
+		WINDOW_HEIGHT / 2.f + player1ScoreText->getGlobalBounds().size.y / 2.f + SCORE_TEXT_OFFSET
+		});
+
+	player2ScoreText.emplace(font, "0", FONT_SIZE_BUTTON);
+	player2ScoreText->setFillColor(sf::Color::White);
+	player2ScoreText->setOrigin({
+		player2ScoreText->getLocalBounds().size.x / 2.f,
+		player2ScoreText->getLocalBounds().size.y / 2.f
+		});
+	player2ScoreText->setPosition({
+		WINDOW_WIDTH - player2ScoreText->getGlobalBounds().size.x / 2.f,
+		WINDOW_HEIGHT / 2.f - player2ScoreText->getGlobalBounds().size.y / 2.f - SCORE_TEXT_OFFSET
+		});
 }
 
 void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
@@ -114,6 +140,34 @@ void UIManager::Draw(GameState state, sf::RenderWindow& gameWindow)
 		gameWindow.draw(playerPickingBox);
 		if (playerPickingText) gameWindow.draw(*playerPickingText);
 	}
+	else if (state == GameState::Playing)
+	{
+		if (player1ScoreText) gameWindow.draw(*player1ScoreText);
+		if (player2ScoreText) gameWindow.draw(*player2ScoreText);
+	}
+	else if (state == GameState::GameOver)
+	{
+		if (gameOverText) gameWindow.draw(*gameOverText);
+		if (winnerText) gameWindow.draw(*winnerText);
+	}
+}
+
+void UIManager::UpdateScores(int player1Score, int player2Score)
+{
+	auto updateText = [&](std::optional<sf::Text>& text, int score, float posY)
+		{
+			text.emplace(font, std::to_string(score), FONT_SIZE_BUTTON);
+			text->setFillColor(sf::Color::White);
+			sf::FloatRect bounds = text->getLocalBounds();
+			text->setOrigin({ bounds.size.x / 2.f, bounds.size.y });
+			text->setPosition({
+				WINDOW_WIDTH - bounds.size.x - SCORE_TEXT_OFFSET,
+				posY
+			});
+		};
+
+	updateText(player1ScoreText, player1Score, WINDOW_HEIGHT / 2.f + SCORE_TEXT_OFFSET);
+	updateText(player2ScoreText, player2Score, WINDOW_HEIGHT / 2.f - SCORE_TEXT_OFFSET);
 }
 
 void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const std::string_view playerName)
@@ -129,6 +183,21 @@ void UIManager::ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const s
 	}
 
 	CreateButtonText(playerPickingText, std::string(playerName), FONT_SIZE_BUTTON, playerPickingBox);
+}
+
+void UIManager::InitializeGameOverScreen(const std::string_view winnerName)
+{
+	gameOverText.emplace(font, "GAME OVER", 60);
+	gameOverText->setFillColor(sf::Color::White);
+	sf::FloatRect goBounds = gameOverText->getLocalBounds();
+	gameOverText->setOrigin({ goBounds.size.x / 2.f, goBounds.size.y });
+	gameOverText->setPosition({ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f - 60.f });
+
+	winnerText.emplace(font, std::string(winnerName) + " WINS!", FONT_SIZE_BUTTON);
+	winnerText->setFillColor(sf::Color::Yellow);
+	sf::FloatRect wBounds = winnerText->getLocalBounds();
+	winnerText->setOrigin({ wBounds.size.x / 2.f, wBounds.size.y });
+	winnerText->setPosition({ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f + 20.f });
 }
 
 int UIManager::GetClickedCardIndex(const sf::Vector2f& mousePos) const

@@ -17,6 +17,8 @@ class UIManager
 	static constexpr float UPGRADE_CARD_GAP = 75.f;
 	static constexpr float UPGRADE_CARD_TITLE_HEGITH = 60.f;
 
+	static constexpr float SCORE_TEXT_OFFSET = 20.f;
+
 	static constexpr unsigned int FONT_SIZE_BUTTON = 40;
 	static constexpr unsigned int FONT_SIZE_CARD_DESCRIPTION = 20;
 
@@ -42,6 +44,12 @@ class UIManager
 	sf::RectangleShape playerPickingBox;
 	std::optional<sf::Text> playerPickingText;
 
+	std::optional<sf::Text> player1ScoreText;
+	std::optional<sf::Text> player2ScoreText;
+
+	std::optional<sf::Text> gameOverText;
+	std::optional<sf::Text> winnerText;
+
 	void CreateButton(sf::RectangleShape& button, float yPosition);
 	void CreateButtonText(std::optional<sf::Text>& text, const std::string& value, int size, const sf::RectangleShape& parent);
 	void OnHoverEffect(sf::RectangleShape& button, std::optional<sf::Text>& text);
@@ -55,12 +63,15 @@ public:
 	void InitializeStartMenu();
 	void InitializeSelectModeMenu();
 	void InitializeUpgradeMenu();
+	void InitializeScoreTexts();
+	void InitializeGameOverScreen(const std::string_view winnerName);
 
 	void Update(GameState state, const sf::RenderWindow& gameWindow);
 	void Draw(GameState state, sf::RenderWindow& gameWindow);
 
 	int GetClickedCardIndex(const sf::Vector2f& mousePos) const;
 	ClickTarget GetClickedTarget(const sf::Vector2f& mousePos, GameState gameState);
+	void UpdateScores(int player1Score, int player2Score);
 
 	void ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const std::string_view playerName);
 };

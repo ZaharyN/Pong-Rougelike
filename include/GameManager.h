@@ -28,6 +28,8 @@ class GameManager
 	static constexpr float BALL_INITIAL_SPEED = 300.f;
 	static constexpr float BALL_OVERLAP_CORRECTION = 1.f;
 
+	static constexpr int WINNING_SCORE = 2;
+
 	sf::RenderWindow gameWindow;
 	sf::Clock clock;
 	GameState gameState = GameState::Menu;
@@ -44,6 +46,9 @@ class GameManager
 	Paddle* upgradeRecipient = nullptr;
 	Paddle* upgradeVictim = nullptr;
 	std::vector<Upgrade> currentUpgradeOptions;
+
+	int player1Score = 0;
+	int player2Score = 0;
 
 	void ProcessEvents();
 	void Update(float deltaT);

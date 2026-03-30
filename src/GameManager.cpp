@@ -98,6 +98,10 @@ void GameManager::ProcessEvents()
 						audioManager->PlaySound("select");
 					}
 				}
+				else if (gameState == GameState::GameOver)
+				{
+					gameState = GameState::Menu;
+				}
 			}
 		}
 	}
@@ -105,11 +109,13 @@ void GameManager::ProcessEvents()
 
 void GameManager::StartGame(GameMode gameMode)
 {
-	ball = std::make_unique<Ball>(BALL_RADIUS, sf::Vector2f{ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f },
-		BALL_INITIAL_SPEED, INITIAL_MIN_ANGLE, INITIAL_MAX_ANGLE, sf::Color::Red);
-
+	player1Score = 0;
+	player2Score = 0;
 	PlayerControls p1Controls;
 	PlayerControls p2Controls;
+
+	ball = std::make_unique<Ball>(BALL_RADIUS, sf::Vector2f{ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f },
+		BALL_INITIAL_SPEED, INITIAL_MIN_ANGLE, INITIAL_MAX_ANGLE, sf::Color::Red);
 
 	if (gameMode == GameMode::OnePlayer)
 	{
@@ -156,6 +162,8 @@ void GameManager::StartGame(GameMode gameMode)
 		sf::Vector2f{ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT - PLAYER_HEIGHT / 2 },
 		sf::Color::Green,
 		PLAYER_INITIAL_SPEED, WINDOW_WIDTH, WINDOW_HEIGHT, 100, p1Controls);
+
+	uiManager->UpdateScores(player1Score, player2Score);
 }
 
 void GameManager::Update(float deltaT)
@@ -252,7 +260,7 @@ void GameManager::CheckBuddyCollisions()
 			{
 				if (buddy->GetGlobalBounds().findIntersection(ball->GetGlobalBounds()))
 				{
-					float correctedY = buddy->GetBody().getPosition().y 
+					float correctedY = buddy->GetBody().getPosition().y
 						+ directionY * (BALL_RADIUS + PLAYER_HEIGHT / 2.f + BALL_OVERLAP_CORRECTION);
 					ball->SetPosition({ ball->GetBody().getPosition().x, correctedY });
 					ball->SwapVerticalDirection();
@@ -296,18 +304,43 @@ void GameManager::CheckObstacleCollisions()
 
 void GameManager::CheckDeadZone()
 {
-	if (ball->GetBody().getPosition().y - BALL_RADIUS <= 0
-		|| ball->GetBody().getPosition().y + BALL_RADIUS >= WINDOW_HEIGHT)
+	bool player1Scored = ball->GetBody().getPosition().y - BALL_RADIUS <= 0;
+	bool player2Scored = ball->GetBody().getPosition().y + BALL_RADIUS >= WINDOW_HEIGHT;
+
+	if (!player1Scored && !player2Scored) return;
+
+	if (player1Scored) player1Score++;
+	if (player2Scored) player2Score++;
+
+	uiManager->UpdateScores(player1Score, player2Score);
+
+	// Check for winner before bouncing
+	if (player1Score >= WINNING_SCORE || player2Score >= WINNING_SCORE)
 	{
+		std::string_view winnerName = player1Score >= WINNING_SCORE ? "PLAYER 1" : "PLAEYR 2";
+
+		uiManager->InitializeGameOverScreen(winnerName);
 		player1->Reset();
 		player2->Reset();
 		ball->Reset();
 		collectibleManager->Reset();
 		audioManager->StopBackgroundMusic();
+		gameState = GameState::GameOver;
 
-		gameState = GameState::Menu;
 		return;
 	}
+
+	// Handle ball score and bounce
+	auto handleBounce = [&](float correctedY)
+		{
+			ball->SetPosition({ ball->GetBody().getPosition().x, correctedY });
+			ball->SwapVerticalDirection();
+			ball->ResetCurvature();
+			audioManager->PlaySound("hit");
+		};
+
+	if (player1Score) handleBounce(BALL_RADIUS);
+	if (player2Score) handleBounce(WINDOW_HEIGHT - BALL_RADIUS);
 }
 
 void GameManager::CheckCollectibleCollisions()
@@ -325,9 +358,9 @@ void GameManager::CheckCollectibleCollisions()
 		};
 
 	if (player1->GetCollectedEnergy() == COLLECTIBLE_COUNT_FOR_UPGRADE)
-		handleUpgradeSelection(player1.get(), player2.get(), "PLAYER_1");
+		handleUpgradeSelection(player1.get(), player2.get(), "PLAYER 1");
 	else if (player2->GetCollectedEnergy() == COLLECTIBLE_COUNT_FOR_UPGRADE)
-		handleUpgradeSelection(player2.get(), player1.get(), "PLAYER_2");
+		handleUpgradeSelection(player2.get(), player1.get(), "PLAYER 2");
 }
 
 void GameManager::Render()
@@ -359,6 +392,7 @@ void GameManager::Render()
 			gameWindow.draw(buddy->GetBody());
 
 		collectibleManager->Draw(gameWindow);
+		uiManager->Draw(GameState::Playing, gameWindow);
 	}
 	else
 	{
