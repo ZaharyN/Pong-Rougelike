@@ -228,7 +228,7 @@ void GameManager::CheckPaddleCollisions()
 	auto handlePaddleCollissions = [&](Paddle* hitter, Paddle* receiver, float correctedY)
 		{
 			ball->SetPosition({ ball->GetBody().getPosition().x, correctedY });
-			ball->ApplySpin(player1->GetXDirection(), hitter->GetSpinMultiplier(), hitter->GetCurvaturePower());
+			ball->ApplySpin(hitter->GetXDirection(), hitter->GetSpinMultiplier(), hitter->GetCurvaturePower());
 			ball->IncreaseSpeed();
 
 			if (receiver->HasForesight())
@@ -317,7 +317,7 @@ void GameManager::CheckDeadZone()
 	// Check for winner before bouncing
 	if (player1Score >= WINNING_SCORE || player2Score >= WINNING_SCORE)
 	{
-		std::string_view winnerName = player1Score >= WINNING_SCORE ? "PLAYER 1" : "PLAEYR 2";
+		std::string_view winnerName = player1Score >= WINNING_SCORE ? "PLAYER 1" : "PLAYER 2";
 
 		uiManager->InitializeGameOverScreen(winnerName);
 		player1->Reset();
@@ -339,8 +339,8 @@ void GameManager::CheckDeadZone()
 			audioManager->PlaySound("hit");
 		};
 
-	if (player1Score) handleBounce(BALL_RADIUS + BALL_OVERLAP_CORRECTION);
-	if (player2Score) handleBounce(WINDOW_HEIGHT - (BALL_RADIUS + BALL_OVERLAP_CORRECTION));
+	if (player1Scored) handleBounce(BALL_RADIUS + BALL_OVERLAP_CORRECTION);
+	if (player2Scored) handleBounce(WINDOW_HEIGHT - (BALL_RADIUS + BALL_OVERLAP_CORRECTION));
 }
 
 void GameManager::CheckCollectibleCollisions()
