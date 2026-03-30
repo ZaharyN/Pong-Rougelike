@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "Types.h"
+#include "UpgradeCard.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -36,58 +37,30 @@ class UIManager
 	std::optional<sf::Text> onePlayerButtonText;
 	std::optional<sf::Text> twoPlayerButtonText;
 
-	// Upgrade card UI
-	sf::RectangleShape upgradeCard1;
-	sf::RectangleShape upgradeCard2;
-	sf::RectangleShape upgradeCard3;
-
-	sf::RectangleShape card1Title;
-	sf::RectangleShape card2Title;
-	sf::RectangleShape card3Title;
-	std::optional<sf::Text> card1TitleText;
-	std::optional<sf::Text> card2TitleText;
-	std::optional<sf::Text> card3TitleText;
-
-	std::optional<sf::Text> card1DescriptionText;
-	std::optional<sf::Text> card2DescriptionText;
-	std::optional<sf::Text> card3DescriptionText;
+	std::array<UpgradeCard, 3> upgradeCards;
 
 	sf::RectangleShape playerPickingBox;
 	std::optional<sf::Text> playerPickingText;
 
 	void CreateButton(sf::RectangleShape& button, float yPosition);
-
 	void CreateButtonText(std::optional<sf::Text>& text, const std::string& value, int size, const sf::RectangleShape& parent);
-
 	void OnHoverEffect(sf::RectangleShape& button, std::optional<sf::Text>& text);
-
 	void ResetHoverEffect(sf::RectangleShape& button, std::optional<sf::Text>& text);
-	
-	void OnCardHoverEffect(sf::RectangleShape& card, sf::RectangleShape& title, 
-		std::optional<sf::Text>& titleText, std::optional<sf::Text>& description);
-	
-	void ResetCardHoverEffect(sf::RectangleShape& card, sf::RectangleShape& title,
-		std::optional<sf::Text>& titleText, std::optional<sf::Text>& description);
-
 	sf::Color GetColorFromRarity(UpgradeRarity rarity);
-
 	std::string WrapText(const std::string& str, float maxWidth, unsigned int fontSize);
+
 public:
 	UIManager(const unsigned int windowWidth, const unsigned int windowHeight);
 
 	void InitializeStartMenu();
-
 	void InitializeSelectModeMenu();
-
 	void InitializeUpgradeMenu();
 
 	void Update(GameState state, const sf::RenderWindow& gameWindow);
-
 	void Draw(GameState state, sf::RenderWindow& gameWindow);
 
-	void ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const std::string_view playerName);
-
 	int GetClickedCardIndex(const sf::Vector2f& mousePos) const;
-
 	ClickTarget GetClickedTarget(const sf::Vector2f& mousePos, GameState gameState);
+
+	void ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const std::string_view playerName);
 };
