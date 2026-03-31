@@ -89,6 +89,9 @@ struct PlayerControls
 
 	sf::Keyboard::Scancode downPrimary = sf::Keyboard::Scancode::Unknown;
 	sf::Keyboard::Scancode downSecondary = sf::Keyboard::Scancode::Unknown;
+
+	sf::Keyboard::Scancode dashPrimary = sf::Keyboard::Scancode::Unknown;
+	sf::Keyboard::Scancode dashSecondary = sf::Keyboard::Scancode::Unknown;
 };
 
 struct Upgrade

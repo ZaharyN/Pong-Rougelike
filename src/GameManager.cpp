@@ -128,7 +128,8 @@ void GameManager::StartGame(GameMode gameMode)
 			sf::Keyboard::Scancode::Left, sf::Keyboard::Scancode::A,
 			sf::Keyboard::Scancode::Right, sf::Keyboard::Scancode::D,
 			sf::Keyboard::Scancode::Up, sf::Keyboard::Scancode::W,
-			sf::Keyboard::Scancode::Down, sf::Keyboard::Scancode::S
+			sf::Keyboard::Scancode::Down, sf::Keyboard::Scancode::S,
+			sf::Keyboard::Scancode::Space
 		};
 
 		player2 = std::make_unique<Enemy>(
@@ -144,14 +145,16 @@ void GameManager::StartGame(GameMode gameMode)
 			sf::Keyboard::Scancode::Left, sf::Keyboard::Scancode::Unknown,
 			sf::Keyboard::Scancode::Right, sf::Keyboard::Scancode::Unknown,
 			sf::Keyboard::Scancode::Up, sf::Keyboard::Scancode::Unknown,
-			sf::Keyboard::Scancode::Down, sf::Keyboard::Scancode::Unknown
+			sf::Keyboard::Scancode::Down, sf::Keyboard::Scancode::Unknown,
+			sf::Keyboard::Scancode::Space
 		};
 		p2Controls =
 		{
 			sf::Keyboard::Scancode::A, sf::Keyboard::Scancode::Unknown,
 			sf::Keyboard::Scancode::D, sf::Keyboard::Scancode::Unknown,
 			sf::Keyboard::Scancode::W, sf::Keyboard::Scancode::Unknown,
-			sf::Keyboard::Scancode::S, sf::Keyboard::Scancode::Unknown
+			sf::Keyboard::Scancode::S, sf::Keyboard::Scancode::Unknown,
+			sf::Keyboard::Scancode::LShift
 		};
 
 		player2 = std::make_unique<Player>(

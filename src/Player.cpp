@@ -41,7 +41,7 @@ void Player::Update(float deltaT)
 			verticalDirection = 1;
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scancode::Space))
+	if (sf::Keyboard::isKeyPressed(controls.dashPrimary) || sf::Keyboard::isKeyPressed(controls.dashSecondary))
 	{
 		if (hasDashUpgrade && dashCooldown <= 0 && !isDashing)
 		{
