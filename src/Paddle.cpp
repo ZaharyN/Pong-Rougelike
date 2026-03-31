@@ -1,5 +1,4 @@
 #include "Paddle.h"
-#include "Buddy.h"
 
 Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition,
 	const sf::Color& initialColor, float speed, int windowWidth, int windowHeight, int initialEnergy)
@@ -150,10 +149,10 @@ void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight, const sf::
 
 		for (const auto& obs : obstacles)
 		{
-			float existingLeft  = obs.getPosition().x - obstacleWidth / 2.f;
+			float existingLeft = obs.getPosition().x - obstacleWidth / 2.f;
 			float existingRight = obs.getPosition().x + obstacleWidth / 2.f;
-			float newLeft       = obstacleX - obstacleWidth / 2.f;
-			float newRight      = obstacleX + obstacleWidth / 2.f;
+			float newLeft = obstacleX - obstacleWidth / 2.f;
+			float newRight = obstacleX + obstacleWidth / 2.f;
 
 			if (newLeft < existingRight && newRight > existingLeft)
 			{
@@ -195,20 +194,9 @@ void Paddle::EnableUpAndDownMovement()
 	canMoveUpAndDown = true;
 }
 
-void Paddle::AddBuddy()
+void Paddle::AddBuddy(std::unique_ptr<Paddle> buddy)
 {
-	float buddyYPos = body.getPosition().y;
-	float buddyXPos = WINDOW_WIDTH / 2.f;
-
-	std::unique_ptr<Buddy> newBuddy = std::make_unique<Buddy>(
-		sf::Vector2f({ BUDDY_WIDTH, BUDDY_HEIGHT }),
-		this->SCREEN_POSITION,
-		sf::Vector2f({ buddyXPos, buddyYPos }),
-		sf::Color(255, 255, 255, 150),
-		INITIAL_SPEED / 2.f,
-		WINDOW_WIDTH, WINDOW_HEIGHT, INITIAL_ENERGY);
-
-	buddies.push_back(std::move(newBuddy));
+	buddies.push_back(std::move(buddy));
 }
 
 void Paddle::EnableForesight()
@@ -257,8 +245,8 @@ void Paddle::TrimForesight(float ballY, float verticalDirection)
 		float dotY = foresightDots.front().getPosition().y;
 
 		bool isPassed = verticalDirection > 0
-			? dotY < ballY
-			: dotY > ballY;
+			? dotY <= ballY
+			: dotY >= ballY;
 
 		if (!isPassed) break;
 
@@ -280,73 +268,30 @@ void Paddle::AddCurvaturePower(float power)
 }
 
 // Getters:
+float Paddle::GetCurrentSpeed() const { return currentSpeed; }
 
-float Paddle::GetCurrentSpeed() const
-{
-	return currentSpeed;
-}
+float Paddle::GetInitialSpeed() const { return INITIAL_SPEED; }
 
-float Paddle::GetInitialSpeed() const
-{
-	return INITIAL_SPEED;
-}
+int Paddle::GetXDirection() const { return horizontalDirection; }
 
-int Paddle::GetXDirection() const
-{
-	return horizontalDirection;
-}
+const sf::RectangleShape& Paddle::GetBody() const { return body; }
 
-const sf::RectangleShape& Paddle::GetBody() const
-{
-	return body;
-}
+int Paddle::GetCollectedEnergy() const { return energyCollected; }
 
-int Paddle::GetCollectedEnergy() const
-{
-	return energyCollected;
-}
+sf::FloatRect Paddle::GetGlobalBounds() const { return body.getGlobalBounds(); }
 
-sf::FloatRect Paddle::GetGlobalBounds() const
-{
-	return body.getGlobalBounds();
-}
+PaddleScreenPosition Paddle::GetScreenPosition() const { return SCREEN_POSITION; }
 
-PaddleScreenPosition Paddle::GetScreenPosition() const
-{
-	return SCREEN_POSITION;
-}
+float Paddle::GetSpinMultiplier() const { return spinMultiplier; }
 
-float Paddle::GetSpinMultiplier() const
-{
-	return spinMultiplier;
-}
+float Paddle::GetEnergySpawnRangeModifier() const { return energyRangeModifier; }
 
-float Paddle::GetEnergySpawnRangeModifier() const
-{
-	return energyRangeModifier;
-}
+const std::vector<sf::RectangleShape>& Paddle::GetObstacles() const { return obstacles; }
 
-const std::vector<sf::RectangleShape>& Paddle::GetObstacles() const
-{
-	return obstacles;
-}
+const std::unordered_set<UpgradeType>& Paddle::GetOwnedUniqueUpgrades() const { return uniqueUpgrades; }
 
-const std::unordered_set<UpgradeType>& Paddle::GetOwnedUniqueUpgrades() const
-{
-	return uniqueUpgrades;
-}
+const std::vector<std::unique_ptr<Paddle>>& Paddle::GetBuddies() const { return buddies; }
 
-const std::vector<std::unique_ptr<Paddle>>& Paddle::GetBuddies() const
-{
-	return buddies;
-}
+bool Paddle::HasForesight() const { return hasForesight; }
 
-bool Paddle::HasForesight() const
-{
-	return hasForesight;
-}
-
-float Paddle::GetCurvaturePower() const
-{
-	return curvaturePower;
-}
+float Paddle::GetCurvaturePower() const { return curvaturePower; }

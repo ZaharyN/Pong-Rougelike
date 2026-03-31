@@ -158,47 +158,23 @@ void Ball::ResetCurvature()
 }
 
 // Getters:
+float Ball::GetCurrentSpeed() const { return currentMovementSpeed; }
 
-float Ball::GetCurrentSpeed() const
-{
-	return currentMovementSpeed;
-}
+float Ball::GetInitialSpeed() const { return INITIAL_MOVEMENT_SPEED; }
 
-float Ball::GetInitialSpeed() const
-{
-	return INITIAL_MOVEMENT_SPEED;
-}
+float Ball::GetCurrentRadius() const { return currentRadius; }
 
-float Ball::GetCurrentRadius() const
-{
-	return currentRadius;
-}
+float Ball::GetVerticalDirection() const { return verticalDirection; }
 
-float Ball::GetVerticalDirection() const
-{
-	return verticalDirection;
-}
+float Ball::GetHorizontalDirection() const { return horizontalDirection; }
 
-float Ball::GetHorizontalDirection() const
-{
-	return horizontalDirection;
-}
+const sf::CircleShape& Ball::GetBody() const { return body; }
 
-const sf::CircleShape& Ball::GetBody() const
-{
-	return body;
-}
+sf::FloatRect Ball::GetGlobalBounds() const { return body.getGlobalBounds(); }
 
-sf::FloatRect Ball::GetGlobalBounds() const
-{
-	return body.getGlobalBounds();
-}
+sf::FloatRect Ball::GetLocalBounds() const { return body.getLocalBounds(); }
 
-sf::FloatRect Ball::GetLocalBounds() const
-{
-	return body.getLocalBounds();
-}
-
+//Helpers:
 void Ball::ResetAngle()
 {
 	sf::Angle startingAngle = Ball::GenerateRandomStartingAngle(INITIAL_MIN_ANGLE, INITIAL_MAX_ANGLE);

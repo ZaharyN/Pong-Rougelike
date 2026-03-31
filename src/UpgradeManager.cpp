@@ -1,7 +1,7 @@
 #include "UpgradeManager.h"
 
-UpgradeManager::UpgradeManager()
-	: rng(std::random_device{}())
+UpgradeManager::UpgradeManager(const unsigned int windowWidth, const unsigned int windowHeight)
+	: WINDOW_WIDTH(windowWidth), WINDOW_HEIGHT(windowHeight), rng(std::random_device{}())
 {
 	LoadUpgradesData();
 }
@@ -169,7 +169,7 @@ void UpgradeManager::LoadUpgradesData()
 		false,
 		[](Paddle& p, Paddle& opp, Ball& ball)
 		{
-			sf::Color placerColor = p.GetScreenPosition() == PaddleScreenPosition::Bottom
+			sf::Color placerColor = opp.GetScreenPosition() == PaddleScreenPosition::Top
 				? sf::Color::Green
 				: sf::Color::Red;
 			opp.PlaceObstacle(OBSTACLE_WIDTH, OBSTACLE_HEIGHT, placerColor);
@@ -208,9 +208,17 @@ void UpgradeManager::LoadUpgradesData()
 		"ADD ONE RECTANGLE WITH DUMMY MOVEMENT",
 		UpgradeRarity::Legendary,
 		false,
-		[](Paddle& p, Paddle& opp, Ball& ball)
+		[&](Paddle& p, Paddle& opp, Ball& ball)
 		{
-			p.AddBuddy();
+			auto buddy = std::make_unique<Buddy>(
+			sf::Vector2f(BUDDY_WIDTH, BUDDY_HEIGHT),
+			p.GetScreenPosition(),
+			sf::Vector2f(p.GetBody().getPosition()),
+			sf::Color(255, 255, 255, 150),
+			p.GetInitialSpeed() / 2.f,
+			WINDOW_WIDTH, WINDOW_HEIGHT, 100);
+
+			p.AddBuddy(std::move(buddy));
 			p.AddUpgrade(UpgradeType::DumbBuddy, false);
 		} });
 

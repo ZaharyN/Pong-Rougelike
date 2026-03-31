@@ -15,9 +15,6 @@ protected:
 	static constexpr float DASH_COOLDOWN_DURATION = 5.f;
 	static constexpr float DASH_DURATION = 0.1f;
 
-	static constexpr float BUDDY_WIDTH = 80.f;
-	static constexpr float BUDDY_HEIGHT = 10.f;
-
 	static constexpr float FORESIGHT_DOT_SPACING = 30.f;
 	static constexpr float FORESIGHT_DOT_RADIUS = 3.f;
 
@@ -127,7 +124,7 @@ public:
 
 	void EnableUpAndDownMovement();
 
-	void AddBuddy();
+	void AddBuddy(std::unique_ptr<Paddle> buddy);
 
 	void EnableForesight();
 

@@ -4,12 +4,16 @@ GameManager::GameManager()
 	: gameWindow(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGHT }), "PONG GAME"),
 	gameState(GameState::Menu)
 {
+	sf::Image windowIcon;
+	if (windowIcon.loadFromFile("resources/icon"))
+		gameWindow.setIcon(windowIcon);
+
 	gameWindow.setFramerateLimit(60);
 
 	audioManager = std::make_unique<AudioManager>();
 	uiManager = std::make_unique<UIManager>(WINDOW_WIDTH, WINDOW_HEIGHT);
 	collectibleManager = std::make_unique<CollectibleManager>(WINDOW_WIDTH, WINDOW_HEIGHT);
-	upgradeManager = std::make_unique<UpgradeManager>();
+	upgradeManager = std::make_unique<UpgradeManager>(WINDOW_WIDTH, WINDOW_HEIGHT);
 
 	currentUpgradeOptions.reserve(3);
 }
@@ -297,9 +301,9 @@ void GameManager::CheckObstacleCollisions()
 		};
 
 	if (ball->GetVerticalDirection() < 0)
-		handleObstacleCollisions(player2.get());
-	if (ball->GetVerticalDirection() > 0)
 		handleObstacleCollisions(player1.get());
+	if (ball->GetVerticalDirection() > 0)
+		handleObstacleCollisions(player2.get());
 }
 
 void GameManager::CheckDeadZone()

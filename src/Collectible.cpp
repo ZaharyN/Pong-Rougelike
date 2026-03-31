@@ -8,12 +8,13 @@ Collectible::Collectible(const sf::Vector2f& screenPos, const sf::Texture& textu
 	sprite.setPosition(screenPos);
 }
 
-sf::FloatRect Collectible::GetBounds() const
-{
-	return this->sprite.getGlobalBounds();
-}
 
 void Collectible::Draw(sf::RenderTarget& window)
 {
 	window.draw(sprite);
+}
+
+sf::FloatRect Collectible::GetBounds() const
+{
+	return sprite.getGlobalBounds();
 }
