@@ -20,6 +20,12 @@ AudioManager::AudioManager()
 	else
 		std::cout << "Could not load energy_picked sound\n";
 
+	sf::SoundBuffer deadZoneHitBuffer;
+	if (deadZoneHitBuffer.loadFromFile("Assets/Audio/dead_zone_hit.ogg"))
+		buffers["dead_zone_hit"] = std::move(deadZoneHitBuffer);
+	else
+		std::cout << "Could not load dead_zone_hit sound\n";
+
 	if (!backgroundMusic.openFromFile("Assets/Audio/background.mp3"))
 		std::cout << "Error: Could not find background music in Assets/Audio folder!\n";
 }
