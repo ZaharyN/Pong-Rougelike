@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Types.h"
 #include "Ball.h"
+#include "PaddleStats.h"
 #include <unordered_set>
 #include <unordered_map>
 #include <vector>
@@ -31,27 +32,13 @@ protected:
 	int horizontalDirection;
 	int verticalDirection;
 	int energyCollected;
-
-	// Modifiables:
 	std::mt19937 rng;
-	std::unordered_set<UpgradeType> uniqueUpgrades;
-	std::unordered_map<UpgradeType, int> stackableUpgrades;
+
+	PaddleStats stats;
+
 	std::vector<sf::RectangleShape> obstacles;
 	std::vector<std::unique_ptr<Paddle>> buddies;
 	std::list<sf::CircleShape> foresightDots;
-	float reducedCollectibleSpawnRange = 0.f;
-	float force = 1.0f;
-	float spinMultiplier = 1.0f;
-	float energyRangeModifier = 0.f;
-	bool hasDashUpgrade = false;
-	bool isDashing = false;
-	float dashTimer = DASH_DURATION;
-	float dashCooldown = 0.f; 
-	float dashSpeedMultiplier = 1.f;
-	bool isNeverExhausted = false;
-	bool canMoveUpAndDown = false;
-	bool hasForesight = false;
-	float curvaturePower = 0.f;
 
 public:
 	Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, const sf::Vector2f& startPosition, 
@@ -100,6 +87,8 @@ public:
 	bool HasForesight() const;
 
 	float GetCurvaturePower() const;
+
+	const PaddleStats& GetStats() const;
 
 	// Modifying methods:
 	void AddUpgrade(UpgradeType type, bool isUnique);

@@ -13,16 +13,16 @@ void Player::Update(float deltaT)
 	horizontalDirection = 0;
 	verticalDirection = 0;
 
-	if (dashCooldown > 0) dashCooldown -= deltaT;
+	if (stats.dashCooldown > 0) stats.dashCooldown -= deltaT;
 
-	if (isDashing)
+	if (stats.isDashing)
 	{
-		dashTimer -= deltaT;
-		if (dashTimer <= 0)
+		stats.dashTimer -= deltaT;
+		if (stats.dashTimer <= 0)
 		{
-			isDashing = false;
-			dashSpeedMultiplier = 1.f;
-			dashCooldown = 5.f;
+			stats.isDashing = false;
+			stats.dashSpeedMultiplier = 1.f;
+			stats.dashCooldown = 5.f;
 		}
 	}
 
@@ -32,7 +32,7 @@ void Player::Update(float deltaT)
 	if (sf::Keyboard::isKeyPressed(controls.rightPrimary) || sf::Keyboard::isKeyPressed(controls.rightSecondary))
 		horizontalDirection = 1;
 
-	if (canMoveUpAndDown)
+	if (stats.canMoveUpAndDown)
 	{
 		if (sf::Keyboard::isKeyPressed(controls.upPrimary) || sf::Keyboard::isKeyPressed(controls.upSecondary))
 			verticalDirection = -1;
@@ -43,13 +43,13 @@ void Player::Update(float deltaT)
 
 	if (sf::Keyboard::isKeyPressed(controls.dashPrimary) || sf::Keyboard::isKeyPressed(controls.dashSecondary))
 	{
-		if (hasDashUpgrade && dashCooldown <= 0 && !isDashing)
+		if (stats.hasDashUpgrade && stats.dashCooldown <= 0 && !stats.isDashing)
 		{
 			StartDash();
 		}
 	}
 
-	float speed = currentSpeed * dashSpeedMultiplier;
+	float speed = currentSpeed * stats.dashSpeedMultiplier;
 	float newXPosition = body.getPosition().x + deltaT * horizontalDirection * speed;
 	float newYPosition = body.getPosition().y + deltaT * verticalDirection * speed;
 

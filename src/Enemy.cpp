@@ -9,22 +9,22 @@ Enemy::Enemy(const sf::Vector2f& size, const PaddleScreenPosition screenPos, con
 
 void Enemy::Update(float deltaT)
 {
-	if (dashCooldown > 0) dashCooldown -= deltaT;
+	if (stats.dashCooldown > 0) stats.dashCooldown -= deltaT;
 
-	if (isDashing)
+	if (stats.isDashing)
 	{
-		dashTimer -= deltaT;
-		if (dashTimer <= 0)
+		stats.dashTimer -= deltaT;
+		if (stats.dashTimer <= 0)
 		{
-			isDashing = false;
-			dashSpeedMultiplier = 1.f;
-			dashCooldown = DASH_COOLDOWN_DURATION;
+			stats.isDashing = false;
+			stats.dashSpeedMultiplier = 1.f;
+			stats.dashCooldown = DASH_COOLDOWN_DURATION;
 		}
 	}
 
 	float distance = ball.GetBody().getPosition().x - body.getPosition().x;
 
-	if (hasDashUpgrade && !isDashing && dashCooldown <= 0)
+	if (stats.hasDashUpgrade && !stats.isDashing && stats.dashCooldown <= 0)
 	{
 		if (std::abs(distance) > MIN_DASH_THRESHOLD)
 		{
@@ -32,7 +32,7 @@ void Enemy::Update(float deltaT)
 		}
 	}
 
-	float speed = currentSpeed * dashSpeedMultiplier;
+	float speed = currentSpeed * stats.dashSpeedMultiplier;
 	float currentStep = speed * deltaT;
 	float newPosition;
 

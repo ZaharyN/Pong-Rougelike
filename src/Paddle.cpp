@@ -14,7 +14,7 @@ Paddle::Paddle(const sf::Vector2f& size, const PaddleScreenPosition screenPos, c
 
 void Paddle::Draw(sf::RenderTarget& target)
 {
-	if (isDashing)
+	if (stats.isDashing)
 	{
 		body.setFillColor(sf::Color::Transparent);
 		body.setOutlineColor(sf::Color::Cyan);
@@ -35,26 +35,11 @@ void Paddle::Reset()
 	horizontalDirection = 0;
 	ResetCollectedEnergy();
 
-	// Reset modifiers:
-	uniqueUpgrades.clear();
-	stackableUpgrades.clear();
 	obstacles.clear();
 	buddies.clear();
 	foresightDots.clear();
 
-	reducedCollectibleSpawnRange = 0.f;
-	force = 1.f;
-	spinMultiplier = 1.f;
-	energyRangeModifier = 0.f;
-	hasDashUpgrade = false;
-	isDashing = false;
-	dashTimer = DASH_DURATION;
-	dashCooldown = 0.f;
-	dashSpeedMultiplier = 1.f;
-	isNeverExhausted = false;
-	canMoveUpAndDown = false;
-	hasForesight = false;
-	curvaturePower = 0.f;
+	stats.Reset();
 }
 
 void Paddle::SetPosition(const sf::Vector2f& newPosition)
@@ -64,7 +49,7 @@ void Paddle::SetPosition(const sf::Vector2f& newPosition)
 
 void Paddle::UpdateEnergy(int energyTake)
 {
-	if (energyTake < 0 && isNeverExhausted) return;
+	if (energyTake < 0 && stats.isNeverExhausted) return;
 
 	currentEnergy = std::clamp(currentEnergy + energyTake, 0, INITIAL_ENERGY);
 
@@ -87,16 +72,16 @@ void Paddle::AddUpgrade(UpgradeType type, bool isUnique)
 {
 	if (isUnique)
 	{
-		uniqueUpgrades.insert(type);
+		stats.uniqueUpgrades.insert(type);
 		return;
 	}
 
-	stackableUpgrades[type]++;
+	stats.stackableUpgrades[type]++;
 }
 
 bool Paddle::HasUniqueUpgrade(UpgradeType type) const
 {
-	return uniqueUpgrades.find(type) != uniqueUpgrades.end();
+	return stats.uniqueUpgrades.find(type) != stats.uniqueUpgrades.end();
 }
 
 void Paddle::SetSpeed(float factor)
@@ -117,24 +102,24 @@ void Paddle::SetSize(float factor)
 
 void Paddle::SetSpin(float factor)
 {
-	spinMultiplier *= factor;
+	stats.spinMultiplier *= factor;
 }
 
 void Paddle::ModifyEnergySpawnRange(float value)
 {
-	energyRangeModifier += value;
+	stats.energyRangeModifier += value;
 }
 
 void Paddle::EnableDash()
 {
-	hasDashUpgrade = true;
+	stats.hasDashUpgrade = true;
 }
 
 void Paddle::StartDash()
 {
-	isDashing = true;
-	dashTimer = 0.1f;
-	dashSpeedMultiplier = 5.f;
+	stats.isDashing = true;
+	stats.dashTimer = 0.1f;
+	stats.dashSpeedMultiplier = 5.f;
 }
 
 void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight, const sf::Color outlineColor)
@@ -186,12 +171,12 @@ void Paddle::PlaceObstacle(float obstacleWidth, float obstacleHeight, const sf::
 
 void Paddle::DisableExhaustion()
 {
-	isNeverExhausted = true;
+	stats.isNeverExhausted = true;
 }
 
 void Paddle::EnableUpAndDownMovement()
 {
-	canMoveUpAndDown = true;
+	stats.canMoveUpAndDown = true;
 }
 
 void Paddle::AddBuddy(std::unique_ptr<Paddle> buddy)
@@ -201,7 +186,7 @@ void Paddle::AddBuddy(std::unique_ptr<Paddle> buddy)
 
 void Paddle::EnableForesight()
 {
-	hasForesight = true;
+	stats.hasForesight = true;
 }
 
 void Paddle::ComputeForesight(const Ball& ball)
@@ -264,7 +249,7 @@ void Paddle::DrawForesight(sf::RenderTarget& target) const
 
 void Paddle::AddCurvaturePower(float power)
 {
-	curvaturePower += power;
+	stats.curvaturePower += power;
 }
 
 // Getters:
@@ -282,16 +267,18 @@ sf::FloatRect Paddle::GetGlobalBounds() const { return body.getGlobalBounds(); }
 
 PaddleScreenPosition Paddle::GetScreenPosition() const { return SCREEN_POSITION; }
 
-float Paddle::GetSpinMultiplier() const { return spinMultiplier; }
+float Paddle::GetSpinMultiplier() const { return stats.spinMultiplier; }
 
-float Paddle::GetEnergySpawnRangeModifier() const { return energyRangeModifier; }
+float Paddle::GetEnergySpawnRangeModifier() const { return stats.energyRangeModifier; }
 
 const std::vector<sf::RectangleShape>& Paddle::GetObstacles() const { return obstacles; }
 
-const std::unordered_set<UpgradeType>& Paddle::GetOwnedUniqueUpgrades() const { return uniqueUpgrades; }
+const std::unordered_set<UpgradeType>& Paddle::GetOwnedUniqueUpgrades() const { return stats.uniqueUpgrades; }
 
 const std::vector<std::unique_ptr<Paddle>>& Paddle::GetBuddies() const { return buddies; }
 
-bool Paddle::HasForesight() const { return hasForesight; }
+bool Paddle::HasForesight() const { return stats.hasForesight; }
 
-float Paddle::GetCurvaturePower() const { return curvaturePower; }
+float Paddle::GetCurvaturePower() const { return stats.curvaturePower; }
+
+const PaddleStats& Paddle::GetStats() const { return stats; };
