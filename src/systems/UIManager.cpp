@@ -1,7 +1,7 @@
 #include "UIManager.h"
 
 UIManager::UIManager(const unsigned int windowWidth, const unsigned int windowHeight)
-	: WINDOW_WIDTH(windowWidth), WINDOW_HEIGHT(windowHeight)
+	: WINDOW_WIDTH(windowWidth), WINDOW_HEIGHT(windowHeight), OVERLAY_WIDTH(windowWidth)
 {
 	if (!font.openFromFile("Assets/Fonts/game_font.ttf"))
 	{
@@ -11,6 +11,7 @@ UIManager::UIManager(const unsigned int windowWidth, const unsigned int windowHe
 	InitializeSelectModeMenu();
 	InitializeUpgradeMenu();
 	InitializeScoreTexts();
+	InitializeOverlay();
 }
 
 void UIManager::InitializeStartMenu()
@@ -74,7 +75,16 @@ void UIManager::InitializeScoreTexts()
 		});
 }
 
-void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
+void UIManager::InitializeOverlay()
+{
+	damageOverlay.setSize({ OVERLAY_WIDTH, OVERLAY_HEIGHT });
+	damageOverlay.setFillColor(sf::Color::Transparent);
+	damageOverlay.setOutlineThickness(OVERLAY_OUTLINE_THICKNESS);
+	damageOverlay.setOutlineColor(sf::Color(255, 0, 0, 0));
+	damageOverlay.setPosition({ 0.f,0.f });
+}
+
+void UIManager::Update(float deltaT, GameState state, const sf::RenderWindow& gameWindow)
 {
 	sf::Vector2i pixelPosition = sf::Mouse::getPosition(gameWindow);
 	sf::Vector2f mouseWorldPos = gameWindow.mapPixelToCoords(pixelPosition);
@@ -108,6 +118,22 @@ void UIManager::Update(GameState state, const sf::RenderWindow& gameWindow)
 		for (auto& upgradeCard : upgradeCards)
 		{
 			upgradeCard.SetHovered(upgradeCard.Contains(mouseWorldPos));
+		}
+	}
+
+	if (isOverlayActive)
+	{
+		damagerOverlayTimer -= deltaT;
+		if (damagerOverlayTimer <= 0.f)
+		{
+			isOverlayActive = false;
+			damageOverlay.setOutlineColor(sf::Color::Transparent);
+		}
+		else
+		{
+			float progress = damagerOverlayTimer / OVERLAY_DURATION;
+			uint8_t alpha = static_cast<uint8_t>(OVERLAY_MAX_ALPHA * progress);
+			damageOverlay.setOutlineColor(sf::Color(255, 0, 0, alpha));
 		}
 	}
 }
@@ -148,6 +174,11 @@ void UIManager::Draw(GameState state, sf::RenderWindow& gameWindow)
 		if (gameOverText) gameWindow.draw(*gameOverText);
 		if (winnerText) gameWindow.draw(*winnerText);
 	}
+
+	if (isOverlayActive)
+	{
+		gameWindow.draw(damageOverlay);
+	}
 }
 
 void UIManager::UpdateScores(int player1Score, int player2Score)
@@ -161,7 +192,7 @@ void UIManager::UpdateScores(int player1Score, int player2Score)
 			text->setPosition({
 				WINDOW_WIDTH - bounds.size.x - SCORE_TEXT_OFFSET,
 				posY
-			});
+				});
 		};
 
 	updateText(player1ScoreText, player1Score, WINDOW_HEIGHT / 2.f + SCORE_TEXT_OFFSET);
@@ -316,4 +347,19 @@ std::string UIManager::WrapText(const std::string& str, float maxWidth, unsigned
 		}
 	}
 	return result + line;
+}
+
+void UIManager::TriggerDamageOverlay(PaddleScreenPosition screenPosition)
+{
+	switch (screenPosition)
+	{
+	case PaddleScreenPosition::Top:
+		damageOverlay.setPosition({ 0.f, OVERLAY_HEIGHT / 2.f });
+		break;
+	case PaddleScreenPosition::Bottom:
+		damageOverlay.setPosition({ 0.f, WINDOW_HEIGHT - OVERLAY_HEIGHT / 2.f });
+		break;
+	}
+	damagerOverlayTimer = OVERLAY_DURATION;
+	isOverlayActive = true;
 }

@@ -4,10 +4,6 @@ GameManager::GameManager()
 	: gameWindow(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGHT }), "PONG GAME"),
 	gameState(GameState::Menu)
 {
-	sf::Image windowIcon;
-	if (windowIcon.loadFromFile("resources/icon"))
-		gameWindow.setIcon(windowIcon);
-
 	gameWindow.setFramerateLimit(60);
 
 	audioManager = std::make_unique<AudioManager>();
@@ -196,10 +192,8 @@ void GameManager::Update(float deltaT)
 				buddy->Update(deltaT);
 		}
 	}
-	else
-	{
-		uiManager->Update(gameState, gameWindow);
-	}
+	
+	uiManager->Update(deltaT, gameState, gameWindow);
 }
 
 void GameManager::CheckCollisions()
@@ -210,7 +204,7 @@ void GameManager::CheckCollisions()
 	CheckPaddleCollisions();
 	CheckBuddyCollisions();
 	CheckObstacleCollisions();
-	CheckDeadZone();
+	CheckDeadZoneCollisions();
 	CheckCollectibleCollisions();
 }
 
@@ -309,7 +303,7 @@ void GameManager::CheckObstacleCollisions()
 		handleObstacleCollisions(player2.get());
 }
 
-void GameManager::CheckDeadZone()
+void GameManager::CheckDeadZoneCollisions()
 {
 	bool player1Scored = ball->GetBody().getPosition().y - BALL_RADIUS <= 0;
 	bool player2Scored = ball->GetBody().getPosition().y + BALL_RADIUS >= WINDOW_HEIGHT;
@@ -338,16 +332,17 @@ void GameManager::CheckDeadZone()
 	}
 
 	// Handle ball score and bounce
-	auto handleBounce = [&](float correctedY)
+	auto handleBounce = [&](float correctedY, PaddleScreenPosition screnPos)
 		{
 			ball->SetPosition({ ball->GetBody().getPosition().x, correctedY });
 			ball->SwapVerticalDirection();
 			ball->ResetCurvature();
-			audioManager->PlaySound("hit");
+			audioManager->PlaySound("dead_zone_hit");
+			uiManager->TriggerDamageOverlay(screnPos);
 		};
 
-	if (player1Scored) handleBounce(BALL_RADIUS + BALL_OVERLAP_CORRECTION);
-	if (player2Scored) handleBounce(WINDOW_HEIGHT - (BALL_RADIUS + BALL_OVERLAP_CORRECTION));
+	if (player1Scored) handleBounce(BALL_RADIUS + BALL_OVERLAP_CORRECTION, player2->GetScreenPosition());
+	if (player2Scored) handleBounce(WINDOW_HEIGHT - (BALL_RADIUS + BALL_OVERLAP_CORRECTION), player1->GetScreenPosition());
 }
 
 void GameManager::CheckCollectibleCollisions()

@@ -60,7 +60,7 @@ class GameManager
 	void CheckPaddleCollisions();
 	void CheckBuddyCollisions();
 	void CheckObstacleCollisions();
-	void CheckDeadZone();
+	void CheckDeadZoneCollisions();
 	void CheckCollectibleCollisions();
 public:
 	GameManager();

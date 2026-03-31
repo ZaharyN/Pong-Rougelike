@@ -17,12 +17,17 @@ class UIManager
 	static constexpr float UPGRADE_CARD_GAP = 75.f;
 	static constexpr float UPGRADE_CARD_TITLE_HEGITH = 60.f;
 
-	static constexpr float SCORE_TEXT_OFFSET = 20.f;
-
 	static constexpr unsigned int FONT_SIZE_BUTTON = 40;
 	static constexpr unsigned int FONT_SIZE_CARD_DESCRIPTION = 20;
 
+	static constexpr float SCORE_TEXT_OFFSET = 20.f;
 	static constexpr float ON_HOVER_SCALE = 1.05f;
+ 
+	static constexpr float OVERLAY_DURATION = 0.2f;
+	static constexpr float OVERLAY_OUTLINE_THICKNESS = -25.f;
+	static constexpr float OVERLAY_MAX_ALPHA = 150.f;
+	static constexpr float OVERLAY_HEIGHT = 0.f;
+	const float OVERLAY_WIDTH;
 
 	const unsigned int WINDOW_WIDTH;
 	const unsigned int WINDOW_HEIGHT;
@@ -50,6 +55,10 @@ class UIManager
 	std::optional<sf::Text> gameOverText;
 	std::optional<sf::Text> winnerText;
 
+	sf::RectangleShape damageOverlay;
+	float damagerOverlayTimer = 0.0f;
+	bool isOverlayActive = false;
+
 	void CreateButton(sf::RectangleShape& button, float yPosition);
 	void CreateButtonText(std::optional<sf::Text>& text, const std::string& value, int size, const sf::RectangleShape& parent);
 	void OnHoverEffect(sf::RectangleShape& button, std::optional<sf::Text>& text);
@@ -65,8 +74,9 @@ public:
 	void InitializeUpgradeMenu();
 	void InitializeScoreTexts();
 	void InitializeGameOverScreen(const std::string_view winnerName);
+	void InitializeOverlay();
 
-	void Update(GameState state, const sf::RenderWindow& gameWindow);
+	void Update(float deltaT, GameState state, const sf::RenderWindow& gameWindow);
 	void Draw(GameState state, sf::RenderWindow& gameWindow);
 
 	int GetClickedCardIndex(const sf::Vector2f& mousePos) const;
@@ -74,4 +84,6 @@ public:
 	void UpdateScores(int player1Score, int player2Score);
 
 	void ShowRandomUpgrades(const std::vector<Upgrade>& upgrades, const std::string_view playerName);
+
+	void TriggerDamageOverlay(PaddleScreenPosition screenPosition);
 };
