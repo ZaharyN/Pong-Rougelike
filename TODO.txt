@@ -1,12 +1,8 @@
 Future Improvements:
 
-1. Think of a way to separate the upgrades
+1. Upload it to GitHub
+------------------------------------------------------------------------------------------------------------------------
+Potential Bugs:
 
-2. Upload it to GitHub and add game icon
-
--------------------------------------------------------------------------------------------------------------------
-Bugs:
-
-- Obstacles are inverted - fix them
-
-- When the ball collided with the paddle and dead zone it glitched and then started to just come from the bottom dead zone over and over
+- If the ball has 90 degrees exact angle and players choose to not move, the ball's speed will infinitely scale, leading
+  to start skipping the collisions because the distance travelled becomes too big

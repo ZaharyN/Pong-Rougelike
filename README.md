@@ -16,13 +16,16 @@ The classic pong game created with SFML 3.0 with some rougelike elements. Player
 ## 🎮 Controls
 
 ### vs AI (One Player)
-- **Player 1**: `A` / `D` or `Left` / `Right` arrows to move.
-- **Ability**: `Space` to Dash (once unlocked).
+- **Movement**: `A` / `D` **or** `Left` / `Right` arrows to move.
+- **Ability**: `Space` to **Dash** (once unlocked).
 
 ### vs Player (Two Player)
-- **Player 1 (Bottom)**: `Left` / `Right` arrows to move.
-- **Player 2 (Top)**: `A` / `D` to move.
-- **Ability**: `Space` to Dash (once unlocked).
+*   **Player 1 (Bottom)**: 
+    *   **Move**: `Left` / `Right` arrows.
+    *   **Ability**: `Space` to **Dash** (once unlocked).
+*   **Player 2 (Top)**: 
+    *   **Move**: `A` / `D` keys.
+    *   **Ability**: `Left Shift` to **Dash** (once unlocked).
 
 ### General
 - **UI**: Mouse Left-Click to navigate menus and select upgrades.
