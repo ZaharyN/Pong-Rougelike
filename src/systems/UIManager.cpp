@@ -89,8 +89,9 @@ void UIManager::Update(float deltaT, GameState state, const sf::RenderWindow& ga
 	sf::Vector2i pixelPosition = sf::Mouse::getPosition(gameWindow);
 	sf::Vector2f mouseWorldPos = gameWindow.mapPixelToCoords(pixelPosition);
 
-	if (state == GameState::Menu)
+	switch (state)
 	{
+	case GameState::Menu:
 		if (startButton.getGlobalBounds().contains(mouseWorldPos))
 			OnHoverEffect(startButton, startButtonText);
 		else
@@ -100,9 +101,9 @@ void UIManager::Update(float deltaT, GameState state, const sf::RenderWindow& ga
 			OnHoverEffect(exitButton, exitButtonText);
 		else
 			ResetHoverEffect(exitButton, exitButtonText);
-	}
-	else if (state == GameState::ModeSelect)
-	{
+		break;
+
+	case GameState::ModeSelect:
 		if (onePlayerGameButton.getGlobalBounds().contains(mouseWorldPos))
 			OnHoverEffect(onePlayerGameButton, onePlayerButtonText);
 		else
@@ -112,67 +113,70 @@ void UIManager::Update(float deltaT, GameState state, const sf::RenderWindow& ga
 			OnHoverEffect(twoPlayerGameButton, twoPlayerButtonText);
 		else
 			ResetHoverEffect(twoPlayerGameButton, twoPlayerButtonText);
-	}
-	else if (state == GameState::UpgradeSelect)
-	{
+		break;
+
+	case GameState::UpgradeSelect:
 		for (auto& upgradeCard : upgradeCards)
 		{
 			upgradeCard.SetHovered(upgradeCard.Contains(mouseWorldPos));
 		}
-	}
+		break;
 
-	if (isOverlayActive)
-	{
-		damagerOverlayTimer -= deltaT;
-		if (damagerOverlayTimer <= 0.f)
+	case GameState::Playing:
+		if (isOverlayActive)
 		{
-			isOverlayActive = false;
-			damageOverlay.setOutlineColor(sf::Color::Transparent);
+			damagerOverlayTimer -= deltaT;
+			if (damagerOverlayTimer <= 0.f)
+			{
+				isOverlayActive = false;
+				damageOverlay.setOutlineColor(sf::Color::Transparent);
+			}
+			else
+			{
+				float progress = damagerOverlayTimer / OVERLAY_DURATION;
+				uint8_t alpha = static_cast<uint8_t>(OVERLAY_MAX_ALPHA * progress);
+				damageOverlay.setOutlineColor(sf::Color(255, 0, 0, alpha));
+			}
 		}
-		else
-		{
-			float progress = damagerOverlayTimer / OVERLAY_DURATION;
-			uint8_t alpha = static_cast<uint8_t>(OVERLAY_MAX_ALPHA * progress);
-			damageOverlay.setOutlineColor(sf::Color(255, 0, 0, alpha));
-		}
+		break;
 	}
 }
 
 void UIManager::Draw(GameState state, sf::RenderWindow& gameWindow)
 {
-	if (state == GameState::Menu)
+	switch (state)
 	{
+	case GameState::Menu:
 		gameWindow.draw(startButton);
 		gameWindow.draw(exitButton);
+		if (startButtonText) gameWindow.draw(*startButtonText);
+		if (exitButtonText) gameWindow.draw(*exitButtonText);
+		break;
 
-		gameWindow.draw(*startButtonText);
-		gameWindow.draw(*exitButtonText);
-	}
-	else if (state == GameState::ModeSelect)
-	{
+	case GameState::ModeSelect:
 		gameWindow.draw(onePlayerGameButton);
 		gameWindow.draw(twoPlayerGameButton);
+		if (onePlayerButtonText) gameWindow.draw(*onePlayerButtonText);
+		if (twoPlayerButtonText) gameWindow.draw(*twoPlayerButtonText);
+		break;
 
-		gameWindow.draw(*onePlayerButtonText);
-		gameWindow.draw(*twoPlayerButtonText);
-	}
-	else if (state == GameState::UpgradeSelect)
-	{
+	case GameState::UpgradeSelect:
 		for (const auto& upgradeCard : upgradeCards)
 			upgradeCard.Draw(gameWindow);
 
 		gameWindow.draw(playerPickingBox);
 		if (playerPickingText) gameWindow.draw(*playerPickingText);
-	}
-	else if (state == GameState::Playing)
-	{
+		break;
+
+	case GameState::Playing:
 		if (player1ScoreText) gameWindow.draw(*player1ScoreText);
 		if (player2ScoreText) gameWindow.draw(*player2ScoreText);
-	}
-	else if (state == GameState::GameOver)
-	{
+		break;
+
+	case GameState::GameOver:
 		if (gameOverText) gameWindow.draw(*gameOverText);
 		if (winnerText) gameWindow.draw(*winnerText);
+		break;
 	}
 
 	if (isOverlayActive)

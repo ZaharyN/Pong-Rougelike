@@ -174,6 +174,8 @@ sf::FloatRect Ball::GetGlobalBounds() const { return body.getGlobalBounds(); }
 
 sf::FloatRect Ball::GetLocalBounds() const { return body.getLocalBounds(); }
 
+float Ball::GetCurvature() const { return currentCurvature; }
+
 //Helpers:
 void Ball::ResetAngle()
 {
@@ -211,9 +213,4 @@ ColorState Ball::MapColorToState(const sf::Color& initialColor)
 
 	if (initialColor.b == 255)
 		return ColorState::Blue;
-}
-
-float Ball::GetCurvature() const
-{
-	return currentCurvature;
 }

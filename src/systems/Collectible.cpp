@@ -8,7 +8,6 @@ Collectible::Collectible(const sf::Vector2f& screenPos, const sf::Texture& textu
 	sprite.setPosition(screenPos);
 }
 
-
 void Collectible::Draw(sf::RenderTarget& window)
 {
 	window.draw(sprite);

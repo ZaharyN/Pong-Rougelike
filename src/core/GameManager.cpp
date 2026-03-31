@@ -192,7 +192,6 @@ void GameManager::Update(float deltaT)
 				buddy->Update(deltaT);
 		}
 	}
-	
 	uiManager->Update(deltaT, gameState, gameWindow);
 }
 
@@ -394,12 +393,8 @@ void GameManager::Render()
 			gameWindow.draw(buddy->GetBody());
 
 		collectibleManager->Draw(gameWindow);
-		uiManager->Draw(GameState::Playing, gameWindow);
 	}
-	else
-	{
-		uiManager->Draw(gameState, gameWindow);
-	}
+	uiManager->Draw(gameState, gameWindow);
 
 	gameWindow.display();
 }
